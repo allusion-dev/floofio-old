@@ -1,0 +1,123 @@
+[{
+    "name": "Lots of new stuff!",
+    "time": 1676601176218,
+    "changes": [
+        "Various balance changes to petals and mobs",
+        "Added two new rarities, Omega and ???",
+        "Unique has been renamed to Ancient",
+        "Added a mob gallery",
+        "Added a settings menu",
+        "Added an option for mouse movement",
+        "Added new petals: Peas, Grapes, Salt, Pollen, Rose, Primrose and Dahlia",
+        "Added new mobs: Wasp, Evil Ladybug, Shiny Ladybug, Shrub, Walkingstick and the Pharaoh Ants",
+        "Reworked Fire Ants",
+        "Fixed bugs with client inputs",
+        "Redid the accounts system in MongoDB, this makes it faster and more reliable",
+        "Reset everyone's accounts completely, this is because we added lots of new mobs and petals and new balance changes",
+        "Added a new biome, the Dark Forest",
+        "Lots of backend changes for speed and support"
+    ]
+}, {
+    "name": "gg",
+    "time": 1676601176218,
+    "changes": [
+        "Added Sponge's proper feature",
+        "Added Shell and Pearl",
+        "Added Bubble",
+        "Added Spider",
+        "New map areas",
+        "Lots of balance",
+        "Balls"
+    ]
+}, {
+    "name": "So what's new?",
+    "time": 1676218787216,
+    "changes": [
+        "Reintroduced Waves as an area for testing. Super Testers can access it and teleport other players to it through bot commands.",
+        "Fixed bugs with Username Inputs",
+        "Fixed an issue with the client not loading",
+        "Nerfed Stinger",
+        "Nerfed Antennae",
+        "Buffed Rock (Petal)",
+        "Buffed Faster (Petal)",
+        "Buffed Light (Petal)",
+        "Added Egg, Ant Egg",
+        "Added Hornet Egg as a developer-unique petal",
+        "Added Beetle",
+        "Added Scorpion",
+        "Rebalanced mobs and petals slightly",
+        "Added Missile (Petal)",
+        "Added Iris (Petal)",
+        "Added Magnet (Petal)",
+        "Redid the world map, as a result, there is no ocean biome YET.",
+        "Improved mob density and spawning",
+        "You can spawn in the desert or garden biomes now",
+        "Made loot shared between the top 4 damage dealers",
+        "Added two new skills to the skill menu",
+        "Added display for your stats in the skill menu",
+        "Various other changes I can't remember"
+    ]
+}, {
+    "name": "Bug fixes",
+    "time": 1675993570323,
+    "changes": [
+        "Removed the wave area until it's complete",
+        "Added a !resetPassword and !recovery commands",
+        "Added an error message that displays if you are unable to connect to the gameserver",
+        "Fixed a few bugs with the client and accounts"
+    ]
+}, {
+    "name": "Wave Area",
+    "time": 1675993530323,
+    "changes": [
+        "Added a rudamentary wave area",
+        "Some bullshitfuckery",
+        "I'm dying inside this really ain't cool",
+        "Balanse",
+        "Fixed drops",
+        "Bug fixes",
+        "something else i forgor"
+    ]
+}, {
+    "name": "Discord Links",
+    "time": 1675739270285,
+    "changes": [
+        "You can now link your discord account to your account on the website",
+        "You can now link your discord account to your account in-game",
+        "The discord bot tells server members when and where ultra mobs spawn",
+        "Your highest petal rarity is now the role you have in the discord",
+        "Reset everyone's petal rarity to EPIC at highest"
+    ]
+}, {
+    "name": "Fixes :)",
+    "time": 1675688055429,
+    "changes": [
+        "Added more dimensions for testing",
+        "Drastically optimized aggressive mobs that fire projectiles",
+        "Fixed Lightning",
+        "Fixed a load issue with the client",
+        "Changed the balance of mobs and mob density in oceans, making it harder as you go along",
+        "Made hornets smarter",
+        "Added ultra areas, ultra mobs are much more rare than others, but still common enough for testing"
+    ]
+}, {
+    "name": "Development #2",
+    "time": 1674962972337,
+    "changes": [
+        "Rewrote how mobs were configured",
+        "Added Bees",
+        "Added Ants and an Ant dimension",
+        "Added this start menu",
+        "Even more stuff I can't remember"
+    ]
+}, {
+    "name": "Development #1",
+    "time": 1674874974065,
+    "changes": [
+        "Lots of fun stuff",
+        "Spawn areas and spawn tables",
+        "Optimizations",
+        "Minor refactoring",
+        "Players spawn in the center of the map (0, 0)"
+    ]
+}]
