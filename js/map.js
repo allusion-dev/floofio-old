@@ -26,15 +26,15 @@ if (!self.__WB_pmw) {
       };
     }();
     const j = document.querySelector("canvas");
-    const k = j.getContext('2d');
-    async function l(m, n = new OffscreenCanvas(0x32, 0x32), o = n.getContext('2d')) {
+    const k = j.getContext("2d");
+    async function l(m, n = new OffscreenCanvas(50, 50), o = n.getContext("2d")) {
       return new Promise((p, q) => {
         const r = new Image();
         r.src = m;
         r.addEventListener("load", () => {
-          n.width = 0x32;
-          n.height = 0x32;
-          o.drawImage(r, 0x0, 0x0, 0x32, 0x32);
+          n.width = 50;
+          n.height = 50;
+          o.drawImage(r, 0, 0, 50, 50);
           p(n);
         });
         r.addEventListener("error", q);
@@ -46,19 +46,19 @@ if (!self.__WB_pmw) {
       });
       w();
       const z = {
-        "garden": k.createPattern(await l('./resources/tiles/grass.svg'), "repeat"),
+        "garden": k.createPattern(await l("./resources/tiles/grass.svg"), "repeat"),
         "antHole": k.createPattern(await l("./resources/tiles/ant.svg"), "repeat"),
         "desert": k.createPattern(await l("./resources/tiles/desert.svg"), "repeat"),
-        ocean: k.createPattern(await l('./resources/tiles/ocean.svg'), "repeat"),
+        ocean: k.createPattern(await l("./resources/tiles/ocean.svg"), "repeat"),
         water: k.createPattern(await l("./resources/tiles/water.svg"), "repeat"),
         "dirt": k.createPattern(await l("./resources/tiles/dirt.svg"), "repeat"),
         "sewer": k.createPattern(await l("./resources/tiles/sewerGrates.svg"), "repeat"),
-        "forest": k.createPattern(await l('./resources/tiles/forest.svg'), "repeat"),
-        "tundra": k.createPattern(await l('./resources/tiles/tundra.svg'), "repeat")
+        "forest": k.createPattern(await l("./resources/tiles/forest.svg"), "repeat"),
+        "tundra": k.createPattern(await l("./resources/tiles/tundra.svg"), "repeat")
       };
       return z;
     }();
-    const aa = location.hostname.includes("localhost") ? "localhost:3001" : 'us1.ovh.woomy-arras.xyz:3001';
+    const aa = location.hostname.includes("localhost") ? "localhost:3001" : "us1.ovh.woomy-arras.xyz:3001";
     const ab = [];
 
     function ac() {
@@ -73,19 +73,19 @@ if (!self.__WB_pmw) {
         ag = Math.max(ag, ah.y2);
       }
       return {
-        'width': af - ad,
-        'height': ag - ae,
-        'minX': ad,
-        'minY': ae,
-        'spacing': 0x14
+        "width": af - ad,
+        "height": ag - ae,
+        "minX": ad,
+        "minY": ae,
+        "spacing": 20
       };
     }
     class ai {
       constructor(aj, ak, al, am, an, ao, ap) {
-          aj *= 0x64;
-          ak *= 0x64;
-          al *= 0x64;
-          am *= 0x64;
+          aj *= 100;
+          ak *= 100;
+          al *= 100;
+          am *= 100;
           this.x = aj;
           this.y = ak;
           this.width = al * 0.75;
@@ -100,7 +100,7 @@ if (!self.__WB_pmw) {
           ab.push(this);
         }
         ["draw"]() {
-          k.fillStyle = t[["garden", "antHole", "desert", 'ocean', "sewer", 'forest', "tundra"][this.type]];
+          k.fillStyle = t[["garden", "antHole", "desert", "ocean", "sewer", "forest", "tundra"][this.type]];
           k.fillRect(this.x1, this.y1, this.x2 - this.x1, this.y2 - this.y1);
           k.fillStyle = k.strokeStyle = "#000000";
           k.lineWidth = 0.01;
@@ -108,7 +108,7 @@ if (!self.__WB_pmw) {
           if (this.portals) {
             for (const aq of this.portals) {
               k.beginPath();
-              k.arc(this.x + aq.x * this.width, this.y + aq.y * this.height, 10, 0x0, Math.PI * 0x2);
+              k.arc(this.x + aq.x * this.width, this.y + aq.y * this.height, 10, 0, Math.PI * 2);
               k.fill();
               k.stroke();
               k.closePath();
@@ -116,12 +116,12 @@ if (!self.__WB_pmw) {
           }
           k.fillStyle = "#FFFFFF";
           k.strokeStyle = "#000000";
-          k.lineWidth = 0x3;
+          k.lineWidth = 3;
           k.strokeText(this.name, this.x, this.y);
           k.fillText(this.name, this.x, this.y);
         }
     }
-    const ar = await (await fetch('//' + aa + '/worldMap')).json();
+    const ar = await (await fetch("//" + aa + "/worldMap")).json();
     let as = new Set();
 
     function at(au, av, aw) {
@@ -135,7 +135,7 @@ if (!self.__WB_pmw) {
         at(ax.leadsTo, av + au.x, aw + au.y);
       }
     }
-    at("Spawn", 0x5, 0x5);
+    at("Spawn", 5, 5);
     const {
       width: ay,
       height: az,
@@ -143,16 +143,16 @@ if (!self.__WB_pmw) {
       minY: bb,
       spacing: bc
     } = ac();
-    j.width = ay + bc * 0x2;
-    j.height = az + bc * 0x2;
+    j.width = ay + bc * 2;
+    j.height = az + bc * 2;
     k.textAlign = "center";
     k.textBaseline = "middle";
-    k.lineCap = k.lineJoin = 'round';
+    k.lineCap = k.lineJoin = "round";
     k.font = "bold 10px sans-serif";
     k.globalAlpha = 0.85;
     k.fillStyle = t.dirt;
-    k.fillRect(0x0, 0x0, j.width, j.height);
-    k.globalAlpha = 0x1;
+    k.fillRect(0, 0, j.width, j.height);
+    k.globalAlpha = 1;
     k.translate(bc, bc);
     k.translate(-ba, -bb);
     for (const bd of ab) {
