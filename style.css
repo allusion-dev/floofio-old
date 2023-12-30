@@ -1,0 +1,163 @@
+:root {
+    /* Base Color Rules */
+     --gradientAccent: rgba(255, 0, 0, .5);
+    /* Link Button Rules */
+     --buttonColor: rgba(170, 0, 0, 1);
+     --buttonHoverColor: rgba(170, 0, 0, .75);
+    /* Property Rules */
+     --selectionColor: rgba(100, 0, 0, .5);
+}
+ * {
+     font-family: 'Ubuntu';
+     border: 0px;
+     margin: 0px;
+     padding: 0px;
+     border: 0px;
+     outline: none;
+     font-weight: bold;
+     text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,-1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000,1px 0px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000,-2px -2px 0 #000, 0px 2px 0 #000, 0px -2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000, 1px 2px 0 #000, -1px 2px 0 #000, 1px -2px 0 #000, -1px -2px 0 #000, 2px 1px 0 #000, -2px 1px 0 #000, 2px -1px 0 #000, -2px -1px 0 #000;
+}
+ body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     overscroll-behavior-y: none;
+     width: 100vw;
+     height: 100vh;
+     background-color: black;
+}
+ canvas {
+     image-rendering: optimizeSpeed;
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
+     cursor: default;
+     border: 0px;
+}
+ #mainMenu {
+     position: absolute;
+     padding: 0;
+     margin: 0;
+     left: 2vmin;
+     top: 2vmin;
+     display: none;
+}
+ .link {
+     display: inline-block;
+     position: relative;
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+     min-width: 2vmin;
+     min-height: 2vmin;
+     padding: 2vmin;
+     border-radius: .5vmin;
+     transition: filter .5s;
+}
+ #discord {
+     background-image: url(/web/20230507204348im_/https://floof.netlify.app/resources/icons/discord.svg);
+     background-color: #5865F2;
+     border: .5vmin solid #4752c4;
+}
+ #scroll {
+     background-image: url(/web/20230507204348im_/https://floof.netlify.app/resources/icons/scroll.svg);
+     background-color: #9bb56b;
+     border: .5vmin solid #7e9357;
+}
+ .link:hover {
+     filter: brightness(110%);
+}
+ #changelog {
+     position: absolute;
+     top: 10vmin;
+     left: -100vmin;
+     max-width: 50vmin;
+     max-height: 40vmin;
+     overflow-wrap: break-word;
+     overflow-y: scroll;
+     background-color: #9bb56b;
+     border: .5vmin solid #7e9357;
+     padding: 1em;
+     transition: left 1s;
+     color: white;
+     border-radius: .5vmin;
+     font-size: 1.5vmin;
+}
+ #changelog *, #changelog * * {
+     margin: .5em;
+}
+ #changelog hr {
+     border-radius: .5vmin;
+     border: .5vmin solid #7e9357;
+}
+ #changelog.active {
+     left: calc(2vmin);
+}
+ input:focus, select:focus, textarea:focus, button:focus {
+     outline: none;
+}
+ #playButton {
+     position: absolute;
+     left: 50%;
+     top: -50%;
+     transform: translate(-50%, -50%);
+}
+ .textInputContainer {
+     position: absolute;
+     left: 50%;
+     top: -50%;
+     text-align: center;
+     transform: translate(-50%, -50%);
+}
+ input {
+     font-size: 27.5pt;
+     font-weight: bold;
+     width: 40vmin;
+     border: 5px solid black;
+     text-shadow: none;
+     margin: .5vmin;
+}
+ span {
+     font-size: x-large;
+     color: white;
+}
+ ::-webkit-scrollbar {
+     width: 10px;
+}
+ ::-webkit-scrollbar-track {
+     background: #505050;
+}
+ ::-webkit-scrollbar-thumb {
+     background: #888888;
+     border-radius: 10px;
+}
+ ::-webkit-scrollbar-thumb:hover {
+     background: #AAAAAA;
+}
+ button {
+     margin: .5vmin;
+     font-size: 27.5pt;
+     font-weight: bold;
+     width: 25vmin;
+     color: white;
+     background-color: #9bb56b;
+     border: .5vmin solid #7e9357;
+     border-radius: .5vmin;
+     transition: filter .5s;
+}
+ button:hover {
+     filter: brightness(110%);
+}
+ #loading {
+     color: #FFFFFF;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     font-size: 48pt;
+     font-weight: bold;
+     cursor: default;
+}
+/* FILE ARCHIVED ON 20:43:48 May 07, 2023 AND RETRIEVED FROM THE INTERNET ARCHIVE ON 02:43:55 Dec 30, 2023. JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE. ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C. SECTION 108(a)(3)). */
+/* playback timings (ms): captures_list: 63.944 exclusion.robots: 0.079 exclusion.robots.policy: 0.068 cdx.remote: 0.059 esindex: 0.01 LoadShardBlock: 35.408 (3) PetaboxLoader3.datanode: 62.023 (5) load_resource: 275.229 PetaboxLoader3.resolve: 56.901 loaddict: 198.834 */
