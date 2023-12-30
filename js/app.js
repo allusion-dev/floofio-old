@@ -28,7 +28,7 @@ if (!self.__WB_pmw) {
     }();
     let o = {};
     let p = {};
-    let q = 0x1;
+    let q = 1;
     const r = location.host === 'localhost:3001' || location.host.startsWith("10.0.0.") ? location.host : "us1.ovh.woomy-arras.xyz:3001";
     try {
       const t = await fetch("./static/petals.json");
@@ -40,19 +40,19 @@ if (!self.__WB_pmw) {
     } catch (ab) {}
     try {
       const ac = await fetch('//' + r + "/ping");
-      q = (await ac.json()).tps ?? 0x1e;
+      q = (await ac.json()).tps ?? 30;
     } catch (ad) {
       window.noConnect();
       return;
     }
     let ae = {
-      0x0: new Array(0x6).fill(0x0).map(() => Math.floor(Math.random() * 0x19)),
-      0x1: new Array(0x6).fill(0x0).map(() => Math.floor(Math.random() * 0x19)),
-      0x2: new Array(0x6).fill(0x0).map(() => Math.floor(Math.random() * 0x19))
+      0: new Array(6).fill(0).map(() => Math.floor(Math.random() * 25)),
+      1: new Array(6).fill(0).map(() => Math.floor(Math.random() * 25)),
+      2: new Array(6).fill(0).map(() => Math.floor(Math.random() * 25))
     };
     let af = [];
-    let ag = 0x0;
-    let ah = 0x1;
+    let ag = 0;
+    let ah = 1;
     const ai = document.getElementById("canvas");
     const aj = ai.getContext('2d', {
       'alpha': false
@@ -66,179 +66,179 @@ if (!self.__WB_pmw) {
       const an = {};
       for (const ao of [["./resources/tiles/grass.svg", "grass"], ['./resources/tiles/ant.svg', "ant"], ['./resources/tiles/dirt.svg', "dirt"], ['./resources/tiles/desert.svg', "desert"], ['./resources/tiles/ocean.svg', "ocean"], ["./resources/tiles/water.svg", "water"], ["./resources/tiles/sewer.svg", "sewer"], ["./resources/tiles/sewerGrates.svg", "sewerGrates"], ["./resources/tiles/forest.svg", "forest"], ["./resources/tiles/tundra.svg", "tundra"]]) {
         const ap = new Image();
-        ap.src = ao[0x0];
+        ap.src = ao[0];
         ap.ready = true;
-        an[ao[0x1]] = ap;
+        an[ao[1]] = ap;
         ap.addEventListener("load", () => ap.ready = true);
       }
       return an;
     }();
     const aq = {
-      'GRASS': 0x0,
-      'ANT': 0x1,
-      'DESERT': 0x2,
-      'OCEAN': 0x3,
-      'SEWER': 0x4,
-      'FOREST': 0x5,
-      'TUNDRA': 0x6
+      'GRASS': 0,
+      'ANT': 1,
+      'DESERT': 2,
+      'OCEAN': 3,
+      'SEWER': 4,
+      'FOREST': 5,
+      'TUNDRA': 6
     };
     const ar = {
-      0x0: "Basic",
-      0x1: "Light",
-      0x2: "Faster",
-      0x3: "Stinger",
-      0x4: "Rock",
-      0x5: "Sponge",
-      0x6: "Antennae",
-      0x7: "god",
-      0x8: 'Lightning',
-      0x9: 'Cactus',
-      0xa: "Leaf",
-      0xb: "Egg",
-      0xc: "Ant Egg",
-      0xd: "Hornet Egg",
-      0xe: "Missile",
-      0xf: "Iris",
-      0x10: "Pincer",
-      0x11: 'Magnet',
-      0x12: "Armor",
-      0x13: "Bubble",
-      0x14: "Pearl",
-      0x15: "Shell",
-      0x16: 'Web',
-      0x17: "Wing",
-      0x18: "Third Eye",
-      0x19: "Square",
-      0x1a: "Triangle",
-      0x1b: "Pentagon",
-      0x1c: 'Peas',
-      0x1d: "Grapes",
-      0x1e: "Salt",
-      0x1f: "Walkingstick Egg",
-      0x20: "Peagun",
-      0x21: 'Pollen',
-      0x22: "Rose",
-      0x23: "Dahlia",
-      0x24: 'Primrose',
-      0x25: "Powder"
+      0: "Basic",
+      1: "Light",
+      2: "Faster",
+      3: "Stinger",
+      4: "Rock",
+      5: "Sponge",
+      6: "Antennae",
+      7: "god",
+      8: 'Lightning',
+      9: 'Cactus',
+      10: "Leaf",
+      11: "Egg",
+      12: "Ant Egg",
+      13: "Hornet Egg",
+      14: "Missile",
+      15: "Iris",
+      16: "Pincer",
+      17: 'Magnet',
+      18: "Armor",
+      19: "Bubble",
+      20: "Pearl",
+      21: "Shell",
+      22: 'Web',
+      23: "Wing",
+      24: "Third Eye",
+      25: "Square",
+      26: "Triangle",
+      27: "Pentagon",
+      28: 'Peas',
+      29: "Grapes",
+      30: "Salt",
+      31: "Walkingstick Egg",
+      32: "Peagun",
+      33: 'Pollen',
+      34: "Rose",
+      35: "Dahlia",
+      36: 'Primrose',
+      37: "Powder"
     };
     let as;
     const at = {
-      0x0: {
+      0: {
         'name': 'Common',
-        'color': ak[0x1],
-        'index': 0x0,
-        'absorbValue': 0x1
+        'color': ak[1],
+        'index': 0,
+        'absorbValue': 1
       },
-      0x1: {
+      1: {
         'name': "Uncommon",
-        'color': ak[0x2],
-        'index': 0x1,
-        'absorbValue': 0x5
+        'color': ak[2],
+        'index': 1,
+        'absorbValue': 5
       },
-      0x2: {
+      2: {
         'name': "Rare",
-        'color': ak[0x3],
-        'index': 0x2,
-        'absorbValue': 0x32
+        'color': ak[3],
+        'index': 2,
+        'absorbValue': 50
       },
-      0x3: {
+      3: {
         'name': 'Epic',
-        'color': ak[0x4],
-        'index': 0x3,
-        'absorbValue': 0x1f4
+        'color': ak[4],
+        'index': 3,
+        'absorbValue': 500
       },
-      0x4: {
+      4: {
         'name': "Legendary",
-        'color': ak[0x5],
-        'index': 0x4,
-        'absorbValue': 0x2710
+        'color': ak[5],
+        'index': 4,
+        'absorbValue': 10000
       },
-      0x5: {
+      5: {
         'name': "Mythic",
-        'color': ak[0x6],
-        'index': 0x5,
-        'absorbValue': 0x3d090
+        'color': ak[6],
+        'index': 5,
+        'absorbValue': 250000
       },
-      0x6: {
+      6: {
         'name': 'Ultra',
-        'color': ak[0x1b],
-        'index': 0x6,
-        'absorbValue': 0x1312d00
+        'color': ak[27],
+        'index': 6,
+        'absorbValue': 20000000
       },
-      0x7: {
+      7: {
         'name': "Super",
-        'color': ak[0x1c],
-        'index': 0x7,
-        'absorbValue': 0x3b9aca00
+        'color': ak[28],
+        'index': 7,
+        'absorbValue': 1000000000
       },
-      0x8: {
+      8: {
         'name': "Ancient",
-        'color': ak[0x1d],
-        'index': 0x8,
-        'absorbValue': 0x5d21dba00
+        'color': ak[29],
+        'index': 8,
+        'absorbValue': 25000000000
       },
-      0x9: {
+      9: {
         'name': 'Omega',
-        'color': ak[0x20],
-        'index': 0x9,
-        'absorbValue': 0x22ecb25c00
+        'color': ak[32],
+        'index': 9,
+        'absorbValue': 150000000000
       },
-      0xa: {
+      10: {
         'name': "???",
-        'color': ak[0x21],
-        'index': 0xa,
-        'absorbValue': 0xe8d4a51000
+        'color': ak[33],
+        'index': 10,
+        'absorbValue': 1000000000000
       }
     };
     const au = {
-      0x0: {
+      0: {
         'key': "HEALTH",
         'name': "Max Health",
         'description': "Increases the health of your flower.",
-        'tiers': [0x3, 0x9, 0x10, 0x18, 0x21, 0x30, 0x45, 0x64]
+        'tiers': [3, 9, 16, 24, 33, 48, 69, 100]
       },
-      0x1: {
+      1: {
         'key': 'SLOTS',
         'name': "Extra Slot",
         'description': "Unlocks a new petal slot.",
-        'tiers': [0x2, 0xc, 0x1a, 0x30, 0x52]
+        'tiers': [2, 12, 26, 48, 82]
       },
-      0x3: {
+      3: {
         'key': "RELOAD",
         'name': "Petal Reload",
         'description': "Decreases the reload time of your petals.",
-        'tiers': [0x1, 0x4, 0x9, 0x10, 0x19, 0x24, 0x31, 0x40]
+        'tiers': [1, 4, 9, 16, 25, 36, 49, 64]
       },
-      0x4: {
+      4: {
         'key': 'DAMAGE',
         'name': "Body Damage",
         'description': "Increases your flower's collision damage.",
-        'tiers': [0x4, 0xc, 0x16, 0x22, 0x30]
+        'tiers': [4, 12, 22, 34, 48]
       }
     };
     function av(aw) {
-      if (aw < 0x3e8) {
+      if (aw < 1000) {
         return aw;
       }
-      if (aw < 0xf4240) {
-        return (aw / 0x3e8).toFixed(0x1) + 'k';
+      if (aw < 1000000) {
+        return (aw / 1000).toFixed(1) + 'k';
       }
-      if (aw < 0x3b9aca00) {
-        return (aw / 0xf4240).toFixed(0x1) + 'm';
+      if (aw < 1000000000) {
+        return (aw / 1000000).toFixed(1) + 'm';
       }
-      return (aw / 0x3b9aca00).toFixed(0x1) + 'b';
+      return (aw / 1000000000).toFixed(1) + 'b';
     }
     class ax {
       constructor() {
         this.commands = [false, false, false, false, false, false];
         this.mouse = {
-          'x': 0x0,
-          'y': 0x0
+          'x': 0,
+          'y': 0
         };
         this.target = {
-          'x': 0x0,
-          'y': 0x0
+          'x': 0,
+          'y': 0
         };
         this.elements = new Map();
         ai.addEventListener("mousedown", ay => this.mouseEvent(ay, true), false);
@@ -246,43 +246,43 @@ if (!self.__WB_pmw) {
         ai.addEventListener("mousemove", ba => this.mouseMoveEvent(ba), false);
         document.addEventListener("keydown", bb => this.keyEvent(bb, true), false);
         document.addEventListener("keyup", bc => this.keyEvent(bc, false), false);
-        this.rwheel = 0x0;
-        this.wheel = 0x0;
+        this.rwheel = 0;
+        this.wheel = 0;
         ai.addEventListener("wheel", bd => this.wheelEvent(bd), false);
         this.inventoryOpen = false;
         this.lastClick = {
           'id': "dummyObject",
-          'time': 0x0
+          'time': 0
         };
-        this.frames = 0x0;
-        this.fps = 0x0;
+        this.frames = 0;
+        this.fps = 0;
       }
       ['wheelEvent'](bf) {
-        this.rwheel += bf.deltaY > 0x0 ? 0x19 : -0x19;
+        this.rwheel += bf.deltaY > 0 ? 25 : -25;
       }
       ["keyEvent"](bg, bh) {
         switch (bg.keyCode) {
-          case 0x10:
-            this.commands[0x5] = bh;
+          case 16:
+            this.commands[5] = bh;
             break;
-          case 0x20:
-            this.commands[0x4] = bh;
+          case 32:
+            this.commands[4] = bh;
             break;
-          case 0x26:
-          case 0x57:
-            this.commands[0x0] = bh;
+          case 38:
+          case 87:
+            this.commands[0] = bh;
             break;
-          case 0x28:
-          case 0x53:
-            this.commands[0x1] = bh;
+          case 40:
+          case 83:
+            this.commands[1] = bh;
             break;
-          case 0x25:
-          case 0x41:
-            this.commands[0x2] = bh;
+          case 37:
+          case 65:
+            this.commands[2] = bh;
             break;
-          case 0x27:
-          case 0x44:
-            this.commands[0x3] = bh;
+          case 39:
+          case 68:
+            this.commands[3] = bh;
             break;
         }
       }
@@ -291,12 +291,12 @@ if (!self.__WB_pmw) {
         this.mouse.y = bi.clientY;
       }
       ["mouseEvent"](bj, bk) {
-        if (bj.button === 0x0) {
+        if (bj.button === 0) {
           let bl = false;
           if (bk === true) {
             this.mouseMoveEvent(bj);
             const bm = this.getElements();
-            for (let bn = bm.length - 0x1; bn >= 0x0; bn--) {
+            for (let bn = bm.length - 1; bn >= 0; bn--) {
               let bo = bm[bn];
               if (bo !== undefined) {
                 this.elements.get(bo).click();
@@ -312,25 +312,25 @@ if (!self.__WB_pmw) {
             }
           }
           if (bl === false) {
-            this.commands[0x4] = bk;
+            this.commands[4] = bk;
           }
         } else {
-          if (bj.button === 0x2) {
-            this.commands[0x5] = bk;
+          if (bj.button === 2) {
+            this.commands[5] = bk;
           }
         }
       }
       ["update"]() {
-        let bp = 0x0;
-        let bq = 0x1;
-        for (let br = 0x0; br < this.commands.length; br++) {
+        let bp = 0;
+        let bq = 1;
+        for (let br = 0; br < this.commands.length; br++) {
           if (this.commands[br]) {
             bp += bq;
           }
-          bq *= 0x2;
+          bq *= 2;
         }
-        if (window.floofConfig.mouseMovement && this.getElements().length === 0x0) {
-          bp += 0x40;
+        if (window.floofConfig.mouseMovement && this.getElements().length === 0) {
+          bp += 64;
         }
         return bp;
       }
@@ -364,78 +364,78 @@ if (!self.__WB_pmw) {
     }
     class cg {
       constructor() {
-        this.level = 0x0;
-        this.levelProgress = 0x0;
+        this.level = 0;
+        this.levelProgress = 0;
         this.discordWidget = false;
         this.isDead = false;
-        this.width = 0x0;
-        this.height = 0x0;
-        this.playerID = -0x1;
+        this.width = 0;
+        this.height = 0;
+        this.playerID = -1;
         this.entities = new Map();
         this.player = null;
         this.petals = [];
-        this.scene = 0x0;
+        this.scene = 0;
         this.camera = {
-          'x': 0x0,
-          'y': 0x0,
-          'fov': 0x3e8,
+          'x': 0,
+          'y': 0,
+          'fov': 1000,
           'getRatio'() {
             const ch = this.fov;
-            return Math.max(innerWidth / ch, innerHeight / ch / 0x438 * 0x780);
+            return Math.max(innerWidth / ch, innerHeight / ch / 1080 * 1920);
           }
         };
         this.portalObjects = [];
-        for (let ci = 0x0; ci < 0x32; ci++) {
+        for (let ci = 0; ci < 50; ci++) {
           this.portalObjects.push({
-            'x': 0x0,
-            'y': 0x0,
+            'x': 0,
+            'y': 0,
             'size': 0.01 + Math.random() * 0.1,
             'speed': 0.001 + Math.random() * 0.03,
-            'angle': Math.random() * Math.PI * 0x2,
+            'angle': Math.random() * Math.PI * 2,
             'alpha': 0.2 + Math.random() * 0.3
           });
         }
-        this.inventorySelection = [-0x1, -0x1];
-        this.slotSelection = -0x1;
+        this.inventorySelection = [-1, -1];
+        this.slotSelection = -1;
         this.absorbSelection = {};
         this.absorbInventory = {};
         this.waves = {
           'enabled': false,
-          'wave': 0x1,
-          'progress': 0x0,
-          'progressTarget': 0x0,
+          'wave': 1,
+          'progress': 0,
+          'progressTarget': 0,
           'mobs': []
         };
       }
       ["selectInventoryItem"](cj, ck) {
         this.inventorySelection = [cj, ck];
-        if (this.slotSelection > -0x1) {
+        if (this.slotSelection > -1) {
           this.swapItems();
         }
       }
       ["selectSlotItem"](cl) {
         this.slotSelection = cl;
-        if (this.inventorySelection[0x0] > -0x1) {
+        if (this.inventorySelection[0] > -1) {
           this.swapItems();
         }
       }
       ["swapItems"]() {
-        if (this.inventorySelection[0x0] > -0x1 && this.slotSelection > -0x1) {
+        if (this.inventorySelection[0] > -1 && this.slotSelection > -1) {
           this.socket.talk({
-            'type': 0x3,
-            'newIndex': this.inventorySelection[0x0],
-            'newRarity': this.inventorySelection[0x1],
+            'type': 3,
+            'newIndex': this.inventorySelection[0],
+            'newRarity': this.inventorySelection[1],
             'oldIndex': this.slotSelection
           });
         }
-        this.inventorySelection = [-0x1, -0x1];
-        this.slotSelection = -0x1;
+        this.inventorySelection = [-1, -1];
+        this.slotSelection = -1;
       }
       ["update"](cm, cn, co, cp) {
         this.width = cn;
         this.height = co;
         this.scene = cp;
-        if (cm !== -0x1) {
+        if (cm !== -1) {
           this.playerID = cm;
           this.player = this.entities.get(cm);
         } else {
@@ -443,18 +443,18 @@ if (!self.__WB_pmw) {
         }
       }
       ["updatePortalObjects"]() {
-        for (let cq = 0x0; cq < this.portalObjects.length; cq++) {
+        for (let cq = 0; cq < this.portalObjects.length; cq++) {
           let cr = this.portalObjects[cq];
           cr.x += Math.cos(cr.angle) * cr.speed;
           cr.y += Math.sin(cr.angle) * cr.speed;
-          if (cr.x < -0x1 || cr.x > 0x1 || cr.y < -0x1 || cr.y > 0x1) {
+          if (cr.x < -1 || cr.x > 1 || cr.y < -1 || cr.y > 1) {
             cr.alpha -= cr.speed * 0.25;
-            if (cr.alpha <= 0x0) {
-              cr.x = 0x0;
-              cr.y = 0x0;
+            if (cr.alpha <= 0) {
+              cr.x = 0;
+              cr.y = 0;
               cr.size = 0.01 + Math.random() * 0.1;
               cr.speed = 0.01 + Math.random() * 0.03;
-              cr.angle = Math.random() * Math.PI * 0x2;
+              cr.angle = Math.random() * Math.PI * 2;
               cr.alpha = 0.2 + Math.random() * 0.3;
             }
           }
@@ -462,7 +462,7 @@ if (!self.__WB_pmw) {
       }
       ["filterEntities"](cs) {
         for (const ct of this.entities.keys()) {
-          if (cs.indexOf(ct) === -0x1) {
+          if (cs.indexOf(ct) === -1) {
             this.entities['delete'](ct);
           }
         }
@@ -471,15 +471,15 @@ if (!self.__WB_pmw) {
     class cu {
       constructor() {
         this.socket = null;
-        this.inbound = 0x0;
-        this.outbound = 0x0;
-        this.inboundData = 0x0;
-        this.outboundData = 0x0;
-        this.latency = 0x0;
+        this.inbound = 0;
+        this.outbound = 0;
+        this.inboundData = 0;
+        this.outboundData = 0;
+        this.latency = 0;
         this.server = {
-          'fps': 0x0,
-          'tick': 0x0,
-          'entities': 0x0
+          'fps': 0,
+          'tick': 0,
+          'entities': 0
         };
         this.world = new cg();
         this.world.socket = this;
@@ -488,7 +488,7 @@ if (!self.__WB_pmw) {
         this.validated = false;
         this.worker = new Worker("./js/workers/packer.js");
         this.workerMap = new Map();
-        this.workerJobID = 0x0;
+        this.workerJobID = 0;
         this.worker.addEventListener("message", cv => {
           const {
             id: cw,
@@ -529,11 +529,11 @@ if (!self.__WB_pmw) {
         localStorage.setItem("password", this.password);
         localStorage.setItem("lastLogin", Date.now());
         this.talk({
-          'type': 0x0,
+          'type': 0,
           'time': performance.now()
         });
         this.talk({
-          'type': 0x1
+          'type': 1
         });
       }
       ["connect"](dg, dh, di) {
@@ -552,22 +552,22 @@ if (!self.__WB_pmw) {
       }
       ["closeEvent"]() {
         console.log("Disconnected from " + this.url);
-        ah = 0x0;
-        setTimeout(() => location.reload(), 0xdac);
+        ah = 0;
+        setTimeout(() => location.reload(), 3500);
         if (!this.validated) {
           localStorage.clear();
         }
       }
       async ["talk"](dl) {
-        if (this.socket?.["readyState"] !== 0x1) {
+        if (this.socket?.["readyState"] !== 1) {
           return;
         }
         const dm = await this.encode(dl);
         switch (dl.type) {
-          case 0x0:
+          case 0:
             this.lastPing = performance.now();
             break;
-          case 0x1:
+          case 1:
             this.world.isDead = false;
             break;
         }
@@ -583,15 +583,15 @@ if (!self.__WB_pmw) {
         let dq = await this.decode(dn);
         let dr = dq.type;
         switch (dr) {
-          case 0x0:
+          case 0:
             this.latency = performance.now() - this.lastPing;
             this.server = dq.server;
             setTimeout(() => this.talk({
-              'type': 0x0,
+              'type': 0,
               'time': performance.now()
-            }), 0x3e8);
+            }), 1000);
             break;
-          case 0x1:
+          case 1:
             this.world.entities.forEach(ds => {
               if (dq.entities[ds.id] === undefined) {
                 this.world.entities["delete"](ds.id);
@@ -604,10 +604,10 @@ if (!self.__WB_pmw) {
                 dv = {
                   'id': +dt,
                   'type': du.type,
-                  'size': 0x1,
+                  'size': 1,
                   'animations': {
-                    'mouthDip': 0x0,
-                    'mood': 0x0
+                    'mouthDip': 0,
+                    'mood': 0
                   }
                 };
                 dv.x = dv.rx = du.x;
@@ -615,18 +615,18 @@ if (!self.__WB_pmw) {
                 dv.rsize = dv.size;
                 dv.rotation = dv.rrotation = du.rotation;
                 dv.health = {
-                  'draws': du.health > 0x0,
+                  'draws': du.health > 0,
                   'real': du.health,
-                  'display': 0x1,
-                  'backbar': 0x1,
-                  'backbarTicker': 0x32,
-                  'alpha': 0x0
+                  'display': 1,
+                  'backbar': 1,
+                  'backbarTicker': 50,
+                  'alpha': 0
                 };
                 dv.shield = {
-                  'draws': du.shield > 0x0,
+                  'draws': du.shield > 0,
                   'real': du.shield,
-                  'display': 0x0,
-                  'alpha': 0x0
+                  'display': 0,
+                  'alpha': 0
                 };
                 if (du.index !== undefined) {
                   dv.index = du.index;
@@ -660,7 +660,7 @@ if (!self.__WB_pmw) {
                 dv.rsize = du.size;
                 dv.health.real = du.health;
                 dv.shield.real = du.shield;
-                dv.shield.draws = du.shield > 0x0;
+                dv.shield.draws = du.shield > 0;
                 if (du.points !== undefined) {
                   dv.points = du.points;
                 }
@@ -674,10 +674,10 @@ if (!self.__WB_pmw) {
               }
               this.world.entities.set(+dt, dv);
             }
-            if (dq.playerID !== -0x1) {
+            if (dq.playerID !== -1) {
               this.world.camera.fov = dq.fov;
               let dw = [];
-              for (let dx = 0x0; dx < dq.petals.length; dx++) {
+              for (let dx = 0; dx < dq.petals.length; dx++) {
                 let dy = dq.petals[dx];
                 let dz = this.world.petals.find((ea, eb) => {
                   return eb === dx && ea.alive === dy.alive && ea.index === dy.index && ea.rarity === at[dy.rarity];
@@ -687,20 +687,20 @@ if (!self.__WB_pmw) {
                   'rarity': at[dy.rarity],
                   'ratio': dz ? dz.ratio : dy.ratio,
                   'rratio': dy.ratio,
-                  'spinAngle': dz ? dz.spinAngle : 0x0
+                  'spinAngle': dz ? dz.spinAngle : 0
                 });
               }
               this.world.petals = dw;
             }
             this.world.update(dq.playerID, this.world.width, this.world.height, this.world.scene);
             break;
-          case 0x2:
+          case 2:
             af = dq.hardcodedPaths;
             break;
-          case 0x3:
-            this.world.update(-0x1, dq.width, dq.height, dq.scene);
+          case 3:
+            this.world.update(-1, dq.width, dq.height, dq.scene);
             break;
-          case 0x4:
+          case 4:
             if (dq.inventory) {
               ae = dq.inventory;
             }
@@ -719,20 +719,20 @@ if (!self.__WB_pmw) {
               }
             }
             break;
-          case 0x5:
+          case 5:
             this.world.isDead = true;
             break;
-          case 0x6:
+          case 6:
             this.world.discordWidget = true;
             break;
-          case 0x7:
-            this.world.discordWidget = dq.response ? 0x4 : 0x1;
+          case 7:
+            this.world.discordWidget = dq.response ? 4 : 1;
             break;
-          case 0x8:
+          case 8:
             this.world.waves = {
               'enabled': dq.enabled,
-              'wave': dq.wave ?? 0x0,
-              'progressTarget': dq.progress ?? 0x0,
+              'wave': dq.wave ?? 0,
+              'progressTarget': dq.progress ?? 0,
               'progress': this.world.waves.progress
             };
             break;
@@ -755,30 +755,30 @@ if (!self.__WB_pmw) {
         if (ei[em] !== undefined) {
           return ei[em];
         }
-        var [ej, en, eo] = ej.match(/\w\w/g).map(ep => parseInt(ep, 0x10));
-        var [ek, eq, er] = ek.match(/\w\w/g).map(es => parseInt(es, 0x10));
-        return ei[em] = '#' + Math.round(ej + (ek - ej) * el).toString(0x10).padStart(0x2, '0') + Math.round(en + (eq - en) * el).toString(0x10).padStart(0x2, '0') + Math.round(eo + (er - eo) * el).toString(0x10).padStart(0x2, '0');
+        var [ej, en, eo] = ej.match(/\w\w/g).map(ep => parseInt(ep, 16));
+        var [ek, eq, er] = ek.match(/\w\w/g).map(es => parseInt(es, 16));
+        return ei[em] = '#' + Math.round(ej + (ek - ej) * el).toString(16).padStart(2, '0') + Math.round(en + (eq - en) * el).toString(16).padStart(2, '0') + Math.round(eo + (er - eo) * el).toString(16).padStart(2, '0');
       };
     }();
     function et(eu, ev, ew, ex = ef.world) {
       let ey;
       switch (ex.scene) {
-        case 0x1:
+        case 1:
           ey = al.ant;
           break;
-        case 0x2:
+        case 2:
           ey = al.desert;
           break;
-        case 0x3:
+        case 3:
           ey = al.ocean;
           break;
-        case 0x4:
+        case 4:
           ey = al.sewerGrates;
           break;
-        case 0x5:
+        case 5:
           ey = al.forest;
           break;
-        case 0x6:
+        case 6:
           ey = al.tundra;
           break;
         default:
@@ -786,102 +786,102 @@ if (!self.__WB_pmw) {
           break;
       }
       if (ey === undefined || ey.ready === false) {
-        const ez = 0xc * eu;
+        const ez = 12 * eu;
         let fa;
         let fb;
         switch (ex.scene) {
-          case 0x1:
+          case 1:
             {
-              fa = ak[0x12];
-              fb = ak[0x11];
+              fa = ak[18];
+              fb = ak[17];
             }
             ;
             break;
-          case 0x2:
+          case 2:
             {
-              fa = ak[0x14];
-              fb = ak[0x15];
+              fa = ak[20];
+              fb = ak[21];
             }
             ;
             break;
-          case 0x3:
+          case 3:
             {
-              fa = ak[0x16];
-              fb = ak[0x17];
+              fa = ak[22];
+              fb = ak[23];
             }
             ;
             break;
           default:
             {
-              fa = ak[0x0];
-              fb = ak[0x13];
+              fa = ak[0];
+              fb = ak[19];
             }
             ;
         }
         aj.fillStyle = fb;
-        aj.strokeStyle = ak[0xf];
-        aj.fillRect(0x0, 0x0, innerWidth, innerHeight);
+        aj.strokeStyle = ak[15];
+        aj.fillRect(0, 0, innerWidth, innerHeight);
         aj.fillStyle = fa;
-        aj.fillRect(-ev + innerWidth * 0.5 - ex.width * eu, -ew + innerHeight * 0.5 - ex.height * eu, ex.width * eu * 0x2, ex.height * eu * 0x2);
+        aj.fillRect(-ev + innerWidth * 0.5 - ex.width * eu, -ew + innerHeight * 0.5 - ex.height * eu, ex.width * eu * 2, ex.height * eu * 2);
         aj.globalAlpha = 0.04;
         aj.lineWidth = eu;
         for (let fc = (innerWidth * 0.5 - ev) % ez; fc <= innerWidth; fc += ez) {
           aj.beginPath();
-          aj.moveTo(fc, 0x0);
+          aj.moveTo(fc, 0);
           aj.lineTo(fc, innerHeight);
           aj.stroke();
         }
         for (let fd = (innerHeight * 0.5 - ew) % ez; fd <= innerHeight; fd += ez) {
           aj.beginPath();
-          aj.moveTo(0x0, fd);
+          aj.moveTo(0, fd);
           aj.lineTo(innerWidth, fd);
           aj.stroke();
         }
-        aj.globalAlpha = 0x1;
+        aj.globalAlpha = 1;
         return;
       }
-      aj.clearRect(0x0, 0x0, innerWidth, innerHeight);
+      aj.clearRect(0, 0, innerWidth, innerHeight);
       aj.save();
       {
-        let fe = ex.scene === 0x4 ? al.sewer : al.dirt;
+        let fe = ex.scene === 4 ? al.sewer : al.dirt;
         let ff = fe.width * eu;
         let fg = fe.height * eu;
         for (let fh = -ev % ff - fg; fh <= innerWidth; fh += ff) {
           for (let fi = -ew % ff - ff; fi <= innerHeight; fi += ff) {
-            aj.drawImage(fe, fh - 0x1 | 0x0, fi - 0x1 | 0x0, ff + 0x2 | 0x0, fg + 0x2 | 0x0);
+            aj.drawImage(fe, fh - 1 | 0, fi - 1 | 0, ff + 2 | 0, fg + 2 | 0);
           }
         }
       }
       aj.beginPath();
-      aj.rect(-ev + innerWidth * 0.5 - ex.width * eu, -ew + innerHeight * 0.5 - ex.height * eu, ex.width * eu * 0x2, ex.height * eu * 0x2);
+      aj.rect(-ev + innerWidth * 0.5 - ex.width * eu, -ew + innerHeight * 0.5 - ex.height * eu, ex.width * eu * 2, ex.height * eu * 2);
       aj.clip();
       let fj = ey.width * eu;
       let fk = ey.height * eu;
       for (let fl = -ev % fj - fk; fl <= innerWidth; fl += fj) {
         for (let fm = -ew % fj - fj; fm <= innerHeight; fm += fj) {
-          aj.drawImage(ey, fl - 0x1 | 0x0, fm - 0x1 | 0x0, fj + 0x2 | 0x0, fk + 0x2 | 0x0);
+          aj.drawImage(ey, fl - 1 | 0, fm - 1 | 0, fj + 2 | 0, fk + 2 | 0);
         }
       }
       aj.restore();
     }
     function fn(fo) {
-      aj.strokeStyle = eh(fo, ak[0xf], 0.2);
+      aj.strokeStyle = eh(fo, ak[15], 0.2);
       aj.fillStyle = fo;
     }
     function fp(fq, fr, fs, ft, fu, fv = true) {
       aj.beginPath();
       switch (fq) {
-        case 0x0:
+        case 0:
           {
             const fw = aj.fillStyle;
             if (fv) {
               aj.fillStyle = aj.strokeStyle;
-              aj.arc(fr, fs, ft + aj.lineWidth, 0x0, Math.PI * 0x2);
+              aj.arc(fr, fs, ft + aj.lineWidth, 0, Math.PI * 2);
               aj.fill();
               aj.closePath();
               aj.beginPath();
             }
-            aj.arc(fr, fs, ft, 0x0, Math.PI * 0x2);
+            aj.arc(fr, fs, ft, 0, Math.PI * 2);
             aj.fillStyle = fw;
             aj.fill();
             return aj.closePath();
@@ -891,18 +891,18 @@ if (!self.__WB_pmw) {
           {
             aj.translate(fr, fs);
             aj.rotate(fu);
-            if (fq > 0x0) {
-              for (let fx = 0x0; fx < fq; fx++) {
-                const fy = fx / fq * Math.PI * 0x2;
+            if (fq > 0) {
+              for (let fx = 0; fx < fq; fx++) {
+                const fy = fx / fq * Math.PI * 2;
                 aj.lineTo(ft * Math.cos(fy), ft * Math.sin(fy));
               }
             } else {
-              const fz = 0x1 - 0x7 / fq / fq;
+              const fz = 1 - 7 / fq / fq;
               fq = -fq;
-              aj.moveTo(ft, 0x0);
-              for (let ga = 0x0; ga < fq; ga++) {
-                const gc = (ga + 0x1) / fq * Math.PI * 0x2;
-                const gd = (ga + 0.5) / fq * Math.PI * 0x2;
+              aj.moveTo(ft, 0);
+              for (let ga = 0; ga < fq; ga++) {
+                const gc = (ga + 1) / fq * Math.PI * 2;
+                const gd = (ga + 0.5) / fq * Math.PI * 2;
                 aj.quadraticCurveTo(ft * fz * Math.cos(gd), ft * fz * Math.sin(gd), ft * Math.cos(gc), ft * Math.sin(gc));
               }
             }
@@ -929,7 +929,7 @@ if (!self.__WB_pmw) {
     }
     function gk(gl, gm, gn, go, gp, gq = "center") {
       aj.fillStyle = gp;
-      aj.font = (go | 0x0) + "px 'Ubuntu'";
+      aj.font = (go | 0) + "px 'Ubuntu'";
       aj.textAlign = gq;
       aj.strokeStyle = eh(gp, "#000000", 0.8);
       aj.lineWidth = go * 0.15;
@@ -946,57 +946,57 @@ if (!self.__WB_pmw) {
     function gs(gt, gu, gv, gw, gx) {
       fn(gx);
       aj.save();
-      aj.strokeStyle = ak[0x1a];
+      aj.strokeStyle = ak[26];
       aj.lineWidth *= 1.5;
       const gy = Math.sin(performance.now() * 0.02 + gw) * 0.1;
       aj.beginPath();
-      aj.moveTo(0x0, -gv * 0.8);
+      aj.moveTo(0, -gv * 0.8);
       aj.rotate(gy);
       aj.lineTo(gv * 1.8, -gv * 0.425);
       aj.closePath();
       aj.stroke();
       aj.rotate(-gy);
       aj.beginPath();
-      aj.moveTo(0x0, gv * 0.8);
+      aj.moveTo(0, gv * 0.8);
       aj.rotate(-gy);
       aj.lineTo(gv * 1.8, gv * 0.425);
       aj.closePath();
       aj.stroke();
       aj.restore();
-      fp(0x0, gt, gu, gv, 0x0, true);
+      fp(0, gt, gu, gv, 0, true);
     }
-    function gz(ha, hb, hc, hd, he, hf, hg, hh = 0x0, hi = {}) {
+    function gz(ha, hb, hc, hd, he, hf, hg, hh = 0, hi = {}) {
       const hj = he * hf;
       aj.translate(hc, hd);
       aj.rotate(hg);
       const hk = Math.abs(hi.health.display - hi.health.real);
-      const hl = hk && hk > 0.025 ? 0.5 : 0x0;
+      const hl = hk && hk > 0.025 ? 0.5 : 0;
       hi.health.display = hi.health.display + 0.075 * (hi.health.real - hi.health.display);
       hi.shield.display = hi.shield.display + 0.075 * (hi.shield.real - hi.shield.display);
       if (hk < 0.01) {
         hi.health.backbar = hi.health.backbar + 0.1 * (hi.health.real - hi.health.backbar);
       }
       switch (ha) {
-        case 0x1:
+        case 1:
           {
             aj.lineWidth = hj * 0.1;
-            let hm = ak[0x7];
+            let hm = ak[7];
             if (hi.isPoisoned) {
-              hm = eh(hm, ak[0x1e], 0.85);
+              hm = eh(hm, ak[30], 0.85);
             }
             if (hi.armor) {
               let hn = window.petalIcons.Armor_0;
               if (hn) {
-                let ho = performance.now() / 333.3333333333333 * (hi.id % 0x2 ? -0x1 : 0x1);
+                let ho = performance.now() / 333.3333333333333 * (hi.id % 2 ? -1 : 1);
                 aj.rotate(ho - hg);
                 aj.drawImage(hn, -hj * 2.9, -hj * 2.9, hj * 5.8, hj * 5.8);
                 aj.rotate(-ho + hg);
               }
             }
             fn(eh(hm, "#FFFFFF", hl));
-            fp(0x0, 0x0, 0x0, hj, hg);
+            fp(0, 0, 0, hj, hg);
             aj.rotate(-hg);
-            hq(aj, hi, hi.attack ? 0x2 : hi.defend ? 0x3 : 0x1, hj, hg);
+            hq(aj, hi, hi.attack ? 2 : hi.defend ? 3 : 1, hj, hg);
             aj.rotate(hg);
             if (hi.antennae) {
               let hr = window.petalIcons.Antennae_0;
@@ -1017,31 +1017,31 @@ if (!self.__WB_pmw) {
           }
           ;
           break;
-        case 0x2:
+        case 2:
           {
             let ht;
             switch (hb) {
-              case 0x0:
-              case 0x1:
+              case 0:
+              case 1:
                 ht = window.petalRenders.Basic_0;
                 break;
-              case 0x3:
+              case 3:
                 ht = window.petalRenders.Stinger_0;
                 break;
-              case 0xc:
+              case 12:
                 ht = window.petalRenders.SingleEgg_0;
                 break;
-              case 0xd:
+              case 13:
                 ht = window.petalRenders.Egg_7;
                 break;
-              case 0x23:
+              case 35:
                 ht = window.petalRenders.Rose_0;
                 break;
-              case 0x24:
+              case 36:
                 aj.save();
                 aj.globalAlpha = 0.2;
                 aj.beginPath();
-                aj.arc(0x0, 0x0, Math.abs(hj * 1.5 + Math.sin(hi.id + performance.now() / 0x2ee) * hj * 0x4), 0x0, Math.PI * 0x2);
+                aj.arc(0, 0, Math.abs(hj * 1.5 + Math.sin(hi.id + performance.now() / 750) * hj * 4), 0, Math.PI * 2);
                 aj.closePath();
                 aj.fillStyle = "#FFFFFF";
                 aj.fill();
@@ -1051,207 +1051,207 @@ if (!self.__WB_pmw) {
               default:
                 ht = window.petalRenders[ar[hb] + '_' + hi.rarity.index];
             }
-            aj.drawImage(ht, -hj * 0x2, -hj * 0x2, hj * 0x4, hj * 0x4);
+            aj.drawImage(ht, -hj * 2, -hj * 2, hj * 4, hj * 4);
           }
           break;
-        case 0x3:
+        case 3:
           {
             let hu;
-            let hv = 0x2;
+            let hv = 2;
             switch (hb) {
-              case 0x0:
+              case 0:
                 {
-                  hu = mobIcons["Ladybug_" + hi.id % 0xa];
+                  hu = mobIcons["Ladybug_" + hi.id % 10];
                 }
                 ;
                 break;
-              case 0x1:
+              case 1:
                 {
                   hu = mobIcons.Bee;
                   hv = 3.5;
                 }
                 ;
                 break;
-              case 0x2:
-              case 0x3:
-              case 0x4:
-              case 0x5:
-              case 0xf:
-              case 0x10:
-              case 0x11:
-              case 0x12:
-              case 0x20:
-              case 0x21:
-              case 0x22:
-              case 0x23:
+              case 2:
+              case 3:
+              case 4:
+              case 5:
+              case 15:
+              case 16:
+              case 17:
+              case 18:
+              case 32:
+              case 33:
+              case 34:
+              case 35:
                 {
-                  let hw = hi.isPlayerMob ? ak[0x7] : hb > 0x1f ? ak[0x22] : hb > 0x5 ? ak[0x1f] : ak[0x18];
+                  let hw = hi.isPlayerMob ? ak[7] : hb > 31 ? ak[34] : hb > 5 ? ak[31] : ak[24];
                   aj.save();
                   fn(eh(hw, "#FFFFFF", hl));
                   aj.lineWidth = 0.4;
                   aj.scale(hj, hj);
                   switch (hb) {
-                    case 0x2:
-                    case 0xf:
-                    case 0x20:
-                      gs(0x0, 0x0, 0x1, hi.id, eh(hw, "#FFFFFF", hl));
+                    case 2:
+                    case 15:
+                    case 32:
+                      gs(0, 0, 1, hi.id, eh(hw, "#FFFFFF", hl));
                       break;
-                    case 0x3:
-                    case 0x10:
-                    case 0x21:
-                      fp(0x0, -1.1, 0x0, 0.667, 0x0, true);
-                      gs(0x0, 0x0, 0x1, hi.id, eh(hw, '#FFFFFF', hl));
+                    case 3:
+                    case 16:
+                    case 33:
+                      fp(0, -1.1, 0, 0.667, 0, true);
+                      gs(0, 0, 1, hi.id, eh(hw, '#FFFFFF', hl));
                       break;
-                    case 0x4:
-                    case 0x11:
-                    case 0x22:
-                      fp(0x0, -1.1, 0x0, 0.667, 0x0, true);
-                      const hx = Math.sin(performance.now() * 0.01 + hi.id) * 0.3 + Math.PI / 0xa;
+                    case 4:
+                    case 17:
+                    case 34:
+                      fp(0, -1.1, 0, 0.667, 0, true);
+                      const hx = Math.sin(performance.now() * 0.01 + hi.id) * 0.3 + Math.PI / 10;
                       aj.save();
                       aj.globalAlpha = 0.5;
-                      aj.fillStyle = eh(ak[0x19], "#FFFFFF", hl);
+                      aj.fillStyle = eh(ak[25], "#FFFFFF", hl);
                       aj.rotate(hx);
                       aj.beginPath();
-                      aj.moveTo(0x0, 0x0);
-                      aj.ellipse(-0x1, -0.3, 1.35, 0.5, 0x0, 0x0, Math.PI * 0x2);
-                      aj.rotate(-hx * 0x2);
-                      aj.ellipse(-0x1, 0.3, 1.35, 0.5, 0x0, 0x0, Math.PI * 0x2);
+                      aj.moveTo(0, 0);
+                      aj.ellipse(-1, -0.3, 1.35, 0.5, 0, 0, Math.PI * 2);
+                      aj.rotate(-hx * 2);
+                      aj.ellipse(-1, 0.3, 1.35, 0.5, 0, 0, Math.PI * 2);
                       aj.closePath();
                       aj.fill();
                       aj.restore();
-                      gs(0x0, 0x0, 0x1, hi.id, eh(hw, "#FFFFFF", hl));
+                      gs(0, 0, 1, hi.id, eh(hw, "#FFFFFF", hl));
                       break;
-                    case 0x5:
-                    case 0x12:
-                    case 0x23:
+                    case 5:
+                    case 18:
+                    case 35:
                       aj.lineWidth *= 0.8;
-                      fp(0x0, -0x2, 0x0, 1.3, 0x0, true);
-                      fp(0x0, -1.1, 0x0, 1.15, 0x0, true);
-                      const hy = Math.sin(performance.now() * 0.01 + hi.id) * 0.3 + Math.PI / 0xa;
+                      fp(0, -2, 0, 1.3, 0, true);
+                      fp(0, -1.1, 0, 1.15, 0, true);
+                      const hy = Math.sin(performance.now() * 0.01 + hi.id) * 0.3 + Math.PI / 10;
                       aj.save();
                       aj.globalAlpha = 0.5;
-                      aj.fillStyle = eh(ak[0x19], "#FFFFFF", hl);
+                      aj.fillStyle = eh(ak[25], "#FFFFFF", hl);
                       aj.rotate(hy);
                       aj.beginPath();
-                      aj.moveTo(0x0, 0x0);
-                      aj.ellipse(-0x1, -0.3, 1.35, 0.5, 0x0, 0x0, Math.PI * 0x2);
-                      aj.rotate(-hy * 0x2);
-                      aj.ellipse(-0x1, 0.3, 1.35, 0.5, 0x0, 0x0, Math.PI * 0x2);
+                      aj.moveTo(0, 0);
+                      aj.ellipse(-1, -0.3, 1.35, 0.5, 0, 0, Math.PI * 2);
+                      aj.rotate(-hy * 2);
+                      aj.ellipse(-1, 0.3, 1.35, 0.5, 0, 0, Math.PI * 2);
                       aj.closePath();
                       aj.fill();
                       aj.restore();
-                      gs(0x0, 0x0, 0x1, hi.id, eh(hw, "#FFFFFF", hl));
+                      gs(0, 0, 1, hi.id, eh(hw, "#FFFFFF", hl));
                       break;
                   }
                   aj.restore();
                 }
                 break;
-              case 0x6:
+              case 6:
                 hu = mobIcons["Ant Hole"];
                 break;
-              case 0x13:
+              case 19:
                 hu = mobIcons["Fire Ant Hole"];
                 break;
-              case 0x24:
+              case 36:
                 hu = mobIcons["Pharaoh Ant Hole"];
                 break;
-              case 0x7:
+              case 7:
                 hu = mobIcons["Rock_" + hi.rarity.index];
                 break;
-              case 0x8:
-                hu = mobIcons["Sponge_" + hi.id % 0x3];
+              case 8:
+                hu = mobIcons["Sponge_" + hi.id % 3];
                 break;
-              case 0x9:
+              case 9:
                 {
                   hu = mobIcons.Hornet;
                   hv = 3.5;
                 }
                 ;
                 break;
-              case 0xa:
+              case 10:
                 hu = mobIcons.Bubble;
                 break;
-              case 0xb:
+              case 11:
                 aj.save();
                 aj.lineWidth = 0.125;
                 aj.scale(hj, hj);
                 fn(eh("#DFDFDF", "#FFFFFF", hl));
                 aj.beginPath();
-                aj.arc(0x0, 0x0, 0x1, 0x0, Math.PI * 0x2);
+                aj.arc(0, 0, 1, 0, Math.PI * 2);
                 aj.closePath();
                 aj.globalAlpha = 0.5;
                 aj.fill();
-                aj.globalAlpha = 0x1;
+                aj.globalAlpha = 1;
                 aj.stroke();
-                for (let hz = 0x0; hz < 0x8; hz++) {
+                for (let hz = 0; hz < 8; hz++) {
                   aj.save();
-                  aj.rotate(Math.PI * 0x2 / 0x8 * hz);
+                  aj.rotate(Math.PI * 2 / 8 * hz);
                   aj.beginPath();
-                  aj.moveTo(0.8, 0x0);
+                  aj.moveTo(0.8, 0);
                   let ia = Math.sin(performance.now() * 0.00125 + hi.id) * 0.3;
-                  aj.lineTo(1.6, ia * (hz % 0x2 == 0x0 ? 0x1 : 0.8));
+                  aj.lineTo(1.6, ia * (hz % 2 == 0 ? 1 : 0.8));
                   aj.closePath();
                   aj.stroke();
                   aj.restore();
                 }
                 aj.restore();
                 break;
-              case 0xc:
+              case 12:
                 hu = mobIcons['Cactus_' + hi.rarity.index];
                 break;
-              case 0xd:
+              case 13:
                 {
                   aj.save();
                   aj.scale(hj, hj);
                   let ib = Math.sin(performance.now() * 0.01 + hi.id) * 0.05;
                   aj.rotate(ib);
-                  aj.drawImage(window.mobIcons.Pincer, 0.575, -0x1, 0x1, 1.334);
-                  aj.rotate(-ib * 0x2);
-                  aj.scale(0x1, -0x1);
-                  aj.drawImage(window.mobIcons.Pincer, 0.575, -0x1, 0x1, 1.334);
+                  aj.drawImage(window.mobIcons.Pincer, 0.575, -1, 1, 1.334);
+                  aj.rotate(-ib * 2);
+                  aj.scale(1, -1);
+                  aj.drawImage(window.mobIcons.Pincer, 0.575, -1, 1, 1.334);
                   aj.restore();
                 }
-                aj.drawImage(window.mobIcons[hi.isPlayerMob ? 'Beetle_Body_Player' : "Beetle_Body"], -hj, -hj, hj * 0x2, hj * 0x2);
+                aj.drawImage(window.mobIcons[hi.isPlayerMob ? 'Beetle_Body_Player' : "Beetle_Body"], -hj, -hj, hj * 2, hj * 2);
                 break;
-              case 0xe:
+              case 14:
                 {
                   aj.strokeStyle = "#444444";
                   aj.save();
                   aj.scale(hj, hj);
                   aj.lineWidth = 0.1;
                   let ic = Math.sin(performance.now() * 0.01 + hi.id) * 0.05;
-                  let ie = Math.sin(performance.now() * 0.01 + hi.id + Math.PI / 0x3) * 0.05;
-                  let ig = Math.sin(performance.now() * 0.01 + hi.id + Math.PI / 0x3 * 0x2) * 0.05;
+                  let ie = Math.sin(performance.now() * 0.01 + hi.id + Math.PI / 3) * 0.05;
+                  let ig = Math.sin(performance.now() * 0.01 + hi.id + Math.PI / 3 * 2) * 0.05;
                   aj.rotate(ic);
                   aj.beginPath();
-                  aj.moveTo(0.45, 0x0);
+                  aj.moveTo(0.45, 0);
                   aj.lineTo(0.45, 0.725);
                   aj.closePath();
                   aj.stroke();
                   aj.beginPath();
-                  aj.moveTo(0.45, 0x0);
+                  aj.moveTo(0.45, 0);
                   aj.lineTo(0.45, -0.725);
                   aj.closePath();
                   aj.stroke();
                   aj.rotate(-ic + ie);
                   aj.beginPath();
-                  aj.moveTo(0.1, 0x0);
-                  aj.lineTo(0x0, 0.8);
+                  aj.moveTo(0.1, 0);
+                  aj.lineTo(0, 0.8);
                   aj.closePath();
                   aj.stroke();
                   aj.beginPath();
-                  aj.moveTo(0.1, 0x0);
-                  aj.lineTo(0x0, -0.775);
+                  aj.moveTo(0.1, 0);
+                  aj.lineTo(0, -0.775);
                   aj.closePath();
                   aj.stroke();
                   aj.rotate(-ie - ig);
                   aj.beginPath();
-                  aj.moveTo(-0.5, 0x0);
+                  aj.moveTo(-0.5, 0);
                   aj.lineTo(-0.5, 0.775);
                   aj.closePath();
                   aj.stroke();
                   aj.beginPath();
-                  aj.moveTo(-0.5, 0x0);
+                  aj.moveTo(-0.5, 0);
                   aj.lineTo(-0.5, -0.8);
                   aj.closePath();
                   aj.stroke();
@@ -1263,19 +1263,19 @@ if (!self.__WB_pmw) {
                   let ih = Math.sin(performance.now() * 0.01 + hi.id) * 0.05;
                   aj.rotate(ih);
                   aj.drawImage(window.mobIcons.Pincer, 0.3, -0.7, 0.675, 0.8);
-                  aj.rotate(-ih * 0x2);
-                  aj.scale(0x1, -0x1);
+                  aj.rotate(-ih * 2);
+                  aj.scale(1, -1);
                   aj.drawImage(window.mobIcons.Pincer, 0.3, -0.7, 0.675, 0.8);
                   aj.restore();
                 }
-                aj.drawImage(window.mobIcons.Scorpion_Body, -hj, -hj, hj * 0x2, hj * 0x2);
+                aj.drawImage(window.mobIcons.Scorpion_Body, -hj, -hj, hj * 2, hj * 2);
                 break;
-              case 0x14:
+              case 20:
                 hu = window.mobIcons.Shell;
                 break;
-              case 0x15:
+              case 21:
                 aj.save();
-                fn(eh(ak[0x18], "#FFFFFF", hl));
+                fn(eh(ak[24], "#FFFFFF", hl));
                 aj.scale(hj, hj);
                 aj.lineWidth = 0.25;
                 aj.beginPath();
@@ -1283,14 +1283,14 @@ if (!self.__WB_pmw) {
                   let ii = Math.sin(performance.now() * 0.01 + hi.id) * 0.05 * 0.5;
                   aj.rotate(ii);
                   aj.moveTo(0.9, -0.7);
-                  aj.bezierCurveTo(1.1, -1.1, 1.7, -1.3, 1.5, -0x2);
+                  aj.bezierCurveTo(1.1, -1.1, 1.7, -1.3, 1.5, -2);
                   aj.rotate(-ii);
                 }
                 {
                   let ij = Math.sin(performance.now() * 0.02 + hi.id) * 0.05 * 0.75;
                   aj.rotate(ij);
                   aj.moveTo(0.9, 0.7);
-                  aj.bezierCurveTo(1.1, 1.1, 1.7, 1.3, 1.5, 0x2);
+                  aj.bezierCurveTo(1.1, 1.1, 1.7, 1.3, 1.5, 2);
                   aj.rotate(-ij);
                 }
                 {
@@ -1337,148 +1337,148 @@ if (!self.__WB_pmw) {
                 }
                 aj.stroke();
                 aj.closePath();
-                fp(0x0, 0x0, 0x0, 0x1, 0x0);
+                fp(0, 0, 0, 1, 0);
                 aj.restore();
                 break;
-              case 0x16:
+              case 22:
                 hu = window.mobIcons.Web;
                 break;
-              case 0x17:
-                fn(eh(ak[0x18], '#FFFFFF', hl));
+              case 23:
+                fn(eh(ak[24], '#FFFFFF', hl));
                 aj.lineWidth = hj * 0.15;
-                fp(0x0, 0x0, 0x0, hj, 0x0);
-                const ir = Math.sin(performance.now() * 0.01 + hi.id) * 0.35 + Math.PI / 0xa;
+                fp(0, 0, 0, hj, 0);
+                const ir = Math.sin(performance.now() * 0.01 + hi.id) * 0.35 + Math.PI / 10;
                 aj.save();
                 aj.globalAlpha = 0.5;
                 aj.scale(hj * 1.25, hj * 1.25);
-                aj.translate(0x0, -0.5);
+                aj.translate(0, -0.5);
                 aj.rotate(ir);
-                aj.drawImage(window.mobIcons.Wing, -0.5, -0.5, 0x1, 0x1);
+                aj.drawImage(window.mobIcons.Wing, -0.5, -0.5, 1, 1);
                 aj.rotate(-ir);
-                aj.translate(0x0, 0x1);
+                aj.translate(0, 1);
                 aj.rotate(-ir);
-                aj.drawImage(window.mobIcons.Wing, -0.5, -0.5, 0x1, 0x1);
+                aj.drawImage(window.mobIcons.Wing, -0.5, -0.5, 1, 1);
                 aj.restore();
                 break;
-              case 0x18:
+              case 24:
                 hu = window.mobIcons.Square;
                 break;
-              case 0x19:
+              case 25:
                 hu = window.mobIcons.Triangle;
                 break;
-              case 0x1a:
+              case 26:
                 hu = window.mobIcons.Pentagon;
                 break;
-              case 0x1b:
+              case 27:
                 hu = window.mobIcons.Wasp;
                 hv = 3.5;
                 break;
-              case 0x1c:
-                hu = window.mobIcons["Evil Ladybug_" + hi.id % 0xa];
+              case 28:
+                hu = window.mobIcons["Evil Ladybug_" + hi.id % 10];
                 break;
-              case 0x1d:
-                hu = window.mobIcons["Shrub_" + hi.id % 0xa];
+              case 29:
+                hu = window.mobIcons["Shrub_" + hi.id % 10];
                 break;
-              case 0x1e:
+              case 30:
                 hu = window.mobIcons.WalkingstickBody;
                 aj.save();
-                hi.stickbugRotate = (hi.stickbugRotate || 0x0) + 0.16666666666666666 * ((hi.rstickBugRotate || 0x0) - (hi.stickbugRotate || 0x0));
+                hi.stickbugRotate = (hi.stickbugRotate || 0) + 0.16666666666666666 * ((hi.rstickBugRotate || 0) - (hi.stickbugRotate || 0));
                 aj.rotate(hi.stickbugRotate);
-                aj.drawImage(window.mobIcons.WalkingstickLegs, -hj * (hv / 0x2), -hj * (hv / 0x2), hj * hv, hj * hv);
+                aj.drawImage(window.mobIcons.WalkingstickLegs, -hj * (hv / 2), -hj * (hv / 2), hj * hv, hj * hv);
                 aj.restore();
                 break;
-              case 0x1f:
-                hu = window.mobIcons["Shiny Ladybug_" + hi.id % 0xa];
+              case 31:
+                hu = window.mobIcons["Shiny Ladybug_" + hi.id % 10];
                 break;
-              case 0x25:
+              case 37:
                 hu = window.mobIcons.CentipedeHead;
-                hv = 0x3;
+                hv = 3;
                 break;
-              case 0x26:
+              case 38:
                 hu = window.mobIcons.CentipedeSegment;
-                hv = 0x3;
+                hv = 3;
                 break;
-              case 0x27:
+              case 39:
                 hu = window.mobIcons.EvilCentipedeHead;
-                hv = 0x3;
+                hv = 3;
                 break;
-              case 0x28:
+              case 40:
                 hu = window.mobIcons.EvilCentipedeSegment;
-                hv = 0x3;
+                hv = 3;
                 break;
-              case 0x29:
+              case 41:
                 hu = window.mobIcons.DesertCentipedeHead;
-                hv = 0x3;
+                hv = 3;
                 break;
-              case 0x2a:
+              case 42:
                 hu = window.mobIcons.DesertCentipedeSegment;
-                hv = 0x3;
+                hv = 3;
                 break;
-              case 0x2b:
+              case 43:
                 hu = window.mobIcons.DemonCoreBody;
                 hv = 2.5;
                 break;
-              case 0x2c:
+              case 44:
                 hu = window.mobIcons.DemonCoreOrb;
                 hv = 2.5;
                 hi.health.draws = false;
                 break;
             }
             if (hu) {
-              aj.drawImage(hu, -hj * (hv / 0x2), -hj * (hv / 0x2), hj * hv, hj * hv);
+              aj.drawImage(hu, -hj * (hv / 2), -hj * (hv / 2), hj * hv, hj * hv);
             }
           }
           ;
           break;
-        case 0x6:
+        case 6:
           {
             let is = hj * hi.width;
             let iu = hj * hi.height;
-            fn(ak[0x12], "#000000", 0.2);
-            aj.fillRect(-is - 0x1, -iu - 0x1, is * 0x2 + 0x2, iu * 0x2 + 0x2);
+            fn(ak[18], "#000000", 0.2);
+            aj.fillRect(-is - 1, -iu - 1, is * 2 + 2, iu * 2 + 2);
           }
           break;
-        case 0x8:
+        case 8:
           fn('#FFFFFF');
           aj.lineWidth = hj * 0.05;
           aj.globalAlpha = 0.3333333333333333;
-          fp(0x0, 0x0, 0x0, hj, 0x0, false);
-          fp(0x6, 0x0, 0x0, hj * 0.9, performance.now() / 0x1f4, true);
-          fp(0x6, 0x0, 0x0, hj * 0.7, -performance.now() / 0x190, true);
-          fp(0x6, 0x0, 0x0, hj * 0.5, performance.now() / 0x12c, true);
-          fp(0x6, 0x0, 0x0, hj * 0.3, -performance.now() / 0xc8, true);
+          fp(0, 0, 0, hj, 0, false);
+          fp(6, 0, 0, hj * 0.9, performance.now() / 500, true);
+          fp(6, 0, 0, hj * 0.7, -performance.now() / 400, true);
+          fp(6, 0, 0, hj * 0.5, performance.now() / 300, true);
+          fp(6, 0, 0, hj * 0.3, -performance.now() / 200, true);
           ef.world.portalObjects.forEach(function iv(iw) {
             aj.globalAlpha = iw.alpha;
-            fp(0x0, iw.x * hj, iw.y * hj, hj * iw.size, 0x0, false);
+            fp(0, iw.x * hj, iw.y * hj, hj * iw.size, 0, false);
           });
-          aj.globalAlpha = 0x1;
+          aj.globalAlpha = 1;
           break;
-        case 0x5:
+        case 5:
           fn(hi.rarity.color);
           aj.lineWidth = hj * 0.1;
           aj.globalAlpha = 0.9;
-          fp(0x4, 0x0, 0x0, hj, Math.PI / 0x4);
+          fp(4, 0, 0, hj, Math.PI / 4);
           {
             let ix = window.petalIcons[ar[hi.index] + '_' + hi.rarity.index];
             if (ix) {
               aj.drawImage(ix, -hj * 0.8, -hj * 0.8, hj * 1.6, hj * 1.6);
             }
           }
-          gk(ar[hi.index], 0x0, hj * 0.5, hj / 2.5, "#FFFFFF", "center");
-          aj.globalAlpha = 0x1;
+          gk(ar[hi.index], 0, hj * 0.5, hj / 2.5, "#FFFFFF", "center");
+          aj.globalAlpha = 1;
           break;
-        case 0x4:
+        case 4:
           switch (hi.index) {
-            case 0x0:
-              aj.drawImage(window.petalRenders.Missile_0, -hj * 0x2, -hj * 0x2, hj * 0x4, hj * 0x4);
+            case 0:
+              aj.drawImage(window.petalRenders.Missile_0, -hj * 2, -hj * 2, hj * 4, hj * 4);
               break;
-            case 0x1:
+            case 1:
               aj.save();
-              aj.lineWidth = 0x2;
+              aj.lineWidth = 2;
               aj.beginPath();
-              aj.moveTo(0x0, 0x0);
+              aj.moveTo(0, 0);
               if (hi.points) {
-                for (let iy = 0x0; iy < hi.points.length; iy++) {
+                for (let iy = 0; iy < hi.points.length; iy++) {
                   aj.lineTo(hi.points[iy].x * hf, hi.points[iy].y * hf);
                 }
               }
@@ -1486,41 +1486,41 @@ if (!self.__WB_pmw) {
               aj.stroke();
               aj.restore();
               break;
-            case 0x2:
-              aj.drawImage(window.mobIcons.ScorpionStinger, -hj, -hj, hj * 0x2, hj * 0x2);
+            case 2:
+              aj.drawImage(window.mobIcons.ScorpionStinger, -hj, -hj, hj * 2, hj * 2);
               break;
-            case 0x3:
-              aj.drawImage(window.petalRenders.SingularPea_0, -hj, -hj, hj * 0x2, hj * 0x2);
+            case 3:
+              aj.drawImage(window.petalRenders.SingularPea_0, -hj, -hj, hj * 2, hj * 2);
               break;
-            case 0x4:
-              aj.drawImage(window.petalRenders.SingularGrape_0, -hj, -hj, hj * 0x2, hj * 0x2);
+            case 4:
+              aj.drawImage(window.petalRenders.SingularGrape_0, -hj, -hj, hj * 2, hj * 2);
               break;
-            case 0x5:
-              aj.drawImage(window.petalRenders.Rose_0, -hj, -hj, hj * 0x2, hj * 0x2);
+            case 5:
+              aj.drawImage(window.petalRenders.Rose_0, -hj, -hj, hj * 2, hj * 2);
               break;
-            case 0x6:
-              aj.drawImage(window.mobIcons.DemonCoreMissile, -hj, -hj, hj * 0x2, hj * 0x2);
+            case 6:
+              aj.drawImage(window.mobIcons.DemonCoreMissile, -hj, -hj, hj * 2, hj * 2);
               break;
           }
           break;
       }
       aj.rotate(-hg);
-      if (hi.health.draws && hi.index !== 0x16) {
-        let iz = Math.max(hj * 0x2, 0x1e * hf);
-        let ja = -iz / 0x2;
-        let jb = iz / 0x2;
-        let jc = hj + 0x12 * hf;
+      if (hi.health.draws && hi.index !== 22) {
+        let iz = Math.max(hj * 2, 30 * hf);
+        let ja = -iz / 2;
+        let jb = iz / 2;
+        let jc = hj + 18 * hf;
         if (hi.rarity) {
-          gk(hi.rarity.name, jb, jc + 0x6 * hf, 0x5 * hf, hi.rarity.color, 'right');
+          gk(hi.rarity.name, jb, jc + 6 * hf, 5 * hf, hi.rarity.color, 'right');
         }
         if (hi.name) {
-          gk(hi.name, ja, jc - 0x6 * hf, 0x5 * hf, "#FFFFFF", 'left');
+          gk(hi.name, ja, jc - 6 * hf, 5 * hf, "#FFFFFF", 'left');
         }
-        ge(ja, jb, jc, 0x3 * hf, ak[0xf]);
+        ge(ja, jb, jc, 3 * hf, ak[15]);
         aj.globalAlpha *= 0.5;
-        ge(ja, ja + iz * hi.health.backbar, jc, 0x1 * hf, ak[0xe]);
-        aj.globalAlpha *= 0x2;
-        ge(ja, ja + iz * hi.health.display, jc, 0x2 * hf, ak[0xd]);
+        ge(ja, ja + iz * hi.health.backbar, jc, 1 * hf, ak[14]);
+        aj.globalAlpha *= 2;
+        ge(ja, ja + iz * hi.health.display, jc, 2 * hf, ak[13]);
         if (hi.shield.draws) {
           ge(ja, ja + iz * hi.shield.display, jc, 1.75 * hf, '#FFFFFF');
         }
@@ -1537,7 +1537,7 @@ if (!self.__WB_pmw) {
           aj.fill();
         }
         if (jl) {
-          aj.lineWidth = 0x4;
+          aj.lineWidth = 4;
           aj.stroke();
         }
       }
@@ -1550,15 +1550,15 @@ if (!self.__WB_pmw) {
           aj.fill();
         }
         if (ju) {
-          aj.lineWidth = 0x5;
+          aj.lineWidth = 5;
           aj.stroke();
         }
       }
       function jv(jw, jx, jy, jz, ka, kc, kd = eh(jz, '#000000', 0.2)) {
         if (kc) {
-          ka.spinAngle += 0.05 + ka.ratio / 0x5;
+          ka.spinAngle += 0.05 + ka.ratio / 5;
         }
-        let ke = jy / 0x2;
+        let ke = jy / 2;
         aj.save();
         aj.fillStyle = eh(kd, "#000000", 0.334);
         aj.beginPath();
@@ -1568,7 +1568,7 @@ if (!self.__WB_pmw) {
         aj.clip();
         aj.fillStyle = jz;
         aj.beginPath();
-        aj.arc(jw + ke, jx + ke, jy, ka.spinAngle, ka.spinAngle + Math.PI * 0x2 * ka.ratio);
+        aj.arc(jw + ke, jx + ke, jy, ka.spinAngle, ka.spinAngle + Math.PI * 2 * ka.ratio);
         aj.lineTo(jw + ke, jx + ke);
         aj.closePath();
         aj.fill();
@@ -1580,53 +1580,53 @@ if (!self.__WB_pmw) {
       }
       function kf(kg) {
         const kh = innerWidth * 0.5;
-        const ki = innerHeight - 0x14 - 0x41;
-        let kj = 0x0;
+        const ki = innerHeight - 20 - 65;
+        let kj = 0;
         for (let kk = kg.petals.length; kj < kk; kj++) {
           let kl = kg.petals[kj];
           kl.ratio = kl.ratio + 0.125 * (kl.rratio - kl.ratio);
-          kl.ratio = Math.max(0x0, Math.min(0x1, kl.ratio));
+          kl.ratio = Math.max(0, Math.min(1, kl.ratio));
           const km = 79 * kk * 0.5 - 79 * kj;
           if (kl.alive) {
-            jm(kh - km, ki, 0x41, 0x41, eh(kl.rarity.color, "#000000", 0.334), true, false);
-            jm(kh - km, ki + 0x41, 0x41, -0x41 * kl.ratio, kl.rarity.color, true, false);
-            jm(kh - km, ki, 0x41, 0x41, kl.rarity.color, false, true);
+            jm(kh - km, ki, 65, 65, eh(kl.rarity.color, "#000000", 0.334), true, false);
+            jm(kh - km, ki + 65, 65, -65 * kl.ratio, kl.rarity.color, true, false);
+            jm(kh - km, ki, 65, 65, kl.rarity.color, false, true);
           } else {
-            jv(kh - km, ki, 0x41, kl.rarity.color, kl, true);
+            jv(kh - km, ki, 65, kl.rarity.color, kl, true);
           }
           let kn = window.petalIcons[ar[kl.index] + '_' + kl.rarity.index];
           if (kn) {
             aj.drawImage(kn, kh - km + 6.5, ki, 52, 52);
           }
           gk(ar[kl.index], kh - km + 32.5, ki + 52, 13, "#ffffff", 'center');
-          ee.addElement("actionBar" + kj, kh - km, ki, kh - km + 0x41, ki + 0x41, () => {
+          ee.addElement("actionBar" + kj, kh - km, ki, kh - km + 65, ki + 65, () => {
             if (kg.player !== null) {
               kg.selectSlotItem(kj);
             }
           });
         }
       }
-      let ko = 0xa0;
+      let ko = 160;
       function kp(kq) {
-        ko = ko + 0.125 * ((kq.includes('minimap') ? 0xf0 : 0xa0) - ko);
-        aj.fillStyle = ak[0xf];
-        aj.fillRect(innerWidth - 0x14 - ko, 0x14, ko, ko);
-        ee.addElement('minimap', innerWidth - 0x14 - ko, 0x14, innerWidth - 0x14, 0x14 + ko);
+        ko = ko + 0.125 * ((kq.includes('minimap') ? 240 : 160) - ko);
+        aj.fillStyle = ak[15];
+        aj.fillRect(innerWidth - 20 - ko, 20, ko, ko);
+        ee.addElement('minimap', innerWidth - 20 - ko, 20, innerWidth - 20, 20 + ko);
       }
       const kr = ["#dbd849", "#895adc", '#dc5a5a', '#5a9edb', "#C8C8C8"];
       aj.save();
       kr.forEach(ks => {
         fn(ks);
-        kr.push('#' + aj.strokeStyle.slice(0x1));
+        kr.push('#' + aj.strokeStyle.slice(1));
       });
       aj.restore();
       function kt(ku) {
-        let kv = innerHeight - 0xe - 0x37;
-        for (let kw = 0x0; kw < 0x5; kw++) {
-          je(0xe, kv, 0x37, 0x37, eh(kr[kw], "#FFFFFF", ku.includes(kw) ? 0.2 : 0x0));
+        let kv = innerHeight - 14 - 55;
+        for (let kw = 0; kw < 5; kw++) {
+          je(14, kv, 55, 55, eh(kr[kw], "#FFFFFF", ku.includes(kw) ? 0.2 : 0));
           switch (kw) {
-            case 0x4:
-              ee.addElement(kw, 0xe, kv, 69, kv + 0x37, () => ee.settingsOpen = true);
+            case 4:
+              ee.addElement(kw, 14, kv, 69, kv + 55, () => ee.settingsOpen = true);
               aj.save();
               aj.fillStyle = aj.strokeStyle;
               aj.translate(25, kv + 11);
@@ -1636,8 +1636,8 @@ if (!self.__WB_pmw) {
               aj.closePath();
               aj.restore();
               break;
-            case 0x3:
-              ee.addElement(kw, 0xe, kv, 69, kv + 0x37, () => ee.inventoryOpen = true);
+            case 3:
+              ee.addElement(kw, 14, kv, 69, kv + 55, () => ee.inventoryOpen = true);
               aj.save();
               aj.fillStyle = aj.strokeStyle;
               aj.translate(25, kv + 11);
@@ -1647,8 +1647,8 @@ if (!self.__WB_pmw) {
               aj.closePath();
               aj.restore();
               break;
-            case 0x2:
-              ee.addElement(kw, 0xe, kv, 69, kv + 0x37, () => ee.skillOpen = true);
+            case 2:
+              ee.addElement(kw, 14, kv, 69, kv + 55, () => ee.skillOpen = true);
               aj.save();
               aj.fillStyle = aj.strokeStyle;
               aj.translate(25, kv + 11);
@@ -1658,8 +1658,8 @@ if (!self.__WB_pmw) {
               aj.closePath();
               aj.restore();
               break;
-            case 0x1:
-              ee.addElement(kw, 0xe, kv, 69, kv + 0x37, () => {
+            case 1:
+              ee.addElement(kw, 14, kv, 69, kv + 55, () => {
                 ee.absorbOpen = true;
                 ef.world.absorbInventory = JSON.parse(JSON.stringify(ae));
                 ef.world.absorbSelection = {};
@@ -1673,8 +1673,8 @@ if (!self.__WB_pmw) {
               aj.closePath();
               aj.restore();
               break;
-            case 0x0:
-              ee.addElement(kw, 0xe, kv, 69, kv + 0x37, () => ee.mobGalleryOpen = true);
+            case 0:
+              ee.addElement(kw, 14, kv, 69, kv + 55, () => ee.mobGalleryOpen = true);
               aj.save();
               aj.drawImage(window.mobIcons.LadybugMobGalleryIcon, 25, kv + 11, 33, 33);
               aj.restore();
@@ -1685,7 +1685,7 @@ if (!self.__WB_pmw) {
         }
       }
       function kx(ky, kz) {
-        let la = ef.world.absorbSelection[ky] || [0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0];
+        let la = ef.world.absorbSelection[ky] || [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         la[kz]++;
         ef.world.absorbInventory[ky][kz]--;
         ef.world.absorbSelection[ky] = la;
@@ -1694,39 +1694,39 @@ if (!self.__WB_pmw) {
         if (!lc.waves.enabled) {
           return;
         }
-        gk("Wave " + lc.waves.wave, innerWidth / 0x2, 24, 0x1e, "#ffffff", "center");
+        gk("Wave " + lc.waves.wave, innerWidth / 2, 24, 30, "#ffffff", "center");
         lc.waves.progress = lc.waves.progress + 0.1 * (lc.waves.progressTarget - lc.waves.progress);
         let ld;
-        let le = 0x0;
-        let lf = 0x1;
+        let le = 0;
+        let lf = 1;
         let lg = lc.waves.progress / 0.1;
         if (lc.waves.progress > 0.9) {
-          le = 0x6;
-          lf = 0x7;
+          le = 6;
+          lf = 7;
           lg = (lc.waves.progress - 0.9) / 0.1;
         } else {
           if (lc.waves.progress > 0.8) {
-            le = 0x5;
-            lf = 0x6;
+            le = 5;
+            lf = 6;
             lg = (lc.waves.progress - 0.8) / 0.1;
           } else {
             if (lc.waves.progress > 0.65) {
-              le = 0x4;
-              lf = 0x5;
+              le = 4;
+              lf = 5;
               lg = (lc.waves.progress - 0.65) / 0.15;
             } else {
               if (lc.waves.progress > 0.45) {
-                le = 0x3;
-                lf = 0x4;
+                le = 3;
+                lf = 4;
                 lg = (lc.waves.progress - 0.45) / 0.2;
               } else {
                 if (lc.waves.progress > 0.25) {
-                  le = 0x2;
-                  lf = 0x3;
+                  le = 2;
+                  lf = 3;
                   lg = (lc.waves.progress - 0.25) / 0.2;
                 } else if (lc.waves.progress > 0.1) {
-                  le = 0x1;
-                  lf = 0x2;
+                  le = 1;
+                  lf = 2;
                   lg = (lc.waves.progress - 0.1) / 0.15;
                 }
               }
@@ -1734,54 +1734,54 @@ if (!self.__WB_pmw) {
           }
         }
         ld = eh(at[le].color, at[lf].color, lg);
-        je(innerWidth / 0x2 - 150, 54, 0x12c, 0x14, '#000000', true, true);
-        je(innerWidth / 0x2 - 150, 54, 0x12c * (0x1 - lc.waves.progress), 0x14, ld, true, true);
+        je(innerWidth / 2 - 150, 54, 300, 20, '#000000', true, true);
+        je(innerWidth / 2 - 150, 54, 300 * (1 - lc.waves.progress), 20, ld, true, true);
       }
       function lh(li) {
-        if (li < 0x400) {
+        if (li < 1024) {
           return li + 'b';
         }
-        if (li < 0x100000) {
-          return (li / 0x400).toFixed(0x1) + 'kb';
+        if (li < 1048576) {
+          return (li / 1024).toFixed(1) + 'kb';
         }
-        if (li < 0x40000000) {
-          return (li / 0x100000).toFixed(0x1) + 'mb';
+        if (li < 1073741824) {
+          return (li / 1048576).toFixed(1) + 'mb';
         }
-        return (li / 0x40000000).toFixed(0x1) + 'gb';
+        return (li / 1073741824).toFixed(1) + 'gb';
       }
       function lj() {
-        let lk = 0xe;
-        let ll = 0xe;
+        let lk = 14;
+        let ll = 14;
         let lm = false;
         if (window.floofConfig.showFPS) {
           let ln = "FPS: " + ee.fps;
-          gk(ln, lk, ll, 0xf, '#ffffff', "left");
-          lk += aj.measureText(ln).width + 0xe;
+          gk(ln, lk, ll, 15, '#ffffff', "left");
+          lk += aj.measureText(ln).width + 14;
           lm = true;
         }
         if (window.floofConfig.showPing) {
-          let lo = "Ping: " + ef.latency.toFixed(0x1) + 'ms';
-          gk(lo, lk, ll, 0xf, "#ffffff", "left");
-          lk += aj.measureText(lo).width + 0xe;
+          let lo = "Ping: " + ef.latency.toFixed(1) + 'ms';
+          gk(lo, lk, ll, 15, "#ffffff", "left");
+          lk += aj.measureText(lo).width + 14;
           lm = true;
         }
         if (window.floofConfig.showBandwidth) {
           let lp = "In: " + lh(ef.inboundData) + '/s';
-          gk(lp, lk, ll, 0xf, "#ffffff", "left");
-          lk += aj.measureText(lp).width + 0xe;
+          gk(lp, lk, ll, 15, "#ffffff", "left");
+          lk += aj.measureText(lp).width + 14;
           lp = "Out: " + lh(ef.outboundData) + '/s';
-          gk(lp, lk, ll, 0xf, "#ffffff", "left");
-          lk += aj.measureText(lp).width + 0xe;
+          gk(lp, lk, ll, 15, "#ffffff", "left");
+          lk += aj.measureText(lp).width + 14;
           lm = true;
         }
         if (lm) {
-          lk = 0xe;
-          ll += 0xe;
+          lk = 14;
+          ll += 14;
         }
         if (window.floofConfig.showServerDebug && ef.server.tick) {
-          for (let lq of ["Server FPS: " + ef.server.fps, "Server Tick: " + ef.server.tick.toFixed(0x2) + "ms/tick", "Server Entities: " + ef.server.entities]) {
-            gk(lq, lk, ll, 0xf, "#ffffff", 'left');
-            lk += aj.measureText(lq).width + 0xe;
+          for (let lq of ["Server FPS: " + ef.server.fps, "Server Tick: " + ef.server.tick.toFixed(2) + "ms/tick", "Server Entities: " + ef.server.entities]) {
+            gk(lq, lk, ll, 15, "#ffffff", 'left');
+            lk += aj.measureText(lq).width + 14;
           }
         }
       }
@@ -1793,40 +1793,40 @@ if (!self.__WB_pmw) {
         lb(lr);
         lj();
         if (lr.discordWidget) {
-          je(0xe, innerHeight - 0xe - 0x7d, 0x12c, 0x7d, "#5865F2", true, true);
-          if (lr.discordWidget === 0x4) {
-            gk("Successfully linked", 164, innerHeight - 0xe - 0x7d + 0x14, 0x19, "#ffffff", "center");
+          je(14, innerHeight - 14 - 125, 300, 125, "#5865F2", true, true);
+          if (lr.discordWidget === 4) {
+            gk("Successfully linked", 164, innerHeight - 14 - 125 + 20, 25, "#ffffff", "center");
           } else {
-            gk("Would you like to link", 164, innerHeight - 0xe - 0x7d + 0x12, 0x14, "#ffffff", "center");
-            gk("your Discord Account?", 164, innerHeight - 0xe - 0x7d + 0x12 + 0x17, 0x14, "#ffffff", 'center');
+            gk("Would you like to link", 164, innerHeight - 14 - 125 + 18, 20, "#ffffff", "center");
+            gk("your Discord Account?", 164, innerHeight - 14 - 125 + 18 + 23, 20, "#ffffff", 'center');
           }
           switch (lr.discordWidget) {
-            case 0x2:
+            case 2:
               {
-                je(28, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe, 272, 0x32, "#43B581", true, true);
-                gk("Waiting...", 164, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe + 0x19, 0x14, "#ffffff", "center");
+                je(28, innerHeight - 14 - 125 + 125 - 50 - 14, 272, 50, "#43B581", true, true);
+                gk("Waiting...", 164, innerHeight - 14 - 125 + 125 - 50 - 14 + 25, 20, "#ffffff", "center");
               }
               break;
-            case 0x3:
+            case 3:
               {
-                je(28, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe, 272, 0x32, "#43B581", true, true);
-                gk('Verifying...', 164, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe + 0x19, 0x14, "#ffffff", 'center');
+                je(28, innerHeight - 14 - 125 + 125 - 50 - 14, 272, 50, "#43B581", true, true);
+                gk('Verifying...', 164, innerHeight - 14 - 125 + 125 - 50 - 14 + 25, 20, "#ffffff", 'center');
               }
               break;
-            case 0x4:
+            case 4:
               {
-                je(28, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe, 272, 0x32, eh("#F04747", "#FFFFFF", ls.includes("discordClose") ? 0.2 : 0x0), true, true);
-                gk("Close", 164, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe + 0x19, 0x14, '#ffffff', "center");
-                ee.addElement("discordClose", 28, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe, 300, innerHeight - 0xe - 0x7d + 0x7d - 0xe, () => {
+                je(28, innerHeight - 14 - 125 + 125 - 50 - 14, 272, 50, eh("#F04747", "#FFFFFF", ls.includes("discordClose") ? 0.2 : 0), true, true);
+                gk("Close", 164, innerHeight - 14 - 125 + 125 - 50 - 14 + 25, 20, '#ffffff', "center");
+                ee.addElement("discordClose", 28, innerHeight - 14 - 125 + 125 - 50 - 14, 300, innerHeight - 14 - 125 + 125 - 14, () => {
                   lr.discordWidget = false;
                 });
               }
               break;
             default:
               {
-                je(28, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe, 129, 0x32, eh("#43B581", '#FFFFFF', ls.includes('discordYes') ? 0.2 : 0x0), true, true);
-                gk("Yes", 92.5, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe + 25, 0x14, "#ffffff", "center");
-                ee.addElement("discordYes", 28, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe, 157, innerHeight - 0xe - 0x7d + 0x7d - 0xe, () => {
+                je(28, innerHeight - 14 - 125 + 125 - 50 - 14, 129, 50, eh("#43B581", '#FFFFFF', ls.includes('discordYes') ? 0.2 : 0), true, true);
+                gk("Yes", 92.5, innerHeight - 14 - 125 + 125 - 50 - 14 + 25, 20, "#ffffff", "center");
+                ee.addElement("discordYes", 28, innerHeight - 14 - 125 + 125 - 50 - 14, 157, innerHeight - 14 - 125 + 125 - 14, () => {
                   let lt = false;
                   let lu = window.open('/discordModal.html', "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");
                   let lv = setInterval(function lw() {
@@ -1834,17 +1834,17 @@ if (!self.__WB_pmw) {
                       clearInterval(lv);
                       window.removeEventListener("storage", lx);
                       if (lt) {
-                        lr.discordWidget = 0x3;
+                        lr.discordWidget = 3;
                       } else {
                         lr.discordWidget = true;
                       }
                     }
-                  }, 0xfa);
+                  }, 250);
                   let lx = ly => {
                     if (ly.key === 'discordCode') {
                       lt = true;
                       ef.talk({
-                        'type': 0x4,
+                        'type': 4,
                         'code': ly.newValue
                       });
                       window.removeEventListener("storage", lx);
@@ -1852,11 +1852,11 @@ if (!self.__WB_pmw) {
                     }
                   };
                   window.addEventListener("storage", lx);
-                  lr.discordWidget = 0x2;
+                  lr.discordWidget = 2;
                 });
-                je(171, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe, 129, 0x32, eh('#F04747', "#FFFFFF", ls.includes("discordNo") ? 0.2 : 0x0), true, true);
-                gk('No', 235.5, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe + 25, 0x14, "#ffffff", "center");
-                ee.addElement("discordNo", 171, innerHeight - 0xe - 0x7d + 0x7d - 0x32 - 0xe, 300, innerHeight - 0xe - 0x7d + 0x7d - 0xe, () => {
+                je(171, innerHeight - 14 - 125 + 125 - 50 - 14, 129, 50, eh('#F04747', "#FFFFFF", ls.includes("discordNo") ? 0.2 : 0), true, true);
+                gk('No', 235.5, innerHeight - 14 - 125 + 125 - 50 - 14 + 25, 20, "#ffffff", "center");
+                ee.addElement("discordNo", 171, innerHeight - 14 - 125 + 125 - 50 - 14, 300, innerHeight - 14 - 125 + 125 - 14, () => {
                   lr.discordWidget = false;
                 });
               }
@@ -1864,20 +1864,20 @@ if (!self.__WB_pmw) {
           return;
         }
         if (ee.settingsOpen) {
-          je(0xe, innerHeight - 0xe - 0x190, 0x15e, 0x190, kr[0x4], true, true);
-          ee.addElement("currentMenuOpen", 0xe, innerHeight - 0xe - 0x190, 364, innerHeight - 0xe, () => {});
-          gk("Settings", 189, innerHeight - 0xe - 0x190 + 0x23, 0x1e, '#ffffff', 'center');
-          je(324, innerHeight - 0xe - 0x190 + 0xa, 0x1e, 0x1e, eh(ak[0x5], "#FFFFFF", ls.includes("closeSettings") ? 0.2 : 0x0), true, true);
-          gk('X', 339, innerHeight - 0xe - 0x190 + 0x19, 0x14, '#ffffff', "center");
-          ee.addElement("closeSettings", 324, innerHeight - 0xe - 0x190 + 0xa, 354, innerHeight - 0xe - 0x190 + 0x28, () => ee.settingsOpen = false);
-          let lz = innerHeight - 0xe - 0x190 + 0x64;
+          je(14, innerHeight - 14 - 400, 350, 400, kr[4], true, true);
+          ee.addElement("currentMenuOpen", 14, innerHeight - 14 - 400, 364, innerHeight - 14, () => {});
+          gk("Settings", 189, innerHeight - 14 - 400 + 35, 30, '#ffffff', 'center');
+          je(324, innerHeight - 14 - 400 + 10, 30, 30, eh(ak[5], "#FFFFFF", ls.includes("closeSettings") ? 0.2 : 0), true, true);
+          gk('X', 339, innerHeight - 14 - 400 + 25, 20, '#ffffff', "center");
+          ee.addElement("closeSettings", 324, innerHeight - 14 - 400 + 10, 354, innerHeight - 14 - 400 + 40, () => ee.settingsOpen = false);
+          let lz = innerHeight - 14 - 400 + 100;
           function ma(mc, md) {
-            je(44, lz, 0x14, 0x14, eh(eh(kr[0x4], '#000000', window.floofConfig[md] ? 0.2 : 0x0), "#FFFFFF", ls.includes("settings" + md) ? 0.2 : 0x0), true, true);
-            gk(mc, 74, lz + 0xf, 0x14, "#ffffff", "left");
-            ee.addElement("settings" + md, 44, lz, 64, lz + 0x14, () => {
+            je(44, lz, 20, 20, eh(eh(kr[4], '#000000', window.floofConfig[md] ? 0.2 : 0), "#FFFFFF", ls.includes("settings" + md) ? 0.2 : 0), true, true);
+            gk(mc, 74, lz + 15, 20, "#ffffff", "left");
+            ee.addElement("settings" + md, 44, lz, 64, lz + 20, () => {
               window.floofConfig[md] = !window.floofConfig[md];
             });
-            lz += 0x28;
+            lz += 40;
           }
           ma("Show FPS", "showFPS");
           ma("Show Server Debug", "showServerDebug");
@@ -1887,31 +1887,31 @@ if (!self.__WB_pmw) {
           return;
         }
         if (ee.inventoryOpen) {
-          let me = -0x1;
-          je(0xe, innerHeight - 0xe - 0x226, 0x190, 0x226, kr[0x3], true, true);
-          ee.addElement("currentMenuOpen", 0xe, innerHeight - 0xe - 0x226, 414, innerHeight - 0xe, () => {});
-          gk("Inventory", 214, innerHeight - 0xe - 0x226 + 0x23, 0x1e, "#ffffff", 'center');
-          gk("Click a petal then click a slot to equip it", 214, innerHeight - 0xe - 0x226 + 0x41, 0x14, '#ffffff', "center");
-          je(374, innerHeight - 0xe - 0x226 + 0xa, 0x1e, 0x1e, eh(ak[0x5], '#FFFFFF', ls.includes("closeInventory") ? 0.2 : 0x0), true, true);
-          gk('X', 389, innerHeight - 0xe - 0x226 + 0x19, 0x14, "#ffffff", "center");
-          ee.addElement('closeInventory', 374, innerHeight - 0xe - 0x226 + 0xa, 404, innerHeight - 0xe - 0x226 + 0x28, () => ee.inventoryOpen = false);
+          let me = -1;
+          je(14, innerHeight - 14 - 550, 400, 550, kr[3], true, true);
+          ee.addElement("currentMenuOpen", 14, innerHeight - 14 - 550, 414, innerHeight - 14, () => {});
+          gk("Inventory", 214, innerHeight - 14 - 550 + 35, 30, "#ffffff", 'center');
+          gk("Click a petal then click a slot to equip it", 214, innerHeight - 14 - 550 + 65, 20, '#ffffff', "center");
+          je(374, innerHeight - 14 - 550 + 10, 30, 30, eh(ak[5], '#FFFFFF', ls.includes("closeInventory") ? 0.2 : 0), true, true);
+          gk('X', 389, innerHeight - 14 - 550 + 25, 20, "#ffffff", "center");
+          ee.addElement('closeInventory', 374, innerHeight - 14 - 550 + 10, 404, innerHeight - 14 - 550 + 40, () => ee.inventoryOpen = false);
           let mf = {
-            0x0: [],
-            0x1: [],
-            0x2: [],
-            0x3: [],
-            0x4: [],
-            0x5: [],
-            0x6: [],
-            0x7: [],
-            0x8: [],
-            0x9: [],
-            0xa: []
+            0: [],
+            1: [],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: [],
+            7: [],
+            8: [],
+            9: [],
+            10: []
           };
           for (let mg in ae) {
             let mh = ae[mg];
             mh.forEach((mi, mj) => {
-              if (mi > 0x0) {
+              if (mi > 0) {
                 mf[mj].push({
                   'index': mg,
                   'rarity': mj,
@@ -1925,55 +1925,55 @@ if (!self.__WB_pmw) {
             let mm = mf[ml];
             mk.unshift(...mm);
           }
-          ee.rwheel = Math.max(ee.rwheel, -0x14);
-          ee.rwheel = Math.min(ee.rwheel, mk.length / 0x5 * 65 - 0x14);
+          ee.rwheel = Math.max(ee.rwheel, -20);
+          ee.rwheel = Math.min(ee.rwheel, mk.length / 5 * 65 - 20);
           let mn = 39;
-          let mo = -ee.wheel + innerHeight - 0xe - 0x226 + 0x64;
+          let mo = -ee.wheel + innerHeight - 14 - 550 + 100;
           aj.save();
           aj.beginPath();
-          aj.rect(0xe, innerHeight - 0xe - 0x226 + 0x64, 390, 430);
+          aj.rect(14, innerHeight - 14 - 550 + 100, 390, 430);
           aj.clip();
           aj.closePath();
-          for (let mp = 0x0; mp < mk.length; mp++) {
+          for (let mp = 0; mp < mk.length; mp++) {
             let mq = mk[mp];
             if (ls.includes("inventory" + mp)) {
               me = mq;
             }
-            je(mn, mo, 0x37, 0x37, eh(at[mq.rarity].color, "#FFFFFF", ls.includes("inventory" + mp) ? 0.2 : 0x0), true, true);
+            je(mn, mo, 55, 55, eh(at[mq.rarity].color, "#FFFFFF", ls.includes("inventory" + mp) ? 0.2 : 0), true, true);
             let mr = window.petalIcons[ar[mq.index] + '_' + mq.rarity];
             if (mr) {
-              aj.drawImage(mr, mn, mo - 5.5, 0x37, 0x37);
+              aj.drawImage(mr, mn, mo - 5.5, 55, 55);
             }
             aj.save();
-            aj.translate(mn + 0x37, mo);
-            aj.rotate(Math.PI / 0x4);
-            gk('x' + av(mq.count), 0x0, 0x0, 15.125000000000002, "#ffffff", "center");
+            aj.translate(mn + 55, mo);
+            aj.rotate(Math.PI / 4);
+            gk('x' + av(mq.count), 0, 0, 15.125000000000002, "#ffffff", "center");
             aj.restore();
             gk(ar[mq.index], mn + 27.5, mo + 46.75, 13.75, '#ffffff', 'center');
-            ee.addElement("inventory" + mp, mn, mo, mn + 0x37, mo + 0x37, () => {
+            ee.addElement("inventory" + mp, mn, mo, mn + 55, mo + 55, () => {
               if (lr.player !== null) {
                 lr.selectInventoryItem(mq.index, mq.rarity);
               }
             });
             mn += 72.5;
-            if (mn + 0x37 > 404) {
+            if (mn + 55 > 404) {
               mn = 39;
               mo += 72.5;
             }
           }
           aj.restore();
-          if (me !== -0x1) {
+          if (me !== -1) {
             let mt = ar[me.index].toUpperCase().replace(/ /g, '_');
             rarity = at[me.rarity];
             config = o[mt];
             stats = config.rarities[rarity.name.toUpperCase()];
-            let mu = innerHeight - 0xe - 0x226 + 0x64;
+            let mu = innerHeight - 14 - 550 + 100;
             let mv = config.description;
             let mw = mv.split(" ");
             let mx = '';
             aj.font = "15px Ubuntu";
             let my = [];
-            for (let mz = 0x0; mz < mw.length; mz++) {
+            for (let mz = 0; mz < mw.length; mz++) {
               let na = mx + mw[mz] + " ";
               let nb = aj.measureText(na);
               let nc = nb.width;
@@ -1985,133 +1985,133 @@ if (!self.__WB_pmw) {
               }
             }
             my.push(mx);
-            let nd = 0x4b + ((stats.damage ? 0x14 : 0x0) + (stats.health ? 0x14 : 0x0) + (stats.bounces ? 0x14 : 0x0) + (stats.radians ? 0x14 : 0x0) + (stats.healthIncrease ? 0x14 : 0x0) + (stats.extraView ? 0x14 : 0x0) + (stats.healPerSecond ? 0x14 : 0x0) + (stats.poison ? 0x14 : 0x0) + (stats.heal ? 0x14 : 0x0) + (stats.pickupRadius ? 0x14 : 0x0) + (stats.speedIncrease ? 0x14 : 0x0) + (stats.armor ? 0x14 : 0x0) + (stats.boost ? 0x14 : 0x0) + (stats.shield ? 0x14 : 0x0) + (stats.period ? 0x14 : 0x0) + (stats.duration ? 0x14 : 0x0) + (stats.damageReflection ? 0x14 : 0x0) + (stats.extraRange ? 0x14 : 0x0) + (stats.spawn ? 0x14 : 0x0) + my.length * 0x14);
-            je(424, mu, 0x12c, nd, kr[0x3], true, true);
-            gk(config.name, 438, mu + 0x19, 0x19, "#ffffff", "left");
-            gk(rarity.name, 710, mu + 0x19, 0x14, rarity.color, 'right');
-            for (let ne = 0x0; ne < my.length; ne++) {
-              gk(my[ne], 438, mu + 0x32 + 0x14 * ne, 0xf, "#ffffff", "left");
+            let nd = 75 + ((stats.damage ? 20 : 0) + (stats.health ? 20 : 0) + (stats.bounces ? 20 : 0) + (stats.radians ? 20 : 0) + (stats.healthIncrease ? 20 : 0) + (stats.extraView ? 20 : 0) + (stats.healPerSecond ? 20 : 0) + (stats.poison ? 20 : 0) + (stats.heal ? 20 : 0) + (stats.pickupRadius ? 20 : 0) + (stats.speedIncrease ? 20 : 0) + (stats.armor ? 20 : 0) + (stats.boost ? 20 : 0) + (stats.shield ? 20 : 0) + (stats.period ? 20 : 0) + (stats.duration ? 20 : 0) + (stats.damageReflection ? 20 : 0) + (stats.extraRange ? 20 : 0) + (stats.spawn ? 20 : 0) + my.length * 20);
+            je(424, mu, 300, nd, kr[3], true, true);
+            gk(config.name, 438, mu + 25, 25, "#ffffff", "left");
+            gk(rarity.name, 710, mu + 25, 20, rarity.color, 'right');
+            for (let ne = 0; ne < my.length; ne++) {
+              gk(my[ne], 438, mu + 50 + 20 * ne, 15, "#ffffff", "left");
             }
-            mu += 0x32 + 0x14 * my.length;
+            mu += 50 + 20 * my.length;
             if (stats.damage !== undefined) {
-              gk("Damage: " + av(stats.damage), 438, mu, 0xf, "#FF6666", "left");
-              mu += 0x14;
+              gk("Damage: " + av(stats.damage), 438, mu, 15, "#FF6666", "left");
+              mu += 20;
             }
             if (stats.health !== undefined) {
-              gk("Health: " + av(stats.health), 438, mu, 0xf, "#66FF66", 'left');
-              mu += 0x14;
+              gk("Health: " + av(stats.health), 438, mu, 15, "#66FF66", 'left');
+              mu += 20;
             }
             if (stats.bounces !== undefined) {
-              gk("Bounces: " + stats.bounces, 438, mu, 0xf, "#FF6666", "left");
-              mu += 0x14;
+              gk("Bounces: " + stats.bounces, 438, mu, 15, "#FF6666", "left");
+              mu += 20;
             }
             if (stats.radians !== undefined) {
-              gk("Rotation Speed: +" + (stats.radians * q).toFixed(0x2) + "rad/s", 438, mu, 0xf, "#FF66FF", 'left');
-              mu += 0x14;
+              gk("Rotation Speed: +" + (stats.radians * q).toFixed(2) + "rad/s", 438, mu, 15, "#FF66FF", 'left');
+              mu += 20;
             }
             if (stats.healthIncrease !== undefined) {
-              gk("Health Increase: " + av(stats.healthIncrease), 438, mu, 0xf, "#66FF66", "left");
-              mu += 0x14;
+              gk("Health Increase: " + av(stats.healthIncrease), 438, mu, 15, "#66FF66", "left");
+              mu += 20;
             }
             if (stats.extraView !== undefined) {
-              gk("Extra Vision: " + (stats.extraView * 0x64).toFixed(0x1) + '%', 438, mu, 0xf, '#6666FF', "left");
-              mu += 0x14;
+              gk("Extra Vision: " + (stats.extraView * 100).toFixed(1) + '%', 438, mu, 15, '#6666FF', "left");
+              mu += 20;
             }
             if (stats.healPerSecond !== undefined) {
-              gk("Heal: " + av(Math.round(stats.healPerSecond)) + "HP/s", 438, mu, 0xf, "#6666FF", 'left');
-              mu += 0x14;
+              gk("Heal: " + av(Math.round(stats.healPerSecond)) + "HP/s", 438, mu, 15, "#6666FF", 'left');
+              mu += 20;
             }
             if (stats.poison !== undefined) {
-              gk("Poison: " + av(stats.poison[0x0] / 0x3e8 * stats.poison[0x1]) + " (" + av(stats.poison[0x1]) + '/s)', 438, mu, 0xf, "#FFFF66", "left");
-              mu += 0x14;
+              gk("Poison: " + av(stats.poison[0] / 1000 * stats.poison[1]) + " (" + av(stats.poison[1]) + '/s)', 438, mu, 15, "#FFFF66", "left");
+              mu += 20;
             }
             if (stats.heal !== undefined) {
-              gk("Heal: " + av(+stats.heal.toFixed(0x2)), 438, mu, 0xf, '#FFC8EF', "left");
-              mu += 0x14;
+              gk("Heal: " + av(+stats.heal.toFixed(2)), 438, mu, 15, '#FFC8EF', "left");
+              mu += 20;
             }
             if (stats.pickupRadius !== undefined) {
-              gk("Pickup Radius: +" + stats.pickupRadius, 438, mu, 0xf, "#66FFFF", "left");
-              mu += 0x14;
+              gk("Pickup Radius: +" + stats.pickupRadius, 438, mu, 15, "#66FFFF", "left");
+              mu += 20;
             }
             if (stats.speedIncrease !== undefined) {
-              gk("Speed Increase: " + (stats.speedIncrease * 0x64).toFixed(0x1) + '%', 438, mu, 0xf, "#66FFFF", "left");
-              mu += 0x14;
+              gk("Speed Increase: " + (stats.speedIncrease * 100).toFixed(1) + '%', 438, mu, 15, "#66FFFF", "left");
+              mu += 20;
             }
             if (stats.armor !== undefined) {
-              gk("Damage Taken: " + (stats.armor * 0x64).toFixed(0x1) + '%', 438, mu, 0xf, "#C8FFAA", "left");
-              mu += 0x14;
+              gk("Damage Taken: " + (stats.armor * 100).toFixed(1) + '%', 438, mu, 15, "#C8FFAA", "left");
+              mu += 20;
             }
             if (stats.boost !== undefined) {
-              gk("Velocity Boost: " + (stats.boost * 0x64).toFixed(0x1) + '%', 438, mu, 0xf, "#AAC8FF", "left");
-              mu += 0x14;
+              gk("Velocity Boost: " + (stats.boost * 100).toFixed(1) + '%', 438, mu, 15, "#AAC8FF", "left");
+              mu += 20;
             }
             if (stats.shield !== undefined) {
-              gk("Shield: " + av(stats.shield) + 'HP', 438, mu, 0xf, '#C8C8FF', "left");
-              mu += 0x14;
+              gk("Shield: " + av(stats.shield) + 'HP', 438, mu, 15, '#C8C8FF', "left");
+              mu += 20;
             }
             if (stats.period !== undefined) {
-              gk("Capacity: " + av(stats.period) + 'HP', 438, mu, 0xf, "#C8FFC8", "left");
-              mu += 0x14;
+              gk("Capacity: " + av(stats.period) + 'HP', 438, mu, 15, "#C8FFC8", "left");
+              mu += 20;
             }
             if (stats.duration !== undefined) {
-              gk("Duration: " + (stats.duration / 0x3e8).toFixed(0x2) + 's', 438, mu, 0xf, "#FFC8FF", 'left');
-              mu += 0x14;
+              gk("Duration: " + (stats.duration / 1000).toFixed(2) + 's', 438, mu, 15, "#FFC8FF", 'left');
+              mu += 20;
             }
             if (stats.damageReflection !== undefined) {
-              gk("Damage Reflection: " + (stats.damageReflection * 0x64).toFixed(0x1) + '%', 438, mu, 0xf, '#FFC800', "left");
-              mu += 0x14;
+              gk("Damage Reflection: " + (stats.damageReflection * 100).toFixed(1) + '%', 438, mu, 15, '#FFC800', "left");
+              mu += 20;
             }
             if (stats.extraRange !== undefined) {
-              gk("Petal Range: +" + stats.extraRange, 438, mu, 0xf, "#C8FFFF", 'left');
-              mu += 0x14;
+              gk("Petal Range: +" + stats.extraRange, 438, mu, 15, "#C8FFFF", 'left');
+              mu += 20;
             }
             if (stats.spawn) {
               aj.font = "15px Ubuntu";
-              let nf = 0x0;
-              gk("Spawns: ", 438, mu, 0xf, "#AABBAF", "left");
+              let nf = 0;
+              gk("Spawns: ", 438, mu, 15, "#AABBAF", "left");
               nf += aj.measureText("Spawns: ").width;
-              let ng = stats.spawn.type.toLowerCase().split('_').join(" ").split(" ").map(nh => nh.charAt(0x0).toUpperCase() + nh.slice(0x1)).join(" ") + " ";
-              gk(ng, 438 + nf, mu, 0xf, "#FFFFFF", "left");
+              let ng = stats.spawn.type.toLowerCase().split('_').join(" ").split(" ").map(nh => nh.charAt(0).toUpperCase() + nh.slice(1)).join(" ") + " ";
+              gk(ng, 438 + nf, mu, 15, "#FFFFFF", "left");
               nf += aj.measureText(ng).width;
               let ni = at[stats.spawn.rarity];
-              gk('(' + ni.name + ')', 438 + nf, mu, 0xf, ni.color, "left");
-              mu += 0x14;
+              gk('(' + ni.name + ')', 438 + nf, mu, 15, ni.color, "left");
+              mu += 20;
             }
-            let nj = "Recharge: " + ((stats.recharge ?? o.DEFAULT_PROPERTIES.recharge) / 0x3e8).toFixed(0x1) + 's';
+            let nj = "Recharge: " + ((stats.recharge ?? o.DEFAULT_PROPERTIES.recharge) / 1000).toFixed(1) + 's';
             if (stats.spawnCharge) {
-              nj += " + " + (stats.spawnCharge / 0x3e8).toFixed(0x1) + 's';
+              nj += " + " + (stats.spawnCharge / 1000).toFixed(1) + 's';
             }
             if (stats.shootDelay) {
-              nj += " + " + (stats.shootDelay / 0x3e8).toFixed(0x1) + 's';
+              nj += " + " + (stats.shootDelay / 1000).toFixed(1) + 's';
             }
             if (stats.waitTime) {
-              nj += " + " + (stats.waitTime / 0x3e8).toFixed(0x1) + 's';
+              nj += " + " + (stats.waitTime / 1000).toFixed(1) + 's';
             }
-            gk(nj, 710, innerHeight - 0xe - 0x226 + 0x64 + nd - 0x14, 0xf, "#ffffff", 'right');
+            gk(nj, 710, innerHeight - 14 - 550 + 100 + nd - 20, 15, "#ffffff", 'right');
           }
           return;
         }
         if (ee.absorbOpen) {
-          je(0xe, innerHeight - 0xe - 0x23f, 0x2ad, 0x23f, kr[0x1], true, true);
-          ee.addElement('currentMenuOpen', 0xe, innerHeight - 0xe - 0x23f, 699, innerHeight - 0xe, () => {});
-          gk("Absorb", 356.5, innerHeight - 0xe - 0x23f + 0x23, 0x1e, "#ffffff", 'center');
-          gk("Click a petal to absorb it!", 356.5, innerHeight - 0xe - 0x23f + 0x41, 0x14, "#ffffff", "center");
-          je(659, innerHeight - 0xe - 0x23f + 0xa, 0x1e, 0x1e, eh(ak[0x5], '#FFFFFF', ls.includes("closeAbsorb") ? 0.2 : 0x0), true, true);
-          gk('X', 674, innerHeight - 0xe - 0x23f + 0x19, 0x14, '#ffffff', "center");
-          ee.addElement("closeAbsorb", 659, innerHeight - 0xe - 0x23f + 0xa, 689, innerHeight - 0xe - 0x23f + 0x28, () => ee.absorbOpen = false);
+          je(14, innerHeight - 14 - 575, 685, 575, kr[1], true, true);
+          ee.addElement('currentMenuOpen', 14, innerHeight - 14 - 575, 699, innerHeight - 14, () => {});
+          gk("Absorb", 356.5, innerHeight - 14 - 575 + 35, 30, "#ffffff", 'center');
+          gk("Click a petal to absorb it!", 356.5, innerHeight - 14 - 575 + 65, 20, "#ffffff", "center");
+          je(659, innerHeight - 14 - 575 + 10, 30, 30, eh(ak[5], '#FFFFFF', ls.includes("closeAbsorb") ? 0.2 : 0), true, true);
+          gk('X', 674, innerHeight - 14 - 575 + 25, 20, '#ffffff', "center");
+          ee.addElement("closeAbsorb", 659, innerHeight - 14 - 575 + 10, 689, innerHeight - 14 - 575 + 40, () => ee.absorbOpen = false);
           aj.save();
-          aj.fillStyle = kr[0x6];
-          let nk = innerHeight - 0xe - 0x23f + 0xc8;
-          aj.translate(185.25, innerHeight - 0xe - 0x23f + 0xc8);
+          aj.fillStyle = kr[6];
+          let nk = innerHeight - 14 - 575 + 200;
+          aj.translate(185.25, innerHeight - 14 - 575 + 200);
           aj.beginPath();
-          aj.arc(0x0, 0x0, 0x64, 0x0, Math.PI * 0x2);
+          aj.arc(0, 0, 100, 0, Math.PI * 2);
           aj.fill();
           aj.closePath();
           let nl = [];
           for (let nm in lr.absorbSelection) {
             let nn = lr.absorbSelection[nm];
             nn.forEach((np, nq) => {
-              if (np > 0x0) {
+              if (np > 0) {
                 nl.push({
                   'index': nm,
                   'rarity': nq,
@@ -2120,34 +2120,34 @@ if (!self.__WB_pmw) {
               }
             });
           }
-          for (let nr = 0x0; nr < nl.length; nr++) {
+          for (let nr = 0; nr < nl.length; nr++) {
             let ns = nl[nr];
-            let nt = nr * Math.PI * 0x2 / nl.length;
+            let nt = nr * Math.PI * 2 / nl.length;
             aj.save();
-            aj.translate(Math.cos(nt) * 0x4b, Math.sin(nt) * 0x4b);
-            je(-27.5, -27.5, 0x37, 0x37, eh(at[ns.rarity].color, "#FFFFFF", ls.includes("selection" + nr) ? 0.2 : 0x0), true, true);
+            aj.translate(Math.cos(nt) * 75, Math.sin(nt) * 75);
+            je(-27.5, -27.5, 55, 55, eh(at[ns.rarity].color, "#FFFFFF", ls.includes("selection" + nr) ? 0.2 : 0), true, true);
             let nu = window.petalIcons[ar[ns.index] + '_' + ns.rarity];
             if (nu) {
-              aj.drawImage(nu, -27.5, -33, 0x37, 0x37);
+              aj.drawImage(nu, -27.5, -33, 55, 55);
             }
-            aj.rotate(Math.PI / 0x4);
-            gk('x' + av(ns.count), 0x0, -36.666666666666664, 15.125000000000002, "#ffffff", 'center');
-            aj.rotate(-Math.PI / 0x4);
-            gk(ar[ns.index], 0x0, 18.333333333333332, 13.75, "#ffffff", 'center');
+            aj.rotate(Math.PI / 4);
+            gk('x' + av(ns.count), 0, -36.666666666666664, 15.125000000000002, "#ffffff", 'center');
+            aj.rotate(-Math.PI / 4);
+            gk(ar[ns.index], 0, 18.333333333333332, 13.75, "#ffffff", 'center');
             aj.restore();
           }
-          je(0xc8, -27.5, 110, 0x37, eh(ak[0x5], '#FFFFFF', ls.includes('absorb') ? 0.2 : 0x0), true, true);
+          je(200, -27.5, 110, 55, eh(ak[5], '#FFFFFF', ls.includes('absorb') ? 0.2 : 0), true, true);
           gk("Absorb", 255, 0, 18.37, "#ffffff", "center");
-          ee.addElement("absorb", 385.25, nk - 27.5, 495.25, nk - 27.5 + 0x37, () => {
+          ee.addElement("absorb", 385.25, nk - 27.5, 495.25, nk - 27.5 + 55, () => {
             ef.talk({
-              'type': 0x5,
+              'type': 5,
               'data': lr.absorbSelection
             });
             lr.absorbSelection = {};
           });
           gk("Warning: This will delete the selected petals!", 255, 50, 13.75, "#ffffff", "center");
           {
-            let nv = 0x0;
+            let nv = 0;
             for (let nw in lr.absorbSelection) {
               let nx = lr.absorbSelection[nw];
               nx.forEach((ny, nz) => {
@@ -2159,22 +2159,22 @@ if (!self.__WB_pmw) {
           }
           aj.restore();
           let oa = {
-            0x0: [],
-            0x1: [],
-            0x2: [],
-            0x3: [],
-            0x4: [],
-            0x5: [],
-            0x6: [],
-            0x7: [],
-            0x8: [],
-            0x9: [],
-            0xa: []
+            0: [],
+            1: [],
+            2: [],
+            3: [],
+            4: [],
+            5: [],
+            6: [],
+            7: [],
+            8: [],
+            9: [],
+            10: []
           };
           for (let ob in lr.absorbInventory) {
             let oc = lr.absorbInventory[ob];
             oc.forEach((od, oe) => {
-              if (od > 0x0) {
+              if (od > 0) {
                 oa[oe].push({
                   'index': ob,
                   'rarity': oe,
@@ -2188,30 +2188,30 @@ if (!self.__WB_pmw) {
             let oi = oa[oh];
             og.unshift(...oi);
           }
-          ee.rwheel = Math.max(ee.rwheel, -0x14);
-          ee.rwheel = Math.min(ee.rwheel, og.length / 0x8 * 65);
+          ee.rwheel = Math.max(ee.rwheel, -20);
+          ee.rwheel = Math.min(ee.rwheel, og.length / 8 * 65);
           let oj = 39;
-          let ok = -ee.wheel + innerHeight - 0xe - 0x23f + 0x15e;
+          let ok = -ee.wheel + innerHeight - 14 - 575 + 350;
           aj.save();
           aj.beginPath();
-          aj.rect(0xe, innerHeight - 0xe - 0x23f + 0x15e, 675, 205);
+          aj.rect(14, innerHeight - 14 - 575 + 350, 675, 205);
           aj.clip();
           aj.closePath();
-          for (let ol = 0x0; ol < og.length; ol++) {
+          for (let ol = 0; ol < og.length; ol++) {
             let om = og[ol];
-            if (om.count > 0x0) {
-              je(oj, ok, 0x37, 0x37, eh(at[om.rarity].color, "#FFFFFF", ls.includes("inventory" + ol) ? 0.2 : 0x0), true, true);
+            if (om.count > 0) {
+              je(oj, ok, 55, 55, eh(at[om.rarity].color, "#FFFFFF", ls.includes("inventory" + ol) ? 0.2 : 0), true, true);
               let oo = window.petalIcons[ar[om.index] + '_' + om.rarity];
               if (oo) {
-                aj.drawImage(oo, oj, ok - 5.5, 0x37, 0x37);
+                aj.drawImage(oo, oj, ok - 5.5, 55, 55);
               }
               aj.save();
-              aj.translate(oj + 0x37, ok);
-              aj.rotate(Math.PI / 0x4);
-              gk('x' + av(om.count), 0x0, 0x0, 15.125000000000002, '#ffffff', "center");
+              aj.translate(oj + 55, ok);
+              aj.rotate(Math.PI / 4);
+              gk('x' + av(om.count), 0, 0, 15.125000000000002, '#ffffff', "center");
               aj.restore();
               gk(ar[om.index], oj + 27.5, ok + 46.75, 13.75, "#ffffff", "center");
-              ee.addElement("inventory" + ol, oj, ok, oj + 0x37, ok + 0x37, () => {
+              ee.addElement("inventory" + ol, oj, ok, oj + 55, ok + 55, () => {
                 if (lr.player !== null) {
                   kx(om.index, om.rarity);
                 }
@@ -2220,7 +2220,7 @@ if (!self.__WB_pmw) {
               continue;
             }
             oj += 72.5;
-            if (oj + 0x37 > 689) {
+            if (oj + 55 > 689) {
               oj = 39;
               ok += 72.5;
             }
@@ -2229,42 +2229,42 @@ if (!self.__WB_pmw) {
           return;
         }
         if (ee.skillOpen) {
-          je(0xe, innerHeight - 0x1f4 - 0xe, 0x1f4, 0x1f4, kr[0x2]);
-          ee.addElement("currentMenuOpen", 0xe, innerHeight - 0xe - 0x1f4, 514, innerHeight - 0xe, () => {});
-          gk("Skills", 264, innerHeight - 0xe - 0x1f4 + 0x23, 0x1e, '#ffffff', "center");
-          gk(lr.skillPoints + " SP", 29, innerHeight - 0xe - 0x1f4 + 0x1e, 0x19, '#FFFFFF', "left");
-          gk(av(lr.mySkillInfo.health.toFixed(0x2)) + " HP", 29, innerHeight - 0xe - 0x1f4 + 0x3c, 0x12, "#FFFFFF", "left");
-          gk(av(lr.mySkillInfo.damage.toFixed(0x2)) + " DMG", 29, innerHeight - 0xe - 0x1f4 + 0x55, 0x12, "#FFFFFF", 'left');
-          gk(av(lr.mySkillInfo.reload.toFixed(0x2)) + "x RLD", 499, innerHeight - 0xe - 0x1f4 + 0x3c, 0x12, "#FFFFFF", "right");
-          gk(av(lr.mySkillInfo.slots + 0x5) + " Slots", 499, innerHeight - 0xe - 0x1f4 + 0x55, 0x12, '#FFFFFF', 'right');
-          je(474, innerHeight - 0xe - 0x1f4 + 0xa, 0x1e, 0x1e, eh(ak[0x5], "#FFFFFF", ls.includes('closeSkills') ? 0.2 : 0x0), true, true);
-          gk('X', 489, innerHeight - 0xe - 0x1f4 + 0x19, 0x14, "#ffffff", "center");
-          ee.addElement("closeSkills", 474, innerHeight - 0xe - 0x1f4 + 0xa, 504, innerHeight - 0xe - 0x1f4 + 0x28, () => ee.skillOpen = false);
-          ee.rwheel = Math.max(ee.rwheel, -0x14);
+          je(14, innerHeight - 500 - 14, 500, 500, kr[2]);
+          ee.addElement("currentMenuOpen", 14, innerHeight - 14 - 500, 514, innerHeight - 14, () => {});
+          gk("Skills", 264, innerHeight - 14 - 500 + 35, 30, '#ffffff', "center");
+          gk(lr.skillPoints + " SP", 29, innerHeight - 14 - 500 + 30, 25, '#FFFFFF', "left");
+          gk(av(lr.mySkillInfo.health.toFixed(2)) + " HP", 29, innerHeight - 14 - 500 + 60, 18, "#FFFFFF", "left");
+          gk(av(lr.mySkillInfo.damage.toFixed(2)) + " DMG", 29, innerHeight - 14 - 500 + 85, 18, "#FFFFFF", 'left');
+          gk(av(lr.mySkillInfo.reload.toFixed(2)) + "x RLD", 499, innerHeight - 14 - 500 + 60, 18, "#FFFFFF", "right");
+          gk(av(lr.mySkillInfo.slots + 5) + " Slots", 499, innerHeight - 14 - 500 + 85, 18, '#FFFFFF', 'right');
+          je(474, innerHeight - 14 - 500 + 10, 30, 30, eh(ak[5], "#FFFFFF", ls.includes('closeSkills') ? 0.2 : 0), true, true);
+          gk('X', 489, innerHeight - 14 - 500 + 25, 20, "#ffffff", "center");
+          ee.addElement("closeSkills", 474, innerHeight - 14 - 500 + 10, 504, innerHeight - 14 - 500 + 40, () => ee.skillOpen = false);
+          ee.rwheel = Math.max(ee.rwheel, -20);
           ee.rwheel = Math.min(ee.rwheel, 536);
           aj.save();
           aj.beginPath();
-          aj.rect(0xe, innerHeight - 0xe - 0x1f4 + 0x7d, 483, 341);
+          aj.rect(14, innerHeight - 14 - 500 + 125, 483, 341);
           aj.clip();
           aj.closePath();
           let op = 78;
-          let oq = -ee.wheel + innerHeight - 0x1f4 - 0xe + 150 + 0x11;
+          let oq = -ee.wheel + innerHeight - 500 - 14 + 150 + 17;
           for (let or in au) {
             let os = au[or];
-            const ot = op - 0x32;
-            const ou = oq - 0x32 - 0x32;
-            gk(os.name, op, oq - 0x2d, 0xf, "#FFFFFF", "center");
+            const ot = op - 50;
+            const ou = oq - 50 - 50;
+            gk(os.name, op, oq - 45, 15, "#FFFFFF", "center");
             aj.beginPath();
             aj.moveTo(op, oq);
-            aj.lineTo(op, oq + 67 * (os.tiers.length - 0x1));
+            aj.lineTo(op, oq + 67 * (os.tiers.length - 1));
             aj.closePath();
             aj.strokeStyle = '#FFFFFF';
             aj.stroke();
-            for (let ov = 0x0; ov < os.tiers.length; ov++) {
+            for (let ov = 0; ov < os.tiers.length; ov++) {
               let ow = lr.mySkillInfo[au[or].key];
-              let ox = ow >= ov && lr.skillPoints > 0x0;
+              let ox = ow >= ov && lr.skillPoints > 0;
               let oy = at[ov].color;
-              if (ow + 0x1 <= ov || os.tiers[ov] > lr.skillPoints) {
+              if (ow + 1 <= ov || os.tiers[ov] > lr.skillPoints) {
                 oy = eh(oy, '#C8C8C8', 0.9);
               } else {
                 if (ow > ov) {
@@ -2273,13 +2273,13 @@ if (!self.__WB_pmw) {
                   oy = eh(oy, "#FFFFFF", 0.2);
                 }
               }
-              je(op - 25, oq - 25, 0x32, 0x32, oy);
-              gk(ow <= ov ? os.tiers[ov] + " SP" : ':)', op, oq, 0xd, "#FFFFFF", "center");
+              je(op - 25, oq - 25, 50, 50, oy);
+              gk(ow <= ov ? os.tiers[ov] + " SP" : ':)', op, oq, 13, "#FFFFFF", "center");
               ee.addElement('skill_' + or + '_' + ov, op - 25, oq - 25, op + 25, oq + 25, function oz() {
                 if (ee.lastClick.id === 'skill_' + or + '_' + ov) {
-                  if (Date.now() - ee.lastClick.timeStamp < 0x1f4) {
+                  if (Date.now() - ee.lastClick.timeStamp < 500) {
                     ef.talk({
-                      'type': 0x6,
+                      'type': 6,
                       'index': or,
                       'level': ov
                     });
@@ -2288,9 +2288,9 @@ if (!self.__WB_pmw) {
               }, ox && os.tiers[ov] <= lr.skillPoints);
               oq += 67;
             }
-            ee.addElement("skill_" + or, ot, ou, op + 0x32, oq, () => {}, false);
+            ee.addElement("skill_" + or, ot, ou, op + 50, oq, () => {}, false);
             op += 101;
-            oq = -ee.wheel + innerHeight - 0x1f4 - 0xe + 150 + 0x11;
+            oq = -ee.wheel + innerHeight - 500 - 14 + 150 + 17;
           }
           aj.restore();
           for (let pa in au) {
@@ -2298,22 +2298,22 @@ if (!self.__WB_pmw) {
               let pb = au[pa];
               aj.save();
               aj.globalAlpha = 0.8;
-              je(28, innerHeight - 0xe - 0x1f4 + 0x64, 472, 0x14, "#000000", true, false);
-              aj.globalAlpha = 0x1;
-              gk(pb.description, 264, innerHeight - 0xe - 0x1f4 + 0x64 + 0xa, 0xa, '#FFFFFF', "center");
+              je(28, innerHeight - 14 - 500 + 100, 472, 20, "#000000", true, false);
+              aj.globalAlpha = 1;
+              gk(pb.description, 264, innerHeight - 14 - 500 + 100 + 10, 10, '#FFFFFF', "center");
               aj.restore();
             }
           }
           return;
         }
         if (ee.mobGalleryOpen) {
-          let pc = -0x1;
-          je(0xe, innerHeight - 0xe - 0x1db, 0x343, 0x1db, kr[0x0], true, true);
-          ee.addElement("currentMenuOpen", 0xe, innerHeight - 0xe - 0x1db, 849, innerHeight - 0xe, () => {});
-          gk("Mob Gallery", 431.5, innerHeight - 0xe - 0x1db + 0x23, 0x1e, "#ffffff", "center");
-          je(809, innerHeight - 0xe - 0x1db + 0xa, 0x1e, 0x1e, eh(ak[0x5], "#FFFFFF", ls.includes('closeInventory') ? 0.2 : 0x0), true, true);
-          gk('X', 824, innerHeight - 0xe - 0x1db + 0x19, 0x14, '#ffffff', "center");
-          ee.addElement("closemobGallery", 809, innerHeight - 0xe - 0x1db + 0xa, 839, innerHeight - 0xe - 0x1db + 0x28, () => ee.mobGalleryOpen = false);
+          let pc = -1;
+          je(14, innerHeight - 14 - 475, 835, 475, kr[0], true, true);
+          ee.addElement("currentMenuOpen", 14, innerHeight - 14 - 475, 849, innerHeight - 14, () => {});
+          gk("Mob Gallery", 431.5, innerHeight - 14 - 475 + 35, 30, "#ffffff", "center");
+          je(809, innerHeight - 14 - 475 + 10, 30, 30, eh(ak[5], "#FFFFFF", ls.includes('closeInventory') ? 0.2 : 0), true, true);
+          gk('X', 824, innerHeight - 14 - 475 + 25, 20, '#ffffff', "center");
+          ee.addElement("closemobGallery", 809, innerHeight - 14 - 475 + 10, 839, innerHeight - 14 - 475 + 40, () => ee.mobGalleryOpen = false);
           let pd = [];
           for (let pe in p) {
             for (let pf in p[pe].rarities) {
@@ -2332,34 +2332,34 @@ if (!self.__WB_pmw) {
                 ...pg,
                 'image': as[pe],
                 'rarity': {
-                  'COMMON': 0x0,
-                  'UNCOMMON': 0x1,
-                  'RARE': 0x2,
-                  'EPIC': 0x3,
-                  'LEGENDARY': 0x4,
-                  'MYTHIC': 0x5,
-                  'ULTRA': 0x6,
-                  'SUPER': 0x7,
-                  'ANCIENT': 0x8,
-                  'OMEGA': 0x9,
-                  '???': 0xa
+                  'COMMON': 0,
+                  'UNCOMMON': 1,
+                  'RARE': 2,
+                  'EPIC': 3,
+                  'LEGENDARY': 4,
+                  'MYTHIC': 5,
+                  'ULTRA': 6,
+                  'SUPER': 7,
+                  'ANCIENT': 8,
+                  'OMEGA': 9,
+                  '???': 10
                 }[pf]
               });
             }
           }
-          ee.rwheel = Math.max(ee.rwheel, -0x14);
-          ee.rwheel = Math.min(ee.rwheel, pd.length / 0xb * 65 - 0x14);
+          ee.rwheel = Math.max(ee.rwheel, -20);
+          ee.rwheel = Math.min(ee.rwheel, pd.length / 11 * 65 - 20);
           let ph = 39;
-          let pj = -ee.wheel + innerHeight - 0xe - 0x1db + 0x64;
+          let pj = -ee.wheel + innerHeight - 14 - 475 + 100;
           aj.save();
           aj.beginPath();
-          aj.rect(0xe, innerHeight - 0xe - 0x1db + 0x64, 825, 355);
+          aj.rect(14, innerHeight - 14 - 475 + 100, 825, 355);
           aj.clip();
           aj.closePath();
-          for (let pk = 0x0; pk < pd.length; pk++) {
-            if (pj + 0x37 < innerHeight - 0xe - 0x1db + 0x64) {
+          for (let pk = 0; pk < pd.length; pk++) {
+            if (pj + 55 < innerHeight - 14 - 475 + 100) {
               ph += 72.5;
-              if (ph + 0x37 > 839) {
+              if (ph + 55 > 839) {
                 ph = 39;
                 pj += 72.5;
               }
@@ -2369,35 +2369,35 @@ if (!self.__WB_pmw) {
             if (ls.includes("mobGallery" + pk)) {
               pc = pl;
             }
-            je(ph, pj, 0x37, 0x37, eh(at[pl.rarity].color, "#FFFFFF", ls.includes("mobGallery" + pk) ? 0.2 : 0x0), true, true);
+            je(ph, pj, 55, 55, eh(at[pl.rarity].color, "#FFFFFF", ls.includes("mobGallery" + pk) ? 0.2 : 0), true, true);
             let pm = pl.image;
             if (pm) {
               aj.drawImage(pm, ph + 5.5, pj + 5.5, 44, 44);
             }
             aj.save();
-            aj.translate(ph + 0x37, pj);
-            aj.rotate(Math.PI / 0x4);
+            aj.translate(ph + 55, pj);
+            aj.rotate(Math.PI / 4);
             aj.restore();
-            ee.addElement("mobGallery" + pk, ph, pj, ph + 0x37, pj + 0x37, () => {});
+            ee.addElement("mobGallery" + pk, ph, pj, ph + 55, pj + 55, () => {});
             ph += 72.5;
-            if (ph + 0x37 > 839) {
+            if (ph + 55 > 839) {
               ph = 39;
               pj += 72.5;
             }
           }
           aj.restore();
-          if (pc !== -0x1) {
-            let pn = innerHeight - 0xe - 0x1db + 0x64;
-            je(859, pn, 0x12c, 0x113, kr[0x3], true, true);
+          if (pc !== -1) {
+            let pn = innerHeight - 14 - 475 + 100;
+            je(859, pn, 300, 275, kr[3], true, true);
             let po = at[pc.rarity];
-            gk(pc.name, 873, pn + 0x19, 0x19, "#ffffff", "left");
-            gk(po.name, 1145, pn + 0x19, 0x14, po.color, "right");
+            gk(pc.name, 873, pn + 25, 25, "#ffffff", "left");
+            gk(po.name, 1145, pn + 25, 20, po.color, "right");
             let pp = pc.description;
             let pq = pp.split(" ");
             let pr = '';
             aj.font = "15px Ubuntu";
             let ps = [];
-            for (let pt = 0x0; pt < pq.length; pt++) {
+            for (let pt = 0; pt < pq.length; pt++) {
               let pu = pr + pq[pt] + " ";
               let pv = aj.measureText(pu);
               let pw = pv.width;
@@ -2409,55 +2409,55 @@ if (!self.__WB_pmw) {
               }
             }
             ps.push(pr);
-            for (let py = 0x0; py < ps.length; py++) {
-              gk(ps[py], 873, pn + 0x32 + 0x14 * py, 0xf, "#ffffff", 'left');
+            for (let py = 0; py < ps.length; py++) {
+              gk(ps[py], 873, pn + 50 + 20 * py, 15, "#ffffff", 'left');
             }
-            pn += 0x32 + 0x14 * ps.length;
+            pn += 50 + 20 * ps.length;
             if (pc.damage !== undefined) {
-              gk("Damage: " + av(+pc.damage.toFixed(0x2)), 873, pn, 0xf, '#FF6666', 'left');
-              pn += 0x14;
+              gk("Damage: " + av(+pc.damage.toFixed(2)), 873, pn, 15, '#FF6666', 'left');
+              pn += 20;
             }
             if (pc.health !== undefined) {
-              gk("Health: " + av(+pc.health.toFixed(0x2)), 873, pn, 0xf, "#66FF66", "left");
-              pn += 0x14;
+              gk("Health: " + av(+pc.health.toFixed(2)), 873, pn, 15, "#66FF66", "left");
+              pn += 20;
             }
             if (pc.poison !== undefined) {
-              gk("Poison: " + av(+(pc.poison[0x0] / 0x3e8 * pc.poison[0x1]).toFixed(0x2)) + " (" + av(+pc.poison[0x1].toFixed(0x2)) + "/s)", 873, pn, 0xf, "#FFFF66", 'left');
-              pn += 0x14;
+              gk("Poison: " + av(+(pc.poison[0] / 1000 * pc.poison[1]).toFixed(2)) + " (" + av(+pc.poison[1].toFixed(2)) + "/s)", 873, pn, 15, "#FFFF66", 'left');
+              pn += 20;
             }
             if (pc.armor !== undefined) {
-              gk("Damage Taken: " + (pc.armor * 0x64).toFixed(0x1) + '%', 873, pn, 0xf, "#C8FFAA", "left");
-              pn += 0x14;
+              gk("Damage Taken: " + (pc.armor * 100).toFixed(1) + '%', 873, pn, 15, "#C8FFAA", "left");
+              pn += 20;
             }
             if (pc.damageReflection !== undefined) {
-              gk("Damage Reflection: " + (pc.damageReflection * 0x64).toFixed(0x1) + '%', 873, pn, 0xf, '#FFC800', "left");
-              pn += 0x14;
+              gk("Damage Reflection: " + (pc.damageReflection * 100).toFixed(1) + '%', 873, pn, 15, '#FFC800', "left");
+              pn += 20;
             }
             if (pc.drops !== undefined) {
               pc.drops.forEach(pz => {
-                let qa = 0xe;
-                for (let qb = 0x0; qb < pz.chance.length; qb++) {
-                  if (pz.chance[qb] === 0x0) {
+                let qa = 14;
+                for (let qb = 0; qb < pz.chance.length; qb++) {
+                  if (pz.chance[qb] === 0) {
                     continue;
                   }
-                  je(859 + qa, pn, 0x32, 0x32, at[qb].color);
+                  je(859 + qa, pn, 50, 50, at[qb].color);
                   aj.drawImage(window.petalIcons[ar[pz.index] + '_' + qb], 859 + qa + 5, pn + 5, 40, 40);
-                  gk(ar[pz.index].split(" ").pop(), 859 + qa + 25, pn + 0x32 - 0xc, 0xc, '#ffffff', 'center');
+                  gk(ar[pz.index].split(" ").pop(), 859 + qa + 25, pn + 50 - 12, 12, '#ffffff', 'center');
                   qa += 64;
                 }
                 pn += 64;
               });
               pn = pn;
               pc.drops.forEach(qc => {
-                let qd = 0xe;
-                for (let qe = 0x0; qe < qc.chance.length; qe++) {
-                  if (qc.chance[qe] === 0x0) {
+                let qd = 14;
+                for (let qe = 0; qe < qc.chance.length; qe++) {
+                  if (qc.chance[qe] === 0) {
                     continue;
                   }
                   aj.save();
-                  aj.translate(859 + qd + 0x32, pn);
+                  aj.translate(859 + qd + 50, pn);
                   aj.rotate(Math.PI / 7.5);
-                  gk(av((qc.chance[qe] * 0x64).toFixed(0x1)) + '%', 0x0, 0x0, 0xc, "#ffffff", "center");
+                  gk(av((qc.chance[qe] * 100).toFixed(1)) + '%', 0, 0, 12, "#ffffff", "center");
                   aj.restore();
                   qd += 64;
                 }
@@ -2469,12 +2469,12 @@ if (!self.__WB_pmw) {
         }
         kt(ls);
         if (lr.isDead) {
-          gk("You died!", innerWidth / 0x2, innerHeight / 0x2, 0x64, '#ffffff', 'center');
-          je(innerWidth / 0x2 - 0x64, innerHeight / 0x2 + 0x64, 0xc8, 0x32, eh(ak[0x5], "#FFFFFF", ls.includes('respawn') ? 0.2 : 0x0), true, true);
-          gk("Respawn", innerWidth / 0x2, innerHeight / 0x2 + 0x7d, 0x1e, "#ffffff", 'center');
-          ee.addElement("respawn", innerWidth / 0x2 - 0x64, innerHeight / 0x2 + 0x64, innerWidth / 0x2 + 0x64, innerHeight / 0x2 + 0x96, () => {
+          gk("You died!", innerWidth / 2, innerHeight / 2, 100, '#ffffff', 'center');
+          je(innerWidth / 2 - 100, innerHeight / 2 + 100, 200, 50, eh(ak[5], "#FFFFFF", ls.includes('respawn') ? 0.2 : 0), true, true);
+          gk("Respawn", innerWidth / 2, innerHeight / 2 + 125, 30, "#ffffff", 'center');
+          ee.addElement("respawn", innerWidth / 2 - 100, innerHeight / 2 + 100, innerWidth / 2 + 100, innerHeight / 2 + 150, () => {
             ef.talk({
-              'type': 0x1
+              'type': 1
             });
           });
         }
@@ -2482,7 +2482,7 @@ if (!self.__WB_pmw) {
     }();
     function hq(qf, qg, qh, qi, qj) {
       qg.animations.mood = qg.animations.mood + 0.2 * (qh - qg.animations.mood);
-      qg.animations.mouthDip = qg.animations.mouthDip + 0.1 * ((qh === 0x1 ? 1.7 : qh === 0x2 ? 0.35 : 0.9) - qg.animations.mouthDip);
+      qg.animations.mouthDip = qg.animations.mouthDip + 0.1 * ((qh === 1 ? 1.7 : qh === 2 ? 0.35 : 0.9) - qg.animations.mouthDip);
       qf.save();
       qf.scale(qi / 2.5, qi / 2.5);
       function qk(ql, qm) {
@@ -2490,12 +2490,12 @@ if (!self.__WB_pmw) {
         qf.translate(ql, qm);
         qf.beginPath();
         switch (qh) {
-          case 0x1:
-          case 0x3:
-            qf.ellipse(0x0, 0x0, 0.334, 0.667, 0x0, 0x0, Math.PI * 0x2);
+          case 1:
+          case 3:
+            qf.ellipse(0, 0, 0.334, 0.667, 0, 0, Math.PI * 2);
             break;
-          case 0x2:
-            qf.ellipse(0x0, 0x0, 0.334, 0.667, 0x0, -Math.PI / 0xa, -Math.PI / 0xa - (-Math.PI / 0xa - -Math.PI / 0x2) * (qg.animations.mood / 0x2));
+          case 2:
+            qf.ellipse(0, 0, 0.334, 0.667, 0, -Math.PI / 10, -Math.PI / 10 - (-Math.PI / 10 - -Math.PI / 2) * (qg.animations.mood / 2));
             break;
         }
         qf.closePath();
@@ -2505,7 +2505,7 @@ if (!self.__WB_pmw) {
         qf.fill();
         qf.clip();
         qf.beginPath();
-        qf.arc(Math.cos(qj) * 0.334, Math.sin(qj) * 0.667, 0.334, 0x0, Math.PI * 0x2);
+        qf.arc(Math.cos(qj) * 0.334, Math.sin(qj) * 0.667, 0.334, 0, Math.PI * 2);
         qf.fillStyle = "#FFFFFF";
         qf.fill();
         qf.closePath();
@@ -2518,7 +2518,7 @@ if (!self.__WB_pmw) {
       qf.lineCap = "round";
       qf.beginPath();
       qf.moveTo(-0.75, 1.15);
-      qf.quadraticCurveTo(0x0, qg.animations.mouthDip, 0.75, 1.15);
+      qf.quadraticCurveTo(0, qg.animations.mouthDip, 0.75, 1.15);
       qf.stroke();
       qf.closePath();
       qf.restore();
@@ -2537,7 +2537,7 @@ if (!self.__WB_pmw) {
       const qs = qp.x * qr;
       const qt = qp.y * qr;
       et(qr, qs, qt);
-      if (ef.world.scene === aq.GARDEN || 0x1) {
+      if (ef.world.scene === aq.GARDEN || 1) {
         aj.save();
         const qu = -qs + innerWidth * 0.5;
         const qv = -qt + innerHeight * 0.5;
@@ -2545,7 +2545,7 @@ if (!self.__WB_pmw) {
         af.forEach(qw => {
           aj.save();
           aj.beginPath();
-          for (let qx = 0x0; qx < qw.length; qx++) {
+          for (let qx = 0; qx < qw.length; qx++) {
             const {
               x: qy,
               y: qz
@@ -2560,7 +2560,7 @@ if (!self.__WB_pmw) {
           let rc = ra.height * qr;
           for (let rd = -qs % rb - rc; rd <= innerWidth * devicePixelRatio; rd += rb) {
             for (let re = -qt % rb - rb; re <= innerHeight * devicePixelRatio; re += rb) {
-              aj.drawImage(ra, rd - 0x1 | 0x0, re - 0x1 | 0x0, rb + 0x2 | 0x0, rc + 0x2 | 0x0);
+              aj.drawImage(ra, rd - 1 | 0, re - 1 | 0, rb + 2 | 0, rc + 2 | 0);
             }
           }
           aj.restore();
@@ -2581,28 +2581,28 @@ if (!self.__WB_pmw) {
           console.error(rh);
         }
       }
-      if (qo.scene === 0x3) {
+      if (qo.scene === 3) {
         aj.globalAlpha = 0.1;
         const ri = al.water;
         let rj = ri.width * qr;
         let rk = ri.height * qr;
-        const rl = rj * (performance.now() % 0x2710) * 0.00005;
+        const rl = rj * (performance.now() % 10000) * 0.00005;
         for (let rm = -qs % rj - rk - rl; rm <= innerWidth * devicePixelRatio; rm += rj) {
           for (let rn = -qt % rj - rj - rl; rn <= innerHeight * devicePixelRatio; rn += rj) {
             aj.drawImage(ri, rm, rn, rj, rk);
           }
         }
-        aj.globalAlpha = 0x1;
+        aj.globalAlpha = 1;
       }
-      if (Math.abs(ah - ag) > 0.01 || ah === 0x0) {
+      if (Math.abs(ah - ag) > 0.01 || ah === 0) {
         let ro = Math.max(canvas.width, canvas.height);
         aj.beginPath();
-        aj.arc(canvas.width / 0x2, canvas.height / 0x2, ro * 1.5, 0x0, 0x2 * Math.PI, true);
-        aj.arc(canvas.width / 0x2, canvas.height / 0x2, ag * ro, 0x0, 0x2 * Math.PI, false);
+        aj.arc(canvas.width / 2, canvas.height / 2, ro * 1.5, 0, 2 * Math.PI, true);
+        aj.arc(canvas.width / 2, canvas.height / 2, ag * ro, 0, 2 * Math.PI, false);
         aj.closePath();
         aj.fillStyle = "#000000";
         aj.fill();
-        ag = Math.max(0x0, ag + 0.015 * (ah === 0x1 ? 0x1 : -0x1));
+        ag = Math.max(0, ag + 0.015 * (ah === 1 ? 1 : -1));
       }
       try {
         jd(qo);
@@ -2616,21 +2616,21 @@ if (!self.__WB_pmw) {
     }
     setInterval(function rq() {
       ef.world.entities.forEach(rr => {
-        if (rr.type === 0x3 && rr.index === 0x1e) {
+        if (rr.type === 3 && rr.index === 30) {
           let rs = Math.max(Math.abs(rr.rx - rr.x), Math.abs(rr.ry - rr.y));
-          let rt = Math.cbrt(rs) / 0x2ee;
+          let rt = Math.cbrt(rs) / 750;
           rr.rstickBugRotate = Math.sin(performance.now() * rt + rr.id) * 0.3;
         }
       });
     }, 100);
     setInterval(function ru() {
       ee.fps = ee.frames;
-      ee.frames = 0x0;
+      ee.frames = 0;
       ef.inboundData = ef.inbound;
       ef.outboundData = ef.outbound;
-      ef.inbound = 0x0;
-      ef.outbound = 0x0;
-    }, 0x3e8);
+      ef.inbound = 0;
+      ef.outbound = 0;
+    }, 1000);
     let rv = false;
     async function rw() {
       if (rv) {
@@ -2680,20 +2680,20 @@ if (!self.__WB_pmw) {
       };
       rv = true;
       ef.connect((location.protocol === "https:" ? "wss:" : 'ws:') + '//' + r + '/', sessionStorage.getItem("username") || localStorage.getItem("username"), sessionStorage.getItem('password') || localStorage.getItem("password"));
-      let rz = -0x1;
-      let sa = 0x0;
+      let rz = -1;
+      let sa = 0;
       setInterval(function sb() {
         let sc = ee.update();
-        let sd = Math.atan2(ee.mouse.y - canvas.height / 0x2, ee.mouse.x - canvas.width / 0x2);
-        let se = Math.sqrt(Math.pow(ee.mouse.x - canvas.width / 0x2, 0x2) + Math.pow(ee.mouse.y - canvas.height / 0x2, 0x2)) / (Math.min(canvas.width, canvas.height) / 0x3);
+        let sd = Math.atan2(ee.mouse.y - canvas.height / 2, ee.mouse.x - canvas.width / 2);
+        let se = Math.sqrt(Math.pow(ee.mouse.x - canvas.width / 2, 2) + Math.pow(ee.mouse.y - canvas.height / 2, 2)) / (Math.min(canvas.width, canvas.height) / 3);
         if (sc !== rz || sa !== sd) {
           rz = sc;
           sa = sd;
           ef.talk({
-            'type': 0x2,
+            'type': 2,
             'inputs': sc,
             'mouseAngle': sd,
-            'intensity': Math.min(0x1, Math.max(0x0, se))
+            'intensity': Math.min(1, Math.max(0, se))
           });
         }
       }, 33.333333333333336);
