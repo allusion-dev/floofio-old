@@ -1,0 +1,4140 @@
+{
+  "DEFAULT_PROPERTIES": {
+    "engine": 0.3,
+    "friction": 0.7,
+    "neutralDistance": 1,
+    "attackDistance": 2,
+    "defendDistance": 0.5,
+    "health": 10,
+    "damage": 1,
+    "recharge": 2500,
+    "size": 0.35,
+    "max": 1,
+    "radians": 0,
+    "spinSpeed": 0.1046511627906977,
+    "spawns": true,
+    "extraView": 0
+  },
+  "BASIC": {
+    "name": "Basic",
+    "description": "A nice petal, not too strong but not too weak.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2500,
+        "health": 10,
+        "damage": 10
+      },
+      "UNCOMMON": {
+        "recharge": 2500,
+        "health": 30,
+        "damage": 30
+      },
+      "RARE": {
+        "recharge": 2500,
+        "health": 90,
+        "damage": 90
+      },
+      "EPIC": {
+        "recharge": 2500,
+        "health": 270,
+        "damage": 270
+      },
+      "LEGENDARY": {
+        "recharge": 2500,
+        "health": 810,
+        "damage": 810
+      },
+      "MYTHIC": {
+        "recharge": 2500,
+        "health": 2430,
+        "damage": 2430
+      },
+      "ULTRA": {
+        "recharge": 2500,
+        "health": 7290,
+        "damage": 7290
+      },
+      "SUPER": {
+        "recharge": 2500,
+        "health": 21870,
+        "damage": 21870
+      },
+      "ANCIENT": {
+        "recharge": 2500,
+        "health": 65610,
+        "damage": 65610
+      },
+      "OMEGA": {
+        "recharge": 2500,
+        "health": 196830,
+        "damage": 196830
+      },
+      "???": {
+        "recharge": 2500,
+        "health": 590490,
+        "damage": 590490
+      }
+    }
+  },
+  "LIGHT": {
+    "name": "Light",
+    "description": "Weaker than most petals, but recharges quickly.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 800,
+        "max": 1,
+        "size": 0.25,
+        "health": 9,
+        "damage": 9
+      },
+      "UNCOMMON": {
+        "recharge": 800,
+        "max": 1,
+        "size": 0.25,
+        "health": 27,
+        "damage": 27
+      },
+      "RARE": {
+        "recharge": 800,
+        "max": 2,
+        "size": 0.25,
+        "health": 40.5,
+        "damage": 40.5
+      },
+      "EPIC": {
+        "recharge": 800,
+        "max": 2,
+        "size": 0.25,
+        "health": 121.5,
+        "damage": 121.5
+      },
+      "LEGENDARY": {
+        "recharge": 800,
+        "max": 3,
+        "size": 0.25,
+        "health": 243,
+        "damage": 243
+      },
+      "MYTHIC": {
+        "recharge": 800,
+        "max": 3,
+        "size": 0.25,
+        "health": 729,
+        "damage": 729
+      },
+      "ULTRA": {
+        "recharge": 800,
+        "max": 4,
+        "size": 0.25,
+        "health": 1640.25,
+        "damage": 1640.25
+      },
+      "SUPER": {
+        "recharge": 800,
+        "max": 4,
+        "size": 0.25,
+        "health": 4920.75,
+        "damage": 4920.75
+      },
+      "ANCIENT": {
+        "recharge": 800,
+        "max": 5,
+        "size": 0.25,
+        "health": 11809.8,
+        "damage": 11809.8
+      },
+      "OMEGA": {
+        "recharge": 800,
+        "max": 5,
+        "size": 0.25,
+        "health": 35429.4,
+        "damage": 35429.4
+      },
+      "???": {
+        "recharge": 800,
+        "max": 5,
+        "size": 0.25,
+        "health": 106288.2,
+        "damage": 106288.2
+      }
+    }
+  },
+  "FASTER": {
+    "name": "Faster",
+    "description": "It's so light it makes your other petals spin faster",
+    "rarities": {
+      "COMMON": {
+        "size": 0.225,
+        "radians": 0.018604651162790697,
+        "health": 9,
+        "damage": 9
+      },
+      "UNCOMMON": {
+        "size": 0.225,
+        "radians": 0.022093023255813953,
+        "health": 27,
+        "damage": 27
+      },
+      "RARE": {
+        "size": 0.225,
+        "radians": 0.025581395348837212,
+        "health": 81,
+        "damage": 81
+      },
+      "EPIC": {
+        "size": 0.225,
+        "radians": 0.029069767441860465,
+        "health": 243,
+        "damage": 243
+      },
+      "LEGENDARY": {
+        "size": 0.225,
+        "radians": 0.03255813953488372,
+        "health": 729,
+        "damage": 729
+      },
+      "MYTHIC": {
+        "size": 0.225,
+        "radians": 0.03604651162790698,
+        "health": 2187,
+        "damage": 2187
+      },
+      "ULTRA": {
+        "size": 0.225,
+        "radians": 0.03953488372093023,
+        "health": 6561,
+        "damage": 6561
+      },
+      "SUPER": {
+        "size": 0.225,
+        "radians": 0.04302325581395349,
+        "health": 19683,
+        "damage": 19683
+      },
+      "ANCIENT": {
+        "size": 0.225,
+        "radians": 0.046511627906976744,
+        "health": 59049,
+        "damage": 59049
+      },
+      "OMEGA": {
+        "size": 0.225,
+        "radians": 0.049999999999999996,
+        "health": 177147,
+        "damage": 177147
+      },
+      "???": {
+        "size": 0.225,
+        "radians": 0.053488372093023255,
+        "health": 531441,
+        "damage": 531441
+      }
+    }
+  },
+  "STINGER": {
+    "name": "Stinger",
+    "description": "It really hurts, but its very fragile.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 1,
+        "clump": true,
+        "health": 1,
+        "damage": 52
+      },
+      "UNCOMMON": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 1,
+        "clump": true,
+        "health": 3,
+        "damage": 156
+      },
+      "RARE": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 2,
+        "clump": true,
+        "health": 4.5,
+        "damage": 234
+      },
+      "EPIC": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 2,
+        "clump": true,
+        "health": 13.5,
+        "damage": 702
+      },
+      "LEGENDARY": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 3,
+        "clump": true,
+        "health": 27,
+        "damage": 1404
+      },
+      "MYTHIC": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 3,
+        "clump": true,
+        "health": 81,
+        "damage": 4212
+      },
+      "ULTRA": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 4,
+        "clump": true,
+        "health": 182.25,
+        "damage": 9477
+      },
+      "SUPER": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 4,
+        "clump": true,
+        "health": 546.75,
+        "damage": 28431
+      },
+      "ANCIENT": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 5,
+        "clump": true,
+        "health": 1312.2,
+        "damage": 68234.4
+      },
+      "OMEGA": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 5,
+        "clump": true,
+        "health": 3936.6,
+        "damage": 204703.2
+      },
+      "???": {
+        "recharge": 7500,
+        "size": 0.3175,
+        "max": 7,
+        "clump": true,
+        "health": 8435.57142857143,
+        "damage": 438649.71428571426
+      }
+    }
+  },
+  "ROCK": {
+    "name": "Rock",
+    "description": "Extremely durable, but takes a bit longer to recharge.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 65,
+        "damage": 8.5
+      },
+      "UNCOMMON": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 195,
+        "damage": 25.5
+      },
+      "RARE": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 585,
+        "damage": 76.5
+      },
+      "EPIC": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 1755,
+        "damage": 229.5
+      },
+      "LEGENDARY": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 5265,
+        "damage": 688.5
+      },
+      "MYTHIC": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 15795,
+        "damage": 2065.5
+      },
+      "ULTRA": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 47385,
+        "damage": 6196.5
+      },
+      "SUPER": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 142155,
+        "damage": 18589.5
+      },
+      "ANCIENT": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 426465,
+        "damage": 55768.5
+      },
+      "OMEGA": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 1279395,
+        "damage": 167305.5
+      },
+      "???": {
+        "recharge": 4250,
+        "size": 0.425,
+        "density": 1.5,
+        "pushability": 0.8,
+        "health": 3838185,
+        "damage": 501916.5
+      }
+    }
+  },
+  "SPONGE": {
+    "name": "Sponge",
+    "description": "Spreads damage over time. If the damage accumulated is greater than the period, you will take all remaining damage at once!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 250,
+        "damage": 1,
+        "period": 125
+      },
+      "UNCOMMON": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 750,
+        "damage": 3,
+        "period": 375
+      },
+      "RARE": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 2250,
+        "damage": 9,
+        "period": 1125
+      },
+      "EPIC": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 6750,
+        "damage": 27,
+        "period": 3375
+      },
+      "LEGENDARY": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 20250,
+        "damage": 81,
+        "period": 10125
+      },
+      "MYTHIC": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 60750,
+        "damage": 243,
+        "period": 30375
+      },
+      "ULTRA": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 182250,
+        "damage": 729,
+        "period": 91125
+      },
+      "SUPER": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 546750,
+        "damage": 2187,
+        "period": 273375
+      },
+      "ANCIENT": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 1640250,
+        "damage": 6561,
+        "period": 820125
+      },
+      "OMEGA": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 4920750,
+        "damage": 19683,
+        "period": 2460375
+      },
+      "???": {
+        "recharge": 2500,
+        "size": 0.525,
+        "health": 14762250,
+        "damage": 59049,
+        "period": 7381125
+      }
+    }
+  },
+  "ANTENNAE": {
+    "name": "Antennae",
+    "description": "Allows your flower to sense foes farther away. Does not stack.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 0.08
+      },
+      "UNCOMMON": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 0.15
+      },
+      "RARE": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 0.23
+      },
+      "EPIC": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 0.32
+      },
+      "LEGENDARY": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 0.42
+      },
+      "MYTHIC": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 0.6
+      },
+      "ULTRA": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 0.78
+      },
+      "SUPER": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 0.96
+      },
+      "ANCIENT": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 1.2
+      },
+      "OMEGA": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 1.5
+      },
+      "???": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraView": 2
+      }
+    }
+  },
+  "ARMOR": {
+    "name": "Armor",
+    "description": "Gives your flower a %-based resistance to damage. Does not stack.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.95
+      },
+      "UNCOMMON": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.9
+      },
+      "RARE": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.825
+      },
+      "EPIC": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.75
+      },
+      "LEGENDARY": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.675
+      },
+      "MYTHIC": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.6
+      },
+      "ULTRA": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.525
+      },
+      "SUPER": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.45
+      },
+      "ANCIENT": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.375
+      },
+      "OMEGA": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.3
+      },
+      "???": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "armor": 0.225
+      }
+    }
+  },
+  "THIRD_EYE": {
+    "name": "Third Eye",
+    "description": "Your petals orbit your flower at a further distance. Does not stack.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 10
+      },
+      "UNCOMMON": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 15
+      },
+      "RARE": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 20
+      },
+      "EPIC": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 25
+      },
+      "LEGENDARY": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 35
+      },
+      "MYTHIC": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 50
+      },
+      "ULTRA": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 65
+      },
+      "SUPER": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 80
+      },
+      "ANCIENT": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 95
+      },
+      "OMEGA": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 110
+      },
+      "???": {
+        "recharge": 1,
+        "spawns": false,
+        "max": 0,
+        "extraRange": 125
+      }
+    }
+  },
+  "LIGHTNING": {
+    "name": "Lightning",
+    "description": "Strikes several nearby entities.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2100,
+        "bounces": 2,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 2,
+        "damage": 15
+      },
+      "UNCOMMON": {
+        "recharge": 2100,
+        "bounces": 3,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 6,
+        "damage": 45
+      },
+      "RARE": {
+        "recharge": 2100,
+        "bounces": 3,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 18,
+        "damage": 135
+      },
+      "EPIC": {
+        "recharge": 2100,
+        "bounces": 4,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 54,
+        "damage": 405
+      },
+      "LEGENDARY": {
+        "recharge": 2100,
+        "bounces": 4,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 162,
+        "damage": 1215
+      },
+      "MYTHIC": {
+        "recharge": 2100,
+        "bounces": 5,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 486,
+        "damage": 3645
+      },
+      "ULTRA": {
+        "recharge": 2100,
+        "bounces": 5,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 1458,
+        "damage": 10935
+      },
+      "SUPER": {
+        "recharge": 2100,
+        "bounces": 6,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 4374,
+        "damage": 32805
+      },
+      "ANCIENT": {
+        "recharge": 2100,
+        "bounces": 6,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 13122,
+        "damage": 98415
+      },
+      "OMEGA": {
+        "recharge": 2100,
+        "bounces": 7,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 39366,
+        "damage": 295245
+      },
+      "???": {
+        "recharge": 2100,
+        "bounces": 7,
+        "bounceRange": 125,
+        "size": 0.425,
+        "health": 118098,
+        "damage": 885735
+      }
+    }
+  },
+  "GOD": {
+    "name": "God",
+    "description": "it's god",
+    "rarities": {
+      "COMMON": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.0111,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 0.3333333333333333,
+        "damage": 33,
+        "healthIncrease": 100,
+        "healPerSecond": 2
+      },
+      "UNCOMMON": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.0176,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 1,
+        "damage": 99,
+        "healthIncrease": 300,
+        "healPerSecond": 6
+      },
+      "RARE": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.025,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 3,
+        "damage": 297,
+        "healthIncrease": 900,
+        "healPerSecond": 18
+      },
+      "EPIC": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.033299999999999996,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 9,
+        "damage": 891,
+        "healthIncrease": 2700,
+        "healPerSecond": 54
+      },
+      "LEGENDARY": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.0429,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 27,
+        "damage": 2673,
+        "healthIncrease": 8100,
+        "healPerSecond": 162
+      },
+      "MYTHIC": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.1,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 81,
+        "damage": 8019,
+        "healthIncrease": 24300,
+        "healPerSecond": 486
+      },
+      "ULTRA": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.1857,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 243,
+        "damage": 24057,
+        "healthIncrease": 72900,
+        "healPerSecond": 1458
+      },
+      "SUPER": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.4,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 729,
+        "damage": 72171,
+        "healthIncrease": 218700,
+        "healPerSecond": 4374
+      },
+      "ANCIENT": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.6,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 2187,
+        "damage": 216513,
+        "healthIncrease": 656100,
+        "healPerSecond": 13122
+      },
+      "OMEGA": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 0.9,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 6561,
+        "damage": 649539,
+        "healthIncrease": 1968300,
+        "healPerSecond": 39366
+      },
+      "???": {
+        "recharge": 50,
+        "radians": 0.00046511627906976747,
+        "max": 3,
+        "clump": true,
+        "extraView": 1.3,
+        "bounces": 2,
+        "bounceRange": 300,
+        "speedIncrease": 0.2,
+        "damageReflection": 2,
+        "pickupRadius": 800,
+        "armor": 0.3333333333333333,
+        "extraRange": 75,
+        "health": 19683,
+        "damage": 1948617,
+        "healthIncrease": 5904900,
+        "healPerSecond": 118098
+      }
+    }
+  },
+  "CACTUS": {
+    "name": "Cactus",
+    "description": "Not very strong, but somehow increases your flower's maximum health.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 15,
+        "damage": 5,
+        "healthIncrease": 30
+      },
+      "UNCOMMON": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 45,
+        "damage": 15,
+        "healthIncrease": 90
+      },
+      "RARE": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 135,
+        "damage": 45,
+        "healthIncrease": 270
+      },
+      "EPIC": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 405,
+        "damage": 135,
+        "healthIncrease": 810
+      },
+      "LEGENDARY": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 1215,
+        "damage": 405,
+        "healthIncrease": 2430
+      },
+      "MYTHIC": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 3645,
+        "damage": 1215,
+        "healthIncrease": 7290
+      },
+      "ULTRA": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 10935,
+        "damage": 3645,
+        "healthIncrease": 21870
+      },
+      "SUPER": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 32805,
+        "damage": 10935,
+        "healthIncrease": 65610
+      },
+      "ANCIENT": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 98415,
+        "damage": 32805,
+        "healthIncrease": 196830
+      },
+      "OMEGA": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 295245,
+        "damage": 98415,
+        "healthIncrease": 590490
+      },
+      "???": {
+        "recharge": 900,
+        "size": 0.55,
+        "health": 885735,
+        "damage": 295245,
+        "healthIncrease": 1771470
+      }
+    }
+  },
+  "LEAF": {
+    "name": "Leaf",
+    "description": "Gathers energy from the sun to heal your flower passively.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 8,
+        "damage": 8,
+        "healPerSecond": 1.334
+      },
+      "UNCOMMON": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 24,
+        "damage": 24,
+        "healPerSecond": 4.002000000000001
+      },
+      "RARE": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 72,
+        "damage": 72,
+        "healPerSecond": 12.006000000000002
+      },
+      "EPIC": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 216,
+        "damage": 216,
+        "healPerSecond": 36.01800000000001
+      },
+      "LEGENDARY": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 648,
+        "damage": 648,
+        "healPerSecond": 108.05400000000003
+      },
+      "MYTHIC": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 1944,
+        "damage": 1944,
+        "healPerSecond": 324.1620000000001
+      },
+      "ULTRA": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 5832,
+        "damage": 5832,
+        "healPerSecond": 972.4860000000003
+      },
+      "SUPER": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 17496,
+        "damage": 17496,
+        "healPerSecond": 2917.458000000001
+      },
+      "ANCIENT": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 52488,
+        "damage": 52488,
+        "healPerSecond": 8752.374000000003
+      },
+      "OMEGA": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 157464,
+        "damage": 157464,
+        "healPerSecond": 26257.12200000001
+      },
+      "???": {
+        "recharge": 1500,
+        "size": 0.425,
+        "health": 472392,
+        "damage": 472392,
+        "healPerSecond": 78771.36600000004
+      }
+    }
+  },
+  "EGG": {
+    "name": "Egg",
+    "description": "Something is hatching inside...",
+    "rarities": {
+      "COMMON": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 20000,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 0
+        },
+        "health": 25,
+        "damage": 1
+      },
+      "UNCOMMON": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 17500,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 0
+        },
+        "health": 75,
+        "damage": 3
+      },
+      "RARE": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 17500,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 1
+        },
+        "health": 225,
+        "damage": 9
+      },
+      "EPIC": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 17500,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 2
+        },
+        "health": 675,
+        "damage": 27
+      },
+      "LEGENDARY": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 17500,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 3
+        },
+        "health": 2025,
+        "damage": 81
+      },
+      "MYTHIC": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 17500,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 4
+        },
+        "health": 6075,
+        "damage": 243
+      },
+      "ULTRA": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 17500,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 5
+        },
+        "health": 18225,
+        "damage": 729
+      },
+      "SUPER": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 15000,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 6
+        },
+        "health": 54675,
+        "damage": 2187
+      },
+      "ANCIENT": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 6
+        },
+        "health": 164025,
+        "damage": 6561
+      },
+      "OMEGA": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 7
+        },
+        "health": 492075,
+        "damage": 19683
+      },
+      "???": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 2500,
+        "spawn": {
+          "type": "BEETLE",
+          "rarity": 9
+        },
+        "health": 1476225,
+        "damage": 59049
+      }
+    }
+  },
+  "ANT_EGG": {
+    "name": "Egg",
+    "description": "Something is hatching inside...",
+    "rarities": {
+      "COMMON": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 30000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 0
+        },
+        "max": 4,
+        "health": 6.25,
+        "damage": 0.25
+      },
+      "UNCOMMON": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 0
+        },
+        "max": 4,
+        "health": 18.75,
+        "damage": 0.75
+      },
+      "RARE": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 1
+        },
+        "max": 4,
+        "health": 56.25,
+        "damage": 2.25
+      },
+      "EPIC": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 2
+        },
+        "max": 4,
+        "health": 168.75,
+        "damage": 6.75
+      },
+      "LEGENDARY": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 3
+        },
+        "max": 4,
+        "health": 506.25,
+        "damage": 20.25
+      },
+      "MYTHIC": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 4
+        },
+        "max": 4,
+        "health": 1518.75,
+        "damage": 60.75
+      },
+      "ULTRA": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 5
+        },
+        "max": 4,
+        "health": 4556.25,
+        "damage": 182.25
+      },
+      "SUPER": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 6
+        },
+        "max": 4,
+        "health": 13668.75,
+        "damage": 546.75
+      },
+      "ANCIENT": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 6
+        },
+        "max": 4,
+        "health": 41006.25,
+        "damage": 1640.25
+      },
+      "OMEGA": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 7
+        },
+        "max": 4,
+        "health": 123018.75,
+        "damage": 4920.75
+      },
+      "???": {
+        "recharge": 500,
+        "size": 0.475,
+        "spinSpeed": 0,
+        "spawnCharge": 100,
+        "spawn": {
+          "type": "PLAYER_SOLDIER_ANT",
+          "rarity": 9
+        },
+        "max": 4,
+        "health": 369056.25,
+        "damage": 14762.25
+      }
+    }
+  },
+  "HORNET_EGG": {
+    "name": "Egg",
+    "description": "Something is hatching inside...",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 30000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 0
+        },
+        "max": 2,
+        "health": 12.5,
+        "damage": 0.5
+      },
+      "UNCOMMON": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 0
+        },
+        "max": 2,
+        "health": 37.5,
+        "damage": 1.5
+      },
+      "RARE": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 1
+        },
+        "max": 2,
+        "health": 112.5,
+        "damage": 4.5
+      },
+      "EPIC": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 2
+        },
+        "max": 2,
+        "health": 337.5,
+        "damage": 13.5
+      },
+      "LEGENDARY": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 3
+        },
+        "max": 2,
+        "health": 1012.5,
+        "damage": 40.5
+      },
+      "MYTHIC": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 4
+        },
+        "max": 2,
+        "health": 3037.5,
+        "damage": 121.5
+      },
+      "ULTRA": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 5
+        },
+        "max": 2,
+        "health": 9112.5,
+        "damage": 364.5
+      },
+      "SUPER": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 6
+        },
+        "max": 2,
+        "health": 27337.5,
+        "damage": 1093.5
+      },
+      "ANCIENT": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 7
+        },
+        "max": 2,
+        "health": 82012.5,
+        "damage": 3280.5
+      },
+      "OMEGA": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 25000,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 8
+        },
+        "max": 2,
+        "health": 246037.5,
+        "damage": 9841.5
+      },
+      "???": {
+        "recharge": 2500,
+        "size": 0.6,
+        "spinSpeed": 0,
+        "spawnCharge": 100,
+        "spawn": {
+          "type": "HORNET",
+          "rarity": 9
+        },
+        "max": 2,
+        "health": 738112.5,
+        "damage": 29524.5
+      }
+    }
+  },
+  "MISSILE": {
+    "name": "Missile",
+    "description": "You can actually shoot this one.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 8,
+        "damage": 9
+      },
+      "UNCOMMON": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 24,
+        "damage": 27
+      },
+      "RARE": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 72,
+        "damage": 81
+      },
+      "EPIC": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 216,
+        "damage": 243
+      },
+      "LEGENDARY": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 648,
+        "damage": 729
+      },
+      "MYTHIC": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 1944,
+        "damage": 2187
+      },
+      "ULTRA": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 5832,
+        "damage": 6561
+      },
+      "SUPER": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 17496,
+        "damage": 19683
+      },
+      "ANCIENT": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 52488,
+        "damage": 59049
+      },
+      "OMEGA": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.45,
+        "peaIndex": 6,
+        "health": 157464,
+        "damage": 177147
+      },
+      "???": {
+        "recharge": 1800,
+        "shootDelay": 700,
+        "range": 43,
+        "shootSpeed": 8.372093023255815,
+        "size": 0.65,
+        "peaIndex": 5,
+        "health": 472392,
+        "damage": 531441
+      }
+    }
+  },
+  "IRIS": {
+    "name": "Iris",
+    "description": "Watch out! It's poisonous!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 6,
+        "damage": 6,
+        "poison": [
+          5000,
+          20
+        ]
+      },
+      "UNCOMMON": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 18,
+        "damage": 18,
+        "poison": [
+          5000,
+          60
+        ]
+      },
+      "RARE": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 54,
+        "damage": 54,
+        "poison": [
+          5000,
+          180
+        ]
+      },
+      "EPIC": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 162,
+        "damage": 162,
+        "poison": [
+          5000,
+          540
+        ]
+      },
+      "LEGENDARY": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 486,
+        "damage": 486,
+        "poison": [
+          5000,
+          1620
+        ]
+      },
+      "MYTHIC": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 1458,
+        "damage": 1458,
+        "poison": [
+          5000,
+          4860
+        ]
+      },
+      "ULTRA": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 4374,
+        "damage": 4374,
+        "poison": [
+          5000,
+          14580
+        ]
+      },
+      "SUPER": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 13122,
+        "damage": 13122,
+        "poison": [
+          5000,
+          43740
+        ]
+      },
+      "ANCIENT": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 39366,
+        "damage": 39366,
+        "poison": [
+          5000,
+          131220
+        ]
+      },
+      "OMEGA": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 118098,
+        "damage": 118098,
+        "poison": [
+          5000,
+          393660
+        ]
+      },
+      "???": {
+        "recharge": 2500,
+        "size": 0.3,
+        "health": 354294,
+        "damage": 354294,
+        "poison": [
+          5000,
+          1180980
+        ]
+      }
+    }
+  },
+  "MAGNET": {
+    "name": "Magnet",
+    "description": "Your loot loves you even more!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 90,
+        "health": 9,
+        "damage": 1
+      },
+      "UNCOMMON": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 180,
+        "health": 27,
+        "damage": 3
+      },
+      "RARE": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 270,
+        "health": 81,
+        "damage": 9
+      },
+      "EPIC": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 360,
+        "health": 243,
+        "damage": 27
+      },
+      "LEGENDARY": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 450,
+        "health": 729,
+        "damage": 81
+      },
+      "MYTHIC": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 540,
+        "health": 2187,
+        "damage": 243
+      },
+      "ULTRA": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 630,
+        "health": 6561,
+        "damage": 729
+      },
+      "SUPER": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 720,
+        "health": 19683,
+        "damage": 2187
+      },
+      "ANCIENT": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 810,
+        "health": 59049,
+        "damage": 6561
+      },
+      "OMEGA": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 900,
+        "health": 177147,
+        "damage": 19683
+      },
+      "???": {
+        "recharge": 4000,
+        "size": 0.6,
+        "pickupRadius": 990,
+        "health": 531441,
+        "damage": 59049
+      }
+    }
+  },
+  "BUBBLE": {
+    "name": "Bubble",
+    "description": "Fuck Physics",
+    "rarities": {
+      "COMMON": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 0.2833333333333333,
+        "health": 1,
+        "damage": 1
+      },
+      "UNCOMMON": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 0.425,
+        "health": 3,
+        "damage": 3
+      },
+      "RARE": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 0.6375,
+        "health": 9,
+        "damage": 9
+      },
+      "EPIC": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 1.0625,
+        "health": 27,
+        "damage": 27
+      },
+      "LEGENDARY": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 1.4875,
+        "health": 81,
+        "damage": 81
+      },
+      "MYTHIC": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 1.9124999999999999,
+        "health": 243,
+        "damage": 243
+      },
+      "ULTRA": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 2.3375,
+        "health": 729,
+        "damage": 729
+      },
+      "SUPER": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 2.7624999999999997,
+        "health": 2187,
+        "damage": 2187
+      },
+      "ANCIENT": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 3.1875,
+        "health": 6561,
+        "damage": 6561
+      },
+      "OMEGA": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 3.6125,
+        "health": 19683,
+        "damage": 19683
+      },
+      "???": {
+        "recharge": 1750,
+        "size": 0.5,
+        "boost": 4.0375,
+        "health": 59049,
+        "damage": 59049
+      }
+    }
+  },
+  "PEARL": {
+    "name": "Pearl",
+    "description": "Say what now?? I can't hear you over the sound of my money!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 500,
+        "size": 0.55,
+        "droppable": true,
+        "health": 11,
+        "damage": 9
+      },
+      "UNCOMMON": {
+        "recharge": 500,
+        "size": 0.575,
+        "droppable": true,
+        "health": 33,
+        "damage": 27
+      },
+      "RARE": {
+        "recharge": 500,
+        "size": 0.6,
+        "droppable": true,
+        "health": 99,
+        "damage": 81
+      },
+      "EPIC": {
+        "recharge": 500,
+        "size": 0.625,
+        "droppable": true,
+        "health": 297,
+        "damage": 243
+      },
+      "LEGENDARY": {
+        "recharge": 500,
+        "size": 0.65,
+        "droppable": true,
+        "health": 891,
+        "damage": 729
+      },
+      "MYTHIC": {
+        "recharge": 500,
+        "size": 0.675,
+        "droppable": true,
+        "health": 2673,
+        "damage": 2187
+      },
+      "ULTRA": {
+        "recharge": 500,
+        "size": 0.7,
+        "droppable": true,
+        "health": 8019,
+        "damage": 6561
+      },
+      "SUPER": {
+        "recharge": 500,
+        "size": 0.725,
+        "droppable": true,
+        "health": 24057,
+        "damage": 19683
+      },
+      "ANCIENT": {
+        "recharge": 500,
+        "size": 0.75,
+        "droppable": true,
+        "health": 72171,
+        "damage": 59049
+      },
+      "OMEGA": {
+        "recharge": 500,
+        "size": 0.775,
+        "droppable": true,
+        "health": 216513,
+        "damage": 177147
+      },
+      "???": {
+        "recharge": 500,
+        "size": 0.8,
+        "droppable": true,
+        "health": 649539,
+        "damage": 531441
+      }
+    }
+  },
+  "SHELL": {
+    "name": "Shell",
+    "description": "Somehow gives you a working shield...",
+    "rarities": {
+      "COMMON": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 13,
+        "damage": 5,
+        "shield": 10
+      },
+      "UNCOMMON": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 39,
+        "damage": 15,
+        "shield": 30
+      },
+      "RARE": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 117,
+        "damage": 45,
+        "shield": 90
+      },
+      "EPIC": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 351,
+        "damage": 135,
+        "shield": 270
+      },
+      "LEGENDARY": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 1053,
+        "damage": 405,
+        "shield": 810
+      },
+      "MYTHIC": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 3159,
+        "damage": 1215,
+        "shield": 2430
+      },
+      "ULTRA": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 9477,
+        "damage": 3645,
+        "shield": 7290
+      },
+      "SUPER": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 28431,
+        "damage": 10935,
+        "shield": 21870
+      },
+      "ANCIENT": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 85293,
+        "damage": 32805,
+        "shield": 65610
+      },
+      "OMEGA": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 255879,
+        "damage": 98415,
+        "shield": 196830
+      },
+      "???": {
+        "recharge": 3500,
+        "size": 0.525,
+        "waitTime": 1500,
+        "spinSpeed": 0.1046511627906977,
+        "health": 767637,
+        "damage": 295245,
+        "shield": 590490
+      }
+    }
+  },
+  "WEB": {
+    "name": "Web",
+    "description": "Sticky bitches",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 15,
+        "damage": 5
+      },
+      "UNCOMMON": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 45,
+        "damage": 15
+      },
+      "RARE": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 135,
+        "damage": 45
+      },
+      "EPIC": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 405,
+        "damage": 135
+      },
+      "LEGENDARY": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 1215,
+        "damage": 405
+      },
+      "MYTHIC": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 3645,
+        "damage": 1215
+      },
+      "ULTRA": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 10935,
+        "damage": 3645
+      },
+      "SUPER": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 32805,
+        "damage": 10935
+      },
+      "ANCIENT": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 98415,
+        "damage": 32805
+      },
+      "OMEGA": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 1,
+        "size": 0.5,
+        "health": 295245,
+        "damage": 98415
+      },
+      "???": {
+        "recharge": 2500,
+        "waitTime": 2500,
+        "duration": 7500,
+        "spawnWeb": 3,
+        "size": 0.5,
+        "health": 885735,
+        "damage": 295245
+      }
+    }
+  },
+  "WING": {
+    "name": "Wing",
+    "description": "It's on drugs",
+    "rarities": {
+      "COMMON": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 5,
+        "damage": 16
+      },
+      "UNCOMMON": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 15,
+        "damage": 48
+      },
+      "RARE": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 45,
+        "damage": 144
+      },
+      "EPIC": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 135,
+        "damage": 432
+      },
+      "LEGENDARY": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 405,
+        "damage": 1296
+      },
+      "MYTHIC": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 1215,
+        "damage": 3888
+      },
+      "ULTRA": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 3645,
+        "damage": 11664
+      },
+      "SUPER": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 10935,
+        "damage": 34992
+      },
+      "ANCIENT": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 32805,
+        "damage": 104976
+      },
+      "OMEGA": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 98415,
+        "damage": 314928
+      },
+      "???": {
+        "recharge": 1800,
+        "size": 0.5,
+        "spinSpeed": 0.4186046511627908,
+        "health": 295245,
+        "damage": 944784
+      }
+    }
+  },
+  "SQUARE": {
+    "name": "Square",
+    "description": "How familiar...",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 0
+        },
+        "health": 150,
+        "damage": 2
+      },
+      "UNCOMMON": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 1
+        },
+        "health": 450,
+        "damage": 6
+      },
+      "RARE": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 2
+        },
+        "health": 1350,
+        "damage": 18
+      },
+      "EPIC": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 3
+        },
+        "health": 4050,
+        "damage": 54
+      },
+      "LEGENDARY": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 4
+        },
+        "health": 12150,
+        "damage": 162
+      },
+      "MYTHIC": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 5
+        },
+        "health": 36450,
+        "damage": 486
+      },
+      "ULTRA": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 6
+        },
+        "health": 109350,
+        "damage": 1458
+      },
+      "SUPER": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 7
+        },
+        "health": 328050,
+        "damage": 4374
+      },
+      "ANCIENT": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 8
+        },
+        "health": 984150,
+        "damage": 13122
+      },
+      "OMEGA": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 9
+        },
+        "health": 2952450,
+        "damage": 39366
+      },
+      "???": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "SQUARE",
+          "rarity": 10
+        },
+        "health": 8857350,
+        "damage": 118098
+      }
+    }
+  },
+  "TRIANGLE": {
+    "name": "Triangle",
+    "description": "How familiar...",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 0
+        },
+        "health": 200,
+        "damage": 2
+      },
+      "UNCOMMON": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 1
+        },
+        "health": 600,
+        "damage": 6
+      },
+      "RARE": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 2
+        },
+        "health": 1800,
+        "damage": 18
+      },
+      "EPIC": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 3
+        },
+        "health": 5400,
+        "damage": 54
+      },
+      "LEGENDARY": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 4
+        },
+        "health": 16200,
+        "damage": 162
+      },
+      "MYTHIC": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 5
+        },
+        "health": 48600,
+        "damage": 486
+      },
+      "ULTRA": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 6
+        },
+        "health": 145800,
+        "damage": 1458
+      },
+      "SUPER": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 7
+        },
+        "health": 437400,
+        "damage": 4374
+      },
+      "ANCIENT": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 8
+        },
+        "health": 1312200,
+        "damage": 13122
+      },
+      "OMEGA": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 9
+        },
+        "health": 3936600,
+        "damage": 39366
+      },
+      "???": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "TRIANGLE",
+          "rarity": 10
+        },
+        "health": 11809800,
+        "damage": 118098
+      }
+    }
+  },
+  "PENTAGON": {
+    "name": "Pentagon",
+    "description": "How familiar...",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 0
+        },
+        "health": 300,
+        "damage": 2
+      },
+      "UNCOMMON": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 1
+        },
+        "health": 900,
+        "damage": 6
+      },
+      "RARE": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 2
+        },
+        "health": 2700,
+        "damage": 18
+      },
+      "EPIC": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 3
+        },
+        "health": 8100,
+        "damage": 54
+      },
+      "LEGENDARY": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 4
+        },
+        "health": 24300,
+        "damage": 162
+      },
+      "MYTHIC": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 5
+        },
+        "health": 72900,
+        "damage": 486
+      },
+      "ULTRA": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 6
+        },
+        "health": 218700,
+        "damage": 1458
+      },
+      "SUPER": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 7
+        },
+        "health": 656100,
+        "damage": 4374
+      },
+      "ANCIENT": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 8
+        },
+        "health": 1968300,
+        "damage": 13122
+      },
+      "OMEGA": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 9
+        },
+        "health": 5904900,
+        "damage": 39366
+      },
+      "???": {
+        "recharge": 2100,
+        "size": 0.8,
+        "spawnCharge": 10000,
+        "spawn": {
+          "type": "PENTAGON",
+          "rarity": 10
+        },
+        "health": 17714700,
+        "damage": 118098
+      }
+    }
+  },
+  "PEAS": {
+    "name": "Peas",
+    "description": "They're peas in a pod!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 12,
+        "damage": 8
+      },
+      "UNCOMMON": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 36,
+        "damage": 24
+      },
+      "RARE": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 108,
+        "damage": 72
+      },
+      "EPIC": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 324,
+        "damage": 216
+      },
+      "LEGENDARY": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 972,
+        "damage": 648
+      },
+      "MYTHIC": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 2916,
+        "damage": 1944
+      },
+      "ULTRA": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 8748,
+        "damage": 5832
+      },
+      "SUPER": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 26244,
+        "damage": 17496
+      },
+      "ANCIENT": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 78732,
+        "damage": 52488
+      },
+      "OMEGA": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 236196,
+        "damage": 157464
+      },
+      "???": {
+        "recharge": 2350,
+        "shootDelay": 750,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 3,
+        "health": 708588,
+        "damage": 472392
+      }
+    }
+  },
+  "GRAPES": {
+    "name": "Grapes",
+    "description": "It's a bundle of poisonous grapes!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 10,
+        "damage": 4,
+        "poison": [
+          3000,
+          15
+        ]
+      },
+      "UNCOMMON": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 30,
+        "damage": 12,
+        "poison": [
+          3000,
+          45
+        ]
+      },
+      "RARE": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 90,
+        "damage": 36,
+        "poison": [
+          3000,
+          135
+        ]
+      },
+      "EPIC": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 270,
+        "damage": 108,
+        "poison": [
+          3000,
+          405
+        ]
+      },
+      "LEGENDARY": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 810,
+        "damage": 324,
+        "poison": [
+          3000,
+          1215
+        ]
+      },
+      "MYTHIC": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 2430,
+        "damage": 972,
+        "poison": [
+          3000,
+          3645
+        ]
+      },
+      "ULTRA": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 7290,
+        "damage": 2916,
+        "poison": [
+          3000,
+          10935
+        ]
+      },
+      "SUPER": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 21870,
+        "damage": 8748,
+        "poison": [
+          3000,
+          32805
+        ]
+      },
+      "ANCIENT": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 65610,
+        "damage": 26244,
+        "poison": [
+          3000,
+          98415
+        ]
+      },
+      "OMEGA": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 196830,
+        "damage": 78732,
+        "poison": [
+          3000,
+          295245
+        ]
+      },
+      "???": {
+        "recharge": 2350,
+        "shootDelay": 1000,
+        "range": 28.681,
+        "shootSpeed": 12.558139534883722,
+        "size": 0.525,
+        "peaIndex": 4,
+        "health": 590490,
+        "damage": 236196,
+        "poison": [
+          3000,
+          885735
+        ]
+      }
+    }
+  },
+  "SALT": {
+    "name": "Salt",
+    "description": "It reflects damage back onto the enemy. Can stack with itself.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 3000,
+        "damageReflection": 0.1,
+        "health": 8,
+        "damage": 5
+      },
+      "UNCOMMON": {
+        "recharge": 3000,
+        "damageReflection": 0.15,
+        "health": 24,
+        "damage": 15
+      },
+      "RARE": {
+        "recharge": 3000,
+        "damageReflection": 0.25,
+        "health": 72,
+        "damage": 45
+      },
+      "EPIC": {
+        "recharge": 3000,
+        "damageReflection": 0.4,
+        "health": 216,
+        "damage": 135
+      },
+      "LEGENDARY": {
+        "recharge": 3000,
+        "damageReflection": 0.6,
+        "health": 648,
+        "damage": 405
+      },
+      "MYTHIC": {
+        "recharge": 3000,
+        "damageReflection": 0.85,
+        "health": 1944,
+        "damage": 1215
+      },
+      "ULTRA": {
+        "recharge": 3000,
+        "damageReflection": 1,
+        "health": 5832,
+        "damage": 3645
+      },
+      "SUPER": {
+        "recharge": 3000,
+        "damageReflection": 1.5,
+        "health": 17496,
+        "damage": 10935
+      },
+      "ANCIENT": {
+        "recharge": 3000,
+        "damageReflection": 2.25,
+        "health": 52488,
+        "damage": 32805
+      },
+      "OMEGA": {
+        "recharge": 3000,
+        "damageReflection": 3,
+        "health": 157464,
+        "damage": 98415
+      },
+      "???": {
+        "recharge": 3000,
+        "damageReflection": 5,
+        "health": 472392,
+        "damage": 295245
+      }
+    }
+  },
+  "WALKINGSTICK_EGG": {
+    "name": "Walkingstick Egg",
+    "description": "This one's a bit of a mystery...",
+    "rarities": {
+      "COMMON": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 7500,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 0
+        },
+        "health": 25,
+        "damage": 1
+      },
+      "UNCOMMON": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 0
+        },
+        "health": 75,
+        "damage": 3
+      },
+      "RARE": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 1
+        },
+        "health": 225,
+        "damage": 9
+      },
+      "EPIC": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 2
+        },
+        "health": 675,
+        "damage": 27
+      },
+      "LEGENDARY": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 3
+        },
+        "health": 2025,
+        "damage": 81
+      },
+      "MYTHIC": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 4
+        },
+        "health": 6075,
+        "damage": 243
+      },
+      "ULTRA": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 5
+        },
+        "health": 18225,
+        "damage": 729
+      },
+      "SUPER": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 6
+        },
+        "health": 54675,
+        "damage": 2187
+      },
+      "ANCIENT": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 6
+        },
+        "health": 164025,
+        "damage": 6561
+      },
+      "OMEGA": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 7
+        },
+        "health": 492075,
+        "damage": 19683
+      },
+      "???": {
+        "recharge": 500,
+        "size": 0.55,
+        "spinSpeed": 0,
+        "spawnCharge": 5000,
+        "spawn": {
+          "type": "WALKINGSTICK",
+          "rarity": 9
+        },
+        "health": 1476225,
+        "damage": 59049
+      }
+    }
+  },
+  "PEAGUN": {
+    "name": "Peagun",
+    "description": "It's like diep kinda, but with peas!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 6,
+        "damage": 6
+      },
+      "UNCOMMON": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 18,
+        "damage": 18
+      },
+      "RARE": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 54,
+        "damage": 54
+      },
+      "EPIC": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 162,
+        "damage": 162
+      },
+      "LEGENDARY": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 486,
+        "damage": 486
+      },
+      "MYTHIC": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 1458,
+        "damage": 1458
+      },
+      "ULTRA": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 4374,
+        "damage": 4374
+      },
+      "SUPER": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 13122,
+        "damage": 13122
+      },
+      "ANCIENT": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 39366,
+        "damage": 39366
+      },
+      "OMEGA": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 118098,
+        "damage": 118098
+      },
+      "???": {
+        "recharge": 10000,
+        "shootDelay": 500,
+        "range": 48.375,
+        "shootSpeed": 15.697674418604652,
+        "size": 0.5,
+        "peaIndex": 7,
+        "attackDistance": 1,
+        "health": 354294,
+        "damage": 354294
+      }
+    }
+  },
+  "POLLEN": {
+    "name": "Pollen",
+    "description": "Athsmatics beware!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 1300,
+        "max": 1,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 9,
+        "damage": 8
+      },
+      "UNCOMMON": {
+        "recharge": 1300,
+        "max": 1,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 27,
+        "damage": 24
+      },
+      "RARE": {
+        "recharge": 1300,
+        "max": 1,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 81,
+        "damage": 72
+      },
+      "EPIC": {
+        "recharge": 1300,
+        "max": 2,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 121.5,
+        "damage": 108
+      },
+      "LEGENDARY": {
+        "recharge": 1300,
+        "max": 2,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 364.5,
+        "damage": 324
+      },
+      "MYTHIC": {
+        "recharge": 1300,
+        "max": 2,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 1093.5,
+        "damage": 972
+      },
+      "ULTRA": {
+        "recharge": 1300,
+        "max": 3,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 2187,
+        "damage": 1944
+      },
+      "SUPER": {
+        "recharge": 1300,
+        "max": 3,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 6561,
+        "damage": 5832
+      },
+      "ANCIENT": {
+        "recharge": 1300,
+        "max": 3,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 19683,
+        "damage": 17496
+      },
+      "OMEGA": {
+        "recharge": 1300,
+        "max": 4,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 44286.75,
+        "damage": 39366
+      },
+      "???": {
+        "recharge": 1300,
+        "max": 4,
+        "size": 0.23,
+        "shootDelay": 700,
+        "range": 60.199999999999996,
+        "shootSpeed": 0,
+        "peaIndex": -1,
+        "clump": true,
+        "health": 132860.25,
+        "damage": 118098
+      }
+    }
+  },
+  "ROSE": {
+    "name": "Rose",
+    "description": "It's healthy for you!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 13,
+        "attackDistance": 1,
+        "health": 4,
+        "damage": 4
+      },
+      "UNCOMMON": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 31.525,
+        "attackDistance": 1,
+        "health": 12,
+        "damage": 12
+      },
+      "RARE": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 76.44812499999999,
+        "attackDistance": 1,
+        "health": 36,
+        "damage": 36
+      },
+      "EPIC": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 185.38670312499994,
+        "attackDistance": 1,
+        "health": 108,
+        "damage": 108
+      },
+      "LEGENDARY": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 449.56275507812484,
+        "attackDistance": 1,
+        "health": 324,
+        "damage": 324
+      },
+      "MYTHIC": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 1090.1896810644528,
+        "attackDistance": 1,
+        "health": 972,
+        "damage": 972
+      },
+      "ULTRA": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 2643.7099765812973,
+        "attackDistance": 1,
+        "health": 2916,
+        "damage": 2916
+      },
+      "SUPER": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 6410.996693209647,
+        "attackDistance": 1,
+        "health": 8748,
+        "damage": 8748
+      },
+      "ANCIENT": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 15546.66698103339,
+        "attackDistance": 1,
+        "health": 26244,
+        "damage": 26244
+      },
+      "OMEGA": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 37700.66742900597,
+        "attackDistance": 1,
+        "health": 78732,
+        "damage": 78732
+      },
+      "???": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 91424.11851533948,
+        "attackDistance": 1,
+        "health": 236196,
+        "damage": 236196
+      }
+    }
+  },
+  "DAHLIA": {
+    "name": "Dahlia",
+    "description": "Like rose, but more rapid",
+    "rarities": {
+      "COMMON": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 4,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 1.3333333333333333,
+        "damage": 1.3333333333333333
+      },
+      "UNCOMMON": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 10.044,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 4,
+        "damage": 4
+      },
+      "RARE": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 25.220484000000003,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 12,
+        "damage": 12
+      },
+      "EPIC": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 63.32863532400001,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 36,
+        "damage": 36
+      },
+      "LEGENDARY": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 159.01820329856403,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 108,
+        "damage": 108
+      },
+      "MYTHIC": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 399.2947084826943,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 324,
+        "damage": 324
+      },
+      "ULTRA": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 1002.6290130000455,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 972,
+        "damage": 972
+      },
+      "SUPER": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 2517.601451643114,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 2916,
+        "damage": 2916
+      },
+      "ANCIENT": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 6321.69724507586,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 8748,
+        "damage": 8748
+      },
+      "OMEGA": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 15873.781782385486,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 26244,
+        "damage": 26244
+      },
+      "???": {
+        "recharge": 3500,
+        "waitTime": 1500,
+        "heal": 39859.06605556996,
+        "size": 0.215,
+        "max": 3,
+        "clump": true,
+        "attackDistance": 1,
+        "health": 78732,
+        "damage": 78732
+      }
+    }
+  },
+  "PRIMROSE": {
+    "name": "Primrose",
+    "description": "A weaker rose that loves your friends more than you do!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 4,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 4,
+        "damage": 4
+      },
+      "UNCOMMON": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 9.6,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 12,
+        "damage": 12
+      },
+      "RARE": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 23.04,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 36,
+        "damage": 36
+      },
+      "EPIC": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 55.29599999999999,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 108,
+        "damage": 108
+      },
+      "LEGENDARY": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 132.7104,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 324,
+        "damage": 324
+      },
+      "MYTHIC": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 318.5049599999999,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 972,
+        "damage": 972
+      },
+      "ULTRA": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 764.4119039999998,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 2916,
+        "damage": 2916
+      },
+      "SUPER": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 1834.5885695999996,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 8748,
+        "damage": 8748
+      },
+      "ANCIENT": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 4403.012567039998,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 26244,
+        "damage": 26244
+      },
+      "OMEGA": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 10567.230160895997,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 78732,
+        "damage": 78732
+      },
+      "???": {
+        "recharge": 5000,
+        "waitTime": 2500,
+        "heal": 25361.35238615039,
+        "healRadius": 16,
+        "attackDistance": 1,
+        "size": 0.5,
+        "health": 236196,
+        "damage": 236196
+      }
+    }
+  },
+  "POWDER": {
+    "name": "Mysterious Powder",
+    "description": "Somehow makes your flower move faster! Does not stack with itself.",
+    "rarities": {
+      "COMMON": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.03,
+        "health": 8,
+        "damage": 8
+      },
+      "UNCOMMON": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.06,
+        "health": 24,
+        "damage": 24
+      },
+      "RARE": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.09,
+        "health": 72,
+        "damage": 72
+      },
+      "EPIC": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.12,
+        "health": 216,
+        "damage": 216
+      },
+      "LEGENDARY": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.15,
+        "health": 648,
+        "damage": 648
+      },
+      "MYTHIC": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.18,
+        "health": 1944,
+        "damage": 1944
+      },
+      "ULTRA": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.21,
+        "health": 5832,
+        "damage": 5832
+      },
+      "SUPER": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.24,
+        "health": 17496,
+        "damage": 17496
+      },
+      "ANCIENT": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.27,
+        "health": 52488,
+        "damage": 52488
+      },
+      "OMEGA": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.3,
+        "health": 157464,
+        "damage": 157464
+      },
+      "???": {
+        "recharge": 2000,
+        "waitTime": 2500,
+        "size": 0.325,
+        "spinSpeed": 0.2093023255813954,
+        "attackDistance": 1,
+        "speedIncrease": 0.33,
+        "health": 472392,
+        "damage": 472392
+      }
+    }
+  },
+  "BOUNCY_BALL": {
+    "name": "Bouncy Ball",
+    "description": "Boiiiinngggg!",
+    "rarities": {
+      "COMMON": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 15,
+        "damage": 6
+      },
+      "UNCOMMON": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 45,
+        "damage": 18
+      },
+      "RARE": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 135,
+        "damage": 54
+      },
+      "EPIC": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 405,
+        "damage": 162
+      },
+      "LEGENDARY": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 1215,
+        "damage": 486
+      },
+      "MYTHIC": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 3645,
+        "damage": 1458
+      },
+      "ULTRA": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 10935,
+        "damage": 4374
+      },
+      "SUPER": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 32805,
+        "damage": 13122
+      },
+      "ANCIENT": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 98415,
+        "damage": 39366
+      },
+      "OMEGA": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 295245,
+        "damage": 118098
+      },
+      "???": {
+        "recharge": 150,
+        "shootDelay": 100,
+        "range": 32.25,
+        "shootSpeed": 18.837209302325583,
+        "size": 0.225,
+        "engine": 0.9,
+        "friction": 0,
+        "defendDistance": 2,
+        "density": 10,
+        "pushability": 20,
+        "health": 885735,
+        "damage": 354294
+      }
+    }
+  }
+}
